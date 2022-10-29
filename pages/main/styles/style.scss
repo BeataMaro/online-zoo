@@ -1,0 +1,15 @@
+//variables
+
+$Black_blue: #333B41;
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: linear-gradient(#FEBDAB); */
+    background-color: $Black_blue;
+}
