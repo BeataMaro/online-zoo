@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-.orange-button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body footer .footer-wrapper .first-column button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -26,7 +26,7 @@ img {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body footer .footer-wrapper .first-column button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
@@ -88,10 +88,6 @@ body header.navigation nav ul li a {
 body header.navigation nav ul li a:is(:link, :active, :visited) {
   color: #ffffff;
 }
-body header.navigation nav ul li a:hover {
-  color: #333b41;
-  background-color: #ffee2e;
-}
 body header.navigation nav ul li a:is(:link, :active, :visited).active {
   color: #f9804b;
   background-color: transparent;
@@ -101,10 +97,6 @@ body header.navigation nav ul li:last-child {
 }
 body header.navigation nav ul li:last-child a {
   margin-right: 0;
-}
-body header.navigation nav ul li:last-child a:hover {
-  background-color: transparent;
-  color: #808080;
 }
 body main section.favorite-animal-block {
   background-image: url("../../../assets/images/animals/Giant Panda.jpg");
@@ -316,4 +308,107 @@ body main section.pets-block img.plant3 {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+body footer {
+  background-color: #111115;
+  height: 443px;
+  color: #ffffff;
+}
+body footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 440px);
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  margin-left: 220px;
+}
+body footer .footer-wrapper .first-column .footer-logo {
+  width: 82px;
+  height: 52px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  padding: 2px;
+}
+body footer .footer-wrapper .first-column .footer-logo h5 {
+  font-size: 19px;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+body footer .footer-wrapper .first-column .footer-logo h5 span::before {
+  content: url("../../../assets/icons/bamboo.svg");
+  width: 7px;
+  height: 21px;
+  position: absolute;
+  left: 7px;
+  bottom: 4px;
+}
+body footer .footer-wrapper .first-column button {
+  border-radius: 5px;
+  margin-top: 68px;
+  margin-bottom: 44px;
+}
+body footer .footer-wrapper .first-column .social-media {
+  display: grid;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+body footer .footer-wrapper .first-column .social-media img {
+  margin-top: 10px;
+}
+body footer .footer-wrapper .second-column {
+  display: flex;
+  align-items: flex-end;
+}
+body footer .footer-wrapper .second-column nav {
+  margin-right: 220px;
+  flex: 2;
+}
+body footer .footer-wrapper .second-column nav ul {
+  display: flex;
+  list-style: none;
+}
+body footer .footer-wrapper .second-column nav ul li a {
+  transition: all 0.35s linear;
+  color: #ffffff;
+  font-weight: 500;
+  margin-right: 58px;
+}
+body footer .footer-wrapper .second-column nav ul li a:is(:link, :active, :visited) {
+  color: #ffffff;
+}
+body footer .footer-wrapper .second-column nav ul li a:is(:link, :active, :visited).active {
+  color: #f9804b;
+  background-color: transparent;
+}
+body footer .footer-wrapper .third-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body footer .footer-wrapper .third-column form p {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+body footer .footer-wrapper .third-column form input[type=email] {
+  border: 1px solid #f9804b;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 10px;
+}
+body footer .footer-wrapper .third-column form button.submit-btn {
+  border-radius: 5px;
+  color: #4b9200;
+  border: 1px solid #4b9200;
+  background-color: #ffffff;
+  width: 129px;
+  height: 42px;
+}
+body footer .footer-wrapper .third-column .copyrights p {
+  color: #ababab;
+}
+body footer .footer-wrapper .third-column .copyrights p:active {
+  color: #4b9200;
 }/*# sourceMappingURL=style.css.map */

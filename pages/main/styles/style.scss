@@ -3,8 +3,10 @@
 //variables
 
 $black_blue: #333b41;
+$gray_smoky: #ababab;
 $yellow: #ffee2e;
 $orange: #f9804b;
+$green: #4b9200;
 
 *,
 *::before,
@@ -131,10 +133,6 @@ body {
             &:is(:link, :active, :visited) {
               color: #ffffff;
             }
-            &:hover {
-              color: $black_blue;
-              background-color: $yellow;
-            }
             &:is(:link, :active, :visited).active {
               color: $orange;
               background-color: transparent;
@@ -145,10 +143,6 @@ body {
             margin-left: auto;
             & a {
               margin-right: 0;
-              &:hover {
-                background-color: transparent;
-                color: #808080;
-              }
             }
           }
         }
@@ -276,29 +270,28 @@ body {
           overflow: hidden;
 
           .animal-image-wrapper {
-              overflow: hidden;
+            overflow: hidden;
             img {
-                max-width: 100%;
-                width: 366px;
-                height: 366px;
-                transform-origin: center center;
-                transition: all 0.2s linear;
-    
-                &:hover {
-                  transform: scale(1.03, 1.03);
-                }
+              max-width: 100%;
+              width: 366px;
+              height: 366px;
+              transform-origin: center center;
+              transition: all 0.2s linear;
+
+              &:hover {
+                transform: scale(1.03, 1.03);
               }
+            }
           }
-    
+
           div {
             background-color: #ffffff;
             display: flex;
             justify-content: space-between;
-           
-    
+
             &.animal-card-desc {
-                display: flex;
-                flex-direction: column; 
+              display: flex;
+              flex-direction: column;
               h4 {
                 text-transform: uppercase;
               }
@@ -346,6 +339,126 @@ body {
         position: absolute;
         bottom: 0;
         right: 0;
+      }
+    }
+  }
+  //FOOTER
+  footer {
+    background-color: #111115;
+    height: 443px;
+    color: #ffffff;
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100vw - 220px * 2);
+      height: 100%;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      margin-left: 220px;
+
+      .first-column {
+        .footer-logo {
+          width: 82px;
+          height: 52px;
+          border: 1px solid #ffffff;
+          border-radius: 2px;
+          padding: 2px;
+
+          h5 {
+            font-size: 19px;
+            font-weight: 400;
+            color: #ffffff;
+            position: relative;
+            text-align: center;
+            & span::before {
+              content: url("../../../assets/icons/bamboo.svg");
+              width: 7px;
+              height: 21px;
+              position: absolute;
+              left: 7px;
+              bottom: 4px;
+            }
+          }
+        }
+        button {
+          @extend .orange-button;
+          border-radius: 5px;
+          margin-top: 68px;
+          margin-bottom: 44px;
+        }
+        .social-media {
+          display: grid;
+          margin-top: auto;
+          margin-bottom: 50px;
+
+          & img {
+            margin-top: 10px;
+          }
+        }
+      }
+      .second-column {
+        display: flex;
+        align-items: flex-end;
+        // NAVIGATION
+        nav {
+          margin-right: 220px;
+          flex: 2;
+          ul {
+            display: flex;
+            list-style: none;
+
+            li {
+              & a {
+                transition: all 0.35s linear;
+                color: #ffffff;
+                font-weight: 500;
+                margin-right: 58px;
+
+                &:is(:link, :active, :visited) {
+                  color: #ffffff;
+                }
+                &:is(:link, :active, :visited).active {
+                  color: $orange;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+      .third-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        form {
+          p {
+            font-size: 24px;
+            margin-bottom: 14px;
+          }
+          input[type="email"] {
+            border: 1px solid $orange;
+            background-color: transparent;
+            color: #ffffff;
+            padding: 10px;
+          }
+          button.submit-btn {
+            border-radius: 5px;
+            color: $green;
+            border: 1px solid $green;
+            background-color: #ffffff;
+            width: 129px;
+            height: 42px;
+          }
+        }
+        .copyrights {
+          p {
+            color: $gray_smoky;
+
+            &:active {
+              color: $green;
+            }
+          }
+        }
       }
     }
   }
