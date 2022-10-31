@@ -50,7 +50,7 @@ body {
   max-width: 100vw;
   font-family: "Roboto", sans-serif;
 
-  header {
+  header.navigation {
     width: 100%;
     height: 80px;
     background-color: #000000;
@@ -116,6 +116,10 @@ body {
             margin-left: auto;
             & a {
               margin-right: 0;
+              &:hover {
+                background-color: transparent;
+                color: #808080;
+              }
             }
           }
         }
@@ -163,6 +167,58 @@ body {
         bottom: 100px;
         right: 319px;
         cursor: pointer;
+      }
+    }
+    section.backstage-block {
+      height: 610px;
+      display: flex;
+      position: relative;
+
+      div {
+        padding-left: 220px;
+        padding-top: 140px;
+        display: grid;
+        grid-template-columns: 1fr 465px;
+        grid-gap: 87px;
+        margin-right: 20px;
+        img {
+          width: 609px;
+          height: 403px;
+        //   margin-right: 87px;
+        }
+
+        article.backstage-block-article {
+          color: $black-blue;
+        //   width: 465px;
+          header.backstage-article-header {
+            h2 {
+              font-size: 48px;
+              font-weight: 400;
+              line-height: 57.6px;
+            }
+          }
+          p.backstage-article-lead {
+            margin-top: 20px;
+            line-height: 20.8px;
+          }
+          p.backstage-article-subtitle {
+            font-size: 24px;
+            line-height: 28.8px;
+            margin-top: 54px;
+          }
+          p.backstage-article {
+            line-height: 22.4px;
+            margin-top: 34px;
+          }
+        }
+      }
+
+      img.plant1 {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        height: 605px;
+        width: 220px;
       }
     }
   }
