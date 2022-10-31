@@ -2,7 +2,9 @@
 
 //variables
 
-$Black_blue: #333b41;
+$black_blue: #333b41;
+$yellow: #ffee2e;
+$orange: #f9804b;
 
 *,
 *::before,
@@ -25,6 +27,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.orange-button {
+  width: 298px;
+  height: 54px;
+  background-image: linear-gradient(#f9804b, #fe9013);
+  border-radius: 25px;
+  border: none;
+  padding-left: 5px;
+
+  & span {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 22.4px;
+  }
 }
 
 body {
@@ -76,15 +94,21 @@ body {
 
         li {
           & a {
-            transition: color .35s linear;
+            transition: all 0.35s linear;
             color: #ffffff;
             font-weight: 500;
             margin-right: 58px;
+
             &:is(:link, :active, :visited) {
               color: #ffffff;
             }
+            &:hover {
+              color: $black_blue;
+              background-color: $yellow;
+            }
             &:is(:link, :active, :visited).active {
-              color: orange;
+              color: $orange;
+              background-color: transparent;
             }
           }
 
@@ -95,6 +119,50 @@ body {
             }
           }
         }
+      }
+    }
+  }
+  main {
+    section.favorite-animal-block {
+      background-image: url("../../../assets/images/Giant\ Panda.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      height: 780px;
+      position: relative;
+
+      .orange-circle {
+        z-index: 1;
+        width: 465px;
+        height: 465px;
+        background-color: $orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 12px;
+        right: 328px;
+      }
+
+      h2 {
+        font-size: 106px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        z-index: 2;
+        position: absolute;
+        top: 86px;
+        right: 220px;
+        line-height: 0.8;
+
+        & span {
+          color: $yellow;
+        }
+      }
+      button {
+        @extend .orange-button;
+        position: absolute;
+        bottom: 100px;
+        right: 319px;
+        cursor: pointer;
       }
     }
   }
