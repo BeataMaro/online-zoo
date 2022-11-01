@@ -207,6 +207,12 @@ body main section.pets-block .pets-wrapper article.animal-card {
 }
 body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper {
   overflow: hidden;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper:hover {
+  background-color: #333b41;
+  opacity: 0.64;
 }
 body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
   max-width: 100%;
