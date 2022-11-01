@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-.orange-button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -26,7 +26,7 @@ img {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body footer .footer-wrapper .first-column button span, body section.testimonials-block .testimonials-wrapper a button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body footer .footer-wrapper .first-column button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
@@ -308,6 +308,33 @@ body main section.pets-block img.plant3 {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+body section.pick-and-feed-a-friend {
+  height: 1000px;
+  background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
+  display: flex;
+  justify-content: center;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper {
+  margin-left: 220px;
+  margin-top: 69px;
+  padding: 41px;
+  display: grid;
+  place-items: center;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
+  color: #f9804b;
+  font-size: 48px;
+  text-align: center;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .instructions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .instructions img.arrow {
+  width: 69px;
+  height: 35px;
 }
 body section.testimonials-block {
   height: 922px;
