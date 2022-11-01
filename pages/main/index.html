@@ -1,16 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Zoo - Home</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header><nav></nav></header>
-    <main></main>
-    <footer></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script>
-</body>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="navigation">
+      <a href="#"
+        ><div class="logo">
+          <h1>PetStory <span>online</span></h1>
+        </div></a
+      >
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-item">About</a></li>
+          <li><a href="../map/" class="nav-item">Map</a></li>
+          <li><a href="../zoos/" class="nav-item">Zoos</a></li>
+          <li><a href="../donate/" class="nav-item">Donate</a></li>
+          <li><a href="../contact/" class="nav-item">Contact us</a></li>
+          <li>
+            <a
+              href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1"
+              target="_blank"
+              >Designed by &copy;</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="favorite-animal-block">
+        <div class="orange-circle"></div>
+        <h2>
+          <p>Watch</p>
+          <p>your</p>
+          <span>favorite</span>
+          <p>animal</p>
+          <p>online</p>
+        </h2>
+        <a href="#"
+          ><button type="button"><span>Watch online</span></button></a
+        >
+      </section>
+      <section class="backstage-block">
+        <div>
+          <img
+            alt="black and white portrait of the old with a moustache man wearing a bamboo cap"
+            src="../../assets/images/bamboo-cap.jpg"
+          />
+          <article class="backstage-block-article">
+            <header class="backstage-article-header">
+              <h2>The Backstage of the Wilderness World.</h2>
+            </header>
+            <p class="backstage-article-lead">
+              The site was founded on the basis of a volunteer movement to
+              protect and care for animals.
+            </p>
+            <p class="backstage-article-subtitle">How it works</p>
+            <p class="backstage-article">
+              The main goal is to help the animals, as well as the nature
+              reserves and zoos where they are kept. We are currently working on
+              video projects targeting pandas in China, eagles on an island near
+              Los Angeles, alligators in Florida and gorillas in the Congo.
+              These have a total of more than 1,500 mammals and reptiles.
+            </p>
+          </article>
+        </div>
+        <img
+          alt="colorful plant"
+          src="../../assets/images/plants/flower_foto1.png"
+          class="plant1"
+        />
+      </section>
+      <section class="pets-block">
+        <a href="#"><button type="button" class="arrow-left"></button></a>
+        <div class="pets-wrapper">
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/pandas.jpg"
+                alt="Two pandas swinging on the tire"
+              />
+            </div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Giant Pandas</h4>
+                <p>Native to Southwest China</p>
+              </div>
+              <img
+                src="../../assets/icons/banana-bamboo_icon.svg"
+                alt="banana icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/eagle.jpg"
+                alt="Flying eagle"
+              />
+            </div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Eagles</h4>
+                <p>Native to South America</p>
+              </div>
+              <img
+                src="../../assets/icons/meet-fish_icon.svg"
+                alt="meat icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/gorilla.jpg"
+                alt="Big black gorilla"
+              />
+            </div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Gorillas</h4>
+                <p>Native to Congo</p>
+              </div>
+              <img
+                src="../../assets/icons/banana-bamboo_icon.svg"
+                alt="banana icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/sloth.jpg"
+                alt="Sloth hanging on the branch."
+              />
+            </div>
+            <div class="animal-image-wrapper"></div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Sloth</h4>
+                <p>Mesoamerica, South America</p>
+              </div>
+              <img
+                src="../../assets/icons/banana-bamboo_icon.svg"
+                alt="banana icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/cheetahs.jpg"
+                alt="Mom cheetah and a little cheetah."
+              />
+            </div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Cheetahs</h4>
+                <p>Native to Africa</p>
+              </div>
+              <img
+                src="../../assets/icons/meet-fish_icon.svg"
+                alt="meat icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+          <article class="animal-card">
+            <div class="animal-image-wrapper">
+              <img
+                src="../../assets/images/animals/pinguin.jpg"
+                alt="Penguin in the ice scenery."
+              />
+            </div>
+            <div>
+              <div class="animal-card-desc">
+                <h4>Penguins</h4>
+                <p>Native to Antarctica</p>
+              </div>
+              <img
+                src="../../assets/icons/meet-fish_icon.svg"
+                alt="meat icon"
+                class="food-icon"
+              />
+            </div>
+          </article>
+        </div>
+        <a href="#"><button type="button" class="arrow-right"></button></a>
+        <img
+          src="../../assets/images/plants/palm_foto.png"
+          alt="palm"
+          class="plant2"
+        />
+        <a href="#"
+          ><button type="button" class="pets-button">
+            <span>Choose your favorite</span>
+          </button></a
+        >
+        <img
+          src="../../assets/images/plants/strelitzia 1.png"
+          alt="strelitzia plant"
+          class="plant3"
+        />
+      </section>
+      <section class="pick-and-feed-a-friend">
+        <div class="salomon-wrapper">
+          <h3 class="orange-header">Pick and feed a friend</h3>
+          <p>
+            We know the animals bring you joy, and in these extraordinary times,
+            we’re glad.
+          </p>
+          <strong
+            >During a time when the COVID-19 epidemic is touching all of our
+            lives, we’re proud and glad that people around the world find joy in
+            PetStory.</strong
+          >
+          <p>
+            Even though the zoo has reopened, we need you now more than ever to
+            help us deal with these problems. Please consider a gift to our
+            <a href="../donate/">Emergency Support Fund </a>.
+          </p>
+          <h3>How it works</h3>
+          <div class="instructions">
+            <img
+              src="../../assets/icons/widjet3.png"
+              alt="card paid icon"
+            /><img src="../../assets/icons/Vector.png" alt="arrow right" class="arrow" /><img
+              src="../../assets/icons/widjet3 (1).png"
+              alt="eco friendly icon"
+            /><img src="../../assets/icons/Vector.png" alt="arrow right" class="arrow" /><img
+              src="../../assets/icons/widjet3 (2).png"
+              alt=""
+            />
+          </div>
+          <a href="#"
+            ><button type="button"><span>Feed a friend now</span></button></a
+          >
+        </div>
+      </section>
+      <section class="testimonials-block">
+        <h3>Testimonials</h3>
+        <div class="testimonials-wrapper">
+          <div class="testimonials-articles">
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+          </div>
+          <input type="range" value="0" name="progressBar" /><img
+            src="../../assets/images/plants/leav_foto.png"
+            alt="monstera leav"
+            class="plant4"
+          />
+          <a href="#"
+            ><button type="button"><span>Leave feedback</span></button></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="first-column">
+          <a href="#"
+            ><div class="footer-logo">
+              <h5>PetStory <span>online</span></h5>
+            </div></a
+          ><a href="../donate/"
+            ><button type="button">
+              <span>Donate for volunteers</span>
+            </button></a
+          >
+          <div class="social-media">
+            <a href="https://www.facebook.com"
+              ><img src="" alt="" /><img
+                src="../../assets/icons/logos/facebook.svg"
+                alt="facebook logo"
+            /></a>
+            <a href="https://www.twitter.com"
+              ><img
+                src="../../assets/icons/logos/twitter.svg"
+                alt="twitter logo"
+              />
+            </a>
+            <a href="https://www.instagram.com"
+              ><img
+                src="../../assets/icons/logos/instagram.svg"
+                alt="instagram logo"
+            /></a>
+            <a href="https://www.youtube.com"
+              ><img
+                src="../../assets/icons/logos/youtube.svg"
+                alt="youtube logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="second-column">
+          <nav>
+            <ul>
+              <li><a href="#" class="nav-item">About</a></li>
+              <li><a href="../map/" class="nav-item">Map</a></li>
+              <li><a href="../zoos/" class="nav-item">Zoos</a></li>
+              <li><a href="../donate/" class="nav-item">Donate</a></li>
+              <li><a href="../contact/" class="nav-item">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="third-column">
+          <div class="newsletter">
+            <form action="POST">
+              <label
+                ><p>Subscribe to our news</p>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email"
+              /></label>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+          <div class="copyrights">
+            <p>Designed by <strong>Alisa Samborskaya</strong></p>
+            <p>©RSSchool & ©Yem Digital 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/css"
+      src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    ></script>
+  </body>
 </html>
