@@ -17,7 +17,7 @@ img {
   max-width: 100%;
 }
 
-.orange-button, body footer .footer-wrapper .first-column button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -26,7 +26,7 @@ img {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body footer .footer-wrapper .first-column button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body footer .footer-wrapper .first-column button span, body section.testimonials-block .testimonials-wrapper a button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
@@ -308,6 +308,60 @@ body main section.pets-block img.plant3 {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+body section.testimonials-block {
+  height: 922px;
+  position: relative;
+}
+body section.testimonials-block h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 47px;
+}
+body section.testimonials-block .testimonials-wrapper {
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section.testimonials-block .testimonials-wrapper input[type=range] {
+  margin-top: 21px;
+  overflow: hidden;
+  width: 599px;
+  height: 8px;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles {
+  display: flex;
+  gap: 30px;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+  width: 268px;
+  height: 351px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 5px;
+}
+body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit-slider-thumb {
+  width: 115px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: ew-resize;
+  border-radius: 5px;
+  background-color: #f9804b;
+}
+body section.testimonials-block .testimonials-wrapper a button {
+  margin-top: 31px;
+  align-self: flex-start;
+  margin-right: auto;
+}
+body section.testimonials-block img.plant4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 body footer {
   background-color: #111115;
