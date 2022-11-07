@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap");
 
 //variables
 
@@ -38,7 +38,6 @@ img {
   color: white;
   border-radius: 50%;
   border: none;
-  position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in;
 
@@ -50,10 +49,6 @@ img {
     content: $direction;
     width: 16px;
     height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -230,6 +225,7 @@ body {
           p.backstage-article {
             line-height: 22.4px;
             margin-top: 34px;
+            font-weight: 400;
           }
         }
       }
@@ -251,7 +247,6 @@ body {
       justify-content: center;
 
       .pets-wrapper {
-        margin-left: 220px;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -261,7 +256,40 @@ body {
         article.animal-card {
           width: 366px;
           height: 426px;
-          border: 1px solid $orange;
+          //https://unused-css.com/tools/border-gradient-generator?p=12Ymc9dCNmZmZmZmYsMSw1LDAscHgsMTtsKDIwMWRlZywjZmE2ZjMyIDAlLCNmZTkwMTMgMTAwJSk
+          background: radial-gradient(
+                circle at 100% 100%,
+                #ffffff 0,
+                #ffffff 4px,
+                transparent 4px
+              )
+              0% 0%/5px 5px no-repeat,
+            radial-gradient(
+                circle at 0 100%,
+                #ffffff 0,
+                #ffffff 4px,
+                transparent 4px
+              )
+              100% 0%/5px 5px no-repeat,
+            radial-gradient(
+                circle at 100% 0,
+                #ffffff 0,
+                #ffffff 4px,
+                transparent 4px
+              )
+              0% 100%/5px 5px no-repeat,
+            radial-gradient(
+                circle at 0 0,
+                #ffffff 0,
+                #ffffff 4px,
+                transparent 4px
+              )
+              100% 100%/5px 5px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+              calc(100% - 10px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
+              calc(100% - 2px) no-repeat,
+            linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
           border-radius: 5px;
           transition: all 2s linear;
           cursor: pointer;
@@ -269,12 +297,12 @@ body {
 
           .animal-image-wrapper {
             overflow: hidden;
-            transition: all .2s linear;
+            transition: all 0.2s linear;
             cursor: pointer;
-            
+
             &:hover {
-                background-color: $black_blue;
-                opacity: .64;
+              background-color: $black_blue;
+              opacity: 0.64;
             }
             img {
               max-width: 100%;
@@ -290,15 +318,16 @@ body {
           }
 
           div {
-            background-color: #ffffff;
             display: flex;
             justify-content: space-between;
 
             &.animal-card-desc {
               display: flex;
               flex-direction: column;
+              padding: 12px 16px;
               h4 {
                 text-transform: uppercase;
+                font-weight: 500;
               }
               p {
                 font-weight: 300;
@@ -307,6 +336,8 @@ body {
             img.food-icon {
               width: 48px;
               height: 38px;
+              align-self: center;
+              margin-right: 12px;
             }
           }
         }
@@ -314,13 +345,13 @@ body {
       button.arrow-left {
         @include arrow-button("\27F5");
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 138px;
       }
       button.arrow-right {
         @include arrow-button("\27F6");
         position: absolute;
-        top: 50%;
+        top: 35%;
         right: 140px;
       }
       button.pets-button {
@@ -355,28 +386,55 @@ body {
     justify-content: center;
 
     .salomon-wrapper {
-      margin-left: 220px;
+      @extend %d-flex;
+      flex-direction: column;
+      width: 1160px;
+      height: 835px;
+      background: rgba(253, 253, 255, 0.52);
+      backdrop-filter: blur(2px);
       margin-top: 69px;
-      padding: 41px;
-      display: grid;
-      place-items: center;
+      color: #333b41;
+
       h3.orange-header {
-        color: $orange;
+        color: #fe9013;
         font-size: 48px;
-        text-align: center;
+        font-weight: 400;
+        margin-bottom: 30px;
       }
+      .pick-and-feed-text {
+        margin-left: 99px;
+
+        & p.lead {
+          font-size: 24px;
+          margin-bottom: 40px;
+        }
+
+        & strong {
+          font-weight: 500;
+          line-height: 3;
+        }
+      }
+      h3 {
+        font-size: 36px;
+        font-weight: 400;
+        margin: 60px 0 40px 0;
+      }
+
       .instructions {
         display: flex;
         justify-content: space-around;
         align-items: center;
 
         & img.arrow {
-            width: 69px;
-            height: 35px;
+          width: 69px;
+          height: 35px;
+          margin: 0 30px 75px;
         }
       }
+
       button {
         @extend .orange-button;
+        margin: 60px 0;
       }
     }
   }
@@ -384,24 +442,30 @@ body {
   section.testimonials-block {
     height: 922px;
     position: relative;
-
-    h3 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 47px;
-    }
+    padding: 140px 0;
+    display: flex;
+    justify-content: center;
 
     .testimonials-wrapper {
-      margin-left: 220px;
+      width: 1160px;
+      height: 575px;
+      margin: 0 220px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      h3 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 47px;
+        font-weight: 400;
+      }
+
       input[type="range"] {
         margin-top: 21px;
-        overflow: hidden;
         width: 599px;
         height: 8px;
+        appearance: none;
         -webkit-appearance: none;
         background-color: #ffffff;
         border: 1px solid orange;
@@ -413,26 +477,101 @@ body {
         gap: 30px;
         article {
           width: 268px;
-          height: 351px;
-          border: 1px solid orange;
+          height: 391px;
           border-radius: 5px;
           padding: 5px;
+          overflow: hidden;
+
+          // https://unused-css.com/tools/border-gradient-generator?p=22EYcwvALgxAZn8BoBMyAMCCMA2BAHAHpgNwA2AFAMxIAcAJgKYgKwUCGAnDNQARZYCkzGPWC1WwbgHYALIKj1WMScO4ZUqOfVS1qMVKvX8AlEA
+
+          background: radial-gradient(
+                circle at 100% 100%,
+                #ffffff 0,
+                #ffffff 18px,
+                transparent 18px
+              )
+              0% 0%/20px 20px no-repeat,
+            radial-gradient(
+                circle at 0 100%,
+                #ffffff 0,
+                #ffffff 18px,
+                transparent 18px
+              )
+              100% 0%/20px 20px no-repeat,
+            radial-gradient(
+                circle at 100% 0,
+                #ffffff 0,
+                #ffffff 18px,
+                transparent 18px
+              )
+              0% 100%/20px 20px no-repeat,
+            radial-gradient(
+                circle at 0 0,
+                #ffffff 0,
+                #ffffff 18px,
+                transparent 18px
+              )
+              100% 100%/20px 20px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
+              calc(100% - 40px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 40px)
+              calc(100% - 4px) no-repeat,
+            linear-gradient(
+              328deg,
+              #f3a9f8 66%,
+              #febdab 74%,
+              #eaf7fe 100%,
+              #e0d8f0 100%
+            );
+          border-radius: 20px;
+          padding: 16px;
+
+          .testimonials-articles_header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            img {
+              width: 37px;
+              height: 37px;
+            }
+            div {
+              display: block;
+              h4 {
+                font-weight: 400;
+              }
+              span {
+                font-weight: 300;
+                color: #bdbdbd;
+                font-size: 15px;
+                line-height: 120%;
+              }
+            }
+          }
+          p {
+            font-weight: 300;
+            font-size: 15px;
+          }
         }
       }
 
       input[type="range"]::-webkit-slider-thumb {
         width: 115px;
+        appearance: none;
         -webkit-appearance: none;
         height: 10px;
         cursor: ew-resize;
         border-radius: 5px;
         background-color: $orange;
       }
-      a button {
-        @extend .orange-button;
-        margin-top: 31px;
+      a {
         align-self: flex-start;
-        margin-right: auto;
+        & button {
+          @extend .orange-button;
+          border-radius: 6px;
+          margin-top: 31px;
+          margin-right: auto;
+        }
       }
     }
 
@@ -488,11 +627,12 @@ body {
         }
         .social-media {
           display: grid;
-          margin-top: auto;
-          margin-bottom: 50px;
 
           & img {
-            margin-top: 10px;
+            margin-top: 7px;
+            &.first-social {
+              margin-top: 0;
+            }
           }
         }
       }
@@ -503,6 +643,7 @@ body {
         nav {
           margin-right: 220px;
           flex: 2;
+          margin-right: 58px;
           ul {
             display: flex;
             list-style: none;
@@ -522,6 +663,9 @@ body {
                   background-color: transparent;
                 }
               }
+              & a.last-item {
+                margin-right: 0;
+              }
             }
           }
         }
@@ -531,32 +675,40 @@ body {
         flex-direction: column;
         justify-content: space-between;
         form {
-          p {
-            font-size: 24px;
-            margin-bottom: 14px;
-          }
-          input[type="email"] {
-            border: 1px solid $orange;
-            background-color: transparent;
-            color: #ffffff;
-            padding: 10px;
-          }
-          button.submit-btn {
-            border-radius: 5px;
-            color: $green;
-            border: 1px solid $green;
-            background-color: #ffffff;
-            width: 129px;
-            height: 42px;
+          fieldset {
+            border: none;
+            p {
+              font-size: 24px;
+              margin-bottom: 14px;
+            }
+            input[type="email"] {
+              border: 1px solid $orange;
+              background-color: transparent;
+              color: #ffffff;
+              padding: 10px;
+            }
+            button.submit-btn {
+              border-radius: 5px;
+              color: $green;
+              border: 1px solid $green;
+              background-color: #ffffff;
+              width: 129px;
+              height: 42px;
+            }
           }
         }
         .copyrights {
+          text-align: right;
           p {
             color: $gray_smoky;
+            font-weight: 100;
 
             &:active {
               color: $green;
             }
+          }
+          strong {
+            font-weight: 100;
           }
         }
       }

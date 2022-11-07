@@ -1,37 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoo online - Donate</title>
     <link rel="stylesheet" href="../main/styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <script src="../main/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="navigation">
-        <a href="../main/"
-          ><div class="logo">
-            <h1>PetStory <span>online</span></h1>
-          </div></a
+      <a href="../main/"
+        ><div class="logo">
+          <h1>PetStory <span>online</span></h1>
+        </div></a
+      >
+      <nav>
+        <ul>
+          <li><a href="../main/" class="nav-item">About</a></li>
+          <li><a href="../map/" class="nav-item">Map</a></li>
+          <li><a href="../zoos/" class="nav-item">Zoos</a></li>
+          <li><a href="#" class="nav-item">Donate</a></li>
+          <li><a href="../contact/" class="nav-item">Contact us</a></li>
+          <li>
+            <a
+              href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1"
+              target="_blank"
+              >Designed by &copy;</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="hero-banner"></aside>
+    <section class="donate-section">
+      <div class="donate-section-text">
+        <h3 class="donate-header">
+          THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!
+        </h3>
+        <p>
+          Even though the Zoo has been able to reopen, we are at a greatly
+          reduced capacity with educational programs and public and private
+          events cancelled or postponed for additional months. We need you now
+          more than ever to help ensure that we overcome these challenges. We
+          have been actively raising funds in the community, and we are grateful
+          for the generosity. But much more support is still needed, and we need
+          your help! Please consider a gift today – no matter what size – to
+          help us sustain our mission.
+        </p>
+        <h3 class="orange-header">Donation Information</h3>
+      </div>
+      <div class="salomon-square">
+        <h2 class="orange-header">Pick and feed a friend</h2>
+        <span class="lead"
+          >We know the animals bring you joy, and in these extraordinary times,
+          we’re glad.</span
         >
-        <nav>
-          <ul>
-            <li><a href="../main/" class="nav-item">About</a></li>
-            <li><a href="../map/" class="nav-item">Map</a></li>
-            <li><a href="../zoos/" class="nav-item">Zoos</a></li>
-            <li><a href="#" class="nav-item">Donate</a></li>
-            <li><a href="../contact/" class="nav-item">Contact us</a></li>
-            <li>
-              <a
-                href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1"
-                target="_blank"
-                >Designed by &copy;</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
-    <h2>Donate page</h2>
-</body>
+        <div class="panda-diet">
+          <div class="amount">
+            <strong>4</strong
+            ><img
+              class="x-icon"
+              src="../../assets/icons/x_icon.png"
+              alt="x icon"
+            />
+            <span>Panda diet for the day.</span>
+          </div>
+          <div class="panda">
+            <img
+              src="../../assets/icons/panda_widget1.png"
+              alt="panda walking to west"
+            />
+          </div>
+        </div>
+
+        <form action="" method="POST">
+          <fieldset class="donation-radio">
+            <legend>Amount</legend>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="5000"
+                id="donation-5000"
+              />
+              <label for="donation-5000">$5000</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="2000"
+                id="donation-2000"
+              />
+              <label for="donation-2000">$2000</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="1000"
+                checked
+                id="donation-1000"
+              />
+              <label for="donation-1000">$1000</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="500"
+                id="donation-500"
+              />
+              <label for="donation-500">$500</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="250"
+                id="donation-250"
+              />
+              <label for="donation-250">$250</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="100"
+                id="donation-100"
+              />
+              <label for="donation-100">$100</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="50"
+                id="donation-50"
+              />
+              <label for="donation-50">$50</label>
+            </div>
+            <div class="wrapper">
+              <input
+                type="radio"
+                name="donation-radio"
+                value="25"
+                id="donation-25"
+              />
+              <label for="donation-25">$25</label>
+            </div>
+          </fieldset>
+          <fieldset class="amount">
+            <span for="amount" class="dollar-icon">
+              <input
+                type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="4"
+                placeholder="Another amount"
+                id="amount"
+              />
+            </span>
+          </fieldset>
+          <fieldset class="radio-frequency">
+            <input
+              type="radio"
+              name="frequency"
+              value="monthly"
+              class="custom-radio"
+              id="monthly"
+            />
+            <label for="monthly">Monthly</label>
+
+            <input
+              type="radio"
+              name="frequency"
+              value="once"
+              class="custom-radio"
+              id="once"
+              checked
+            />
+            <label for="once">Once</label>
+          </fieldset>
+        </form>
+        <a href="#"
+          ><button type="button"><span>Feed a friend now</span></button></a
+        >
+        <span>Share with your friends on social networks.</span>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="first-column">
+          <a href="#"
+            ><div class="footer-logo">
+              <h5>PetStory <span>online</span></h5>
+            </div></a
+          ><a href="../donate/"
+            ><button type="button">
+              <span>Donate for volunteers</span>
+            </button></a
+          >
+          <div class="social-media">
+            <a href="https://www.facebook.com"
+              ><img
+                class="first-social"
+                src="../../assets/icons/logos/facebook.svg"
+                alt="facebook logo"
+            /></a>
+            <a href="https://www.twitter.com"
+              ><img
+                src="../../assets/icons/logos/twitter.svg"
+                alt="twitter logo"
+              />
+            </a>
+            <a href="https://www.instagram.com"
+              ><img
+                src="../../assets/icons/logos/instagram.svg"
+                alt="instagram logo"
+            /></a>
+            <a href="https://www.youtube.com"
+              ><img
+                src="../../assets/icons/logos/youtube.svg"
+                alt="youtube logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="second-column">
+          <nav>
+            <ul>
+              <li><a href="#" class="nav-item">About</a></li>
+              <li><a href="../map/" class="nav-item">Map</a></li>
+              <li><a href="../zoos/" class="nav-item">Zoos</a></li>
+              <li><a href="../donate/" class="nav-item">Donate</a></li>
+              <li>
+                <a href="../contact/" class="nav-item last-item">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="third-column">
+          <div class="newsletter">
+            <form action="POST">
+              <fieldset>
+                <label
+                  ><p>Subscribe to our news</p>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+                /></label>
+                <button type="submit" class="submit-btn">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="copyrights">
+            <p>Designed by <strong>Alisa Samborskaya</strong></p>
+            <p>©RSSchool & ©Yem Digital 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/css"
+      src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    ></script>
+  </body>
 </html>
