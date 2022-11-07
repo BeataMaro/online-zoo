@@ -23,7 +23,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
-.orange-button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, section.donate-section .salomon-square button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -32,7 +32,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body footer .footer-wrapper .first-column button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, section.donate-section .salomon-square button span, body footer .footer-wrapper .first-column button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
@@ -575,4 +575,199 @@ body footer .footer-wrapper .third-column .copyrights p:active {
 }
 body footer .footer-wrapper .third-column .copyrights strong {
   font-weight: 100;
+}
+
+aside.hero-banner {
+  width: 100vw;
+  height: 390px;
+  background-image: url("../../../assets/images/animals/Giant Panda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.donate-section {
+  width: 100vw;
+  background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 220px;
+}
+section.donate-section .donate-section-text {
+  color: white;
+}
+section.donate-section .donate-section-text h3.donate-header {
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+section.donate-section .donate-section-text p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 22.4px;
+}
+section.donate-section .donate-section-text h3.orange-header {
+  font-size: 36px;
+  font-weight: 400;
+  color: #f9804b;
+  margin-bottom: 60px;
+}
+section.donate-section .salomon-square {
+  width: 1160px;
+  height: 964px;
+  background: rgba(253, 253, 255, 0.52);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 40px 92px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section.donate-section .salomon-square h2.orange-header {
+  font-size: 48px;
+  color: #f9804b;
+  text-align: center;
+  font-weight: 400;
+}
+section.donate-section .salomon-square span.lead {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333b41;
+  margin-top: 20px;
+}
+section.donate-section .salomon-square div.panda-diet {
+  display: flex;
+  gap: 78px;
+  margin-top: 60px;
+  margin-bottom: 48px;
+}
+section.donate-section .salomon-square div.panda-diet .amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+section.donate-section .salomon-square div.panda-diet .amount strong {
+  font-size: 72px;
+  text-align: center;
+}
+section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  right: -14px;
+}
+section.donate-section .salomon-square div.panda-diet .amount span {
+  color: #333b41;
+  font-size: 14px;
+}
+section.donate-section .salomon-square div.panda-diet .panda img {
+  width: 284px;
+  height: 246px;
+}
+section.donate-section .salomon-square form fieldset.donation-radio {
+  width: 976px;
+  height: 40px;
+  background-color: #333b41;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.donate-section .salomon-square form fieldset.donation-radio .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.donate-section .salomon-square form fieldset.donation-radio .wrapper label {
+  color: #f9804b;
+  display: block;
+  text-align: center;
+  font-size: 36px;
+}
+section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #ffee2e;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked {
+  outline-offset: 6px;
+  outline: 2px solid #f9804b;
+}
+section.donate-section .salomon-square form span.dollar-icon {
+  position: relative;
+  display: inline-block;
+}
+section.donate-section .salomon-square form span.dollar-icon::after {
+  content: url("../../../assets/icons/dollar.png");
+  right: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 10px;
+  height: 20px;
+}
+section.donate-section .salomon-square form span.dollar-icon input[type=number] {
+  width: 268px;
+  height: 54px;
+  padding: 16px;
+  border: 2px solid #929699;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+section.donate-section .salomon-square form fieldset {
+  border: 0;
+  display: flex;
+  gap: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+section.donate-section .salomon-square form fieldset label {
+  cursor: pointer;
+  margin-left: -40px;
+}
+section.donate-section .salomon-square form fieldset input.custom-radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #f9804b;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+section.donate-section .salomon-square form fieldset input.custom-radio:checked {
+  background-color: #f9804b;
+}
+section.donate-section .salomon-square button {
+  margin: 30px 0;
+}
+section.donate-section .salomon-square button span {
+  font-size: 16px;
+}
+section.donate-section .salomon-square span {
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
