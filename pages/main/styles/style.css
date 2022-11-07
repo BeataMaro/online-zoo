@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap");
 *,
 *::before,
 *::after {
@@ -173,6 +173,7 @@ body main section.backstage-block div article.backstage-block-article p.backstag
 body main section.backstage-block div article.backstage-block-article p.backstage-article {
   line-height: 22.4px;
   margin-top: 34px;
+  font-weight: 400;
 }
 body main section.backstage-block img.plant1 {
   position: absolute;
@@ -189,7 +190,6 @@ body main section.pets-block {
   justify-content: center;
 }
 body main section.pets-block .pets-wrapper {
-  margin-left: 220px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -199,7 +199,7 @@ body main section.pets-block .pets-wrapper {
 body main section.pets-block .pets-wrapper article.animal-card {
   width: 366px;
   height: 426px;
-  border: 1px solid #f9804b;
+  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 4px, transparent 4px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 4px, transparent 4px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 4px, transparent 4px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 4px, transparent 4px) 100% 100%/5px 5px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 10px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 2px) no-repeat, linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
   border-radius: 5px;
   transition: all 2s linear;
   cursor: pointer;
@@ -225,16 +225,17 @@ body main section.pets-block .pets-wrapper article.animal-card .animal-image-wra
   transform: scale(1.03, 1.03);
 }
 body main section.pets-block .pets-wrapper article.animal-card div {
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
 }
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc {
   display: flex;
   flex-direction: column;
+  padding: 12px 16px;
 }
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc h4 {
   text-transform: uppercase;
+  font-weight: 500;
 }
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc p {
   font-weight: 300;
@@ -242,6 +243,8 @@ body main section.pets-block .pets-wrapper article.animal-card div.animal-card-d
 body main section.pets-block .pets-wrapper article.animal-card div img.food-icon {
   width: 48px;
   height: 38px;
+  align-self: center;
+  margin-right: 12px;
 }
 body main section.pets-block button.arrow-left {
   width: 62px;
@@ -250,11 +253,10 @@ body main section.pets-block button.arrow-left {
   color: white;
   border-radius: 50%;
   border: none;
-  position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 138px;
 }
 body main section.pets-block button.arrow-left:hover {
@@ -264,10 +266,6 @@ body main section.pets-block button.arrow-left::after {
   content: "⟵";
   width: 16px;
   height: 8px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 body main section.pets-block button.arrow-right {
   width: 62px;
@@ -276,11 +274,10 @@ body main section.pets-block button.arrow-right {
   color: white;
   border-radius: 50%;
   border: none;
-  position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in;
   position: absolute;
-  top: 50%;
+  top: 35%;
   right: 140px;
 }
 body main section.pets-block button.arrow-right:hover {
@@ -290,10 +287,6 @@ body main section.pets-block button.arrow-right::after {
   content: "⟶";
   width: 16px;
   height: 8px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 body main section.pets-block button.pets-button {
   position: absolute;
@@ -345,23 +338,30 @@ body section.pick-and-feed-a-friend .salomon-wrapper .instructions img.arrow {
 body section.testimonials-block {
   height: 922px;
   position: relative;
-}
-body section.testimonials-block h3 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 47px;
+  padding: 140px 0;
+  display: flex;
+  justify-content: center;
 }
 body section.testimonials-block .testimonials-wrapper {
-  margin-left: 220px;
+  width: 1160px;
+  height: 575px;
+  margin: 0 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+body section.testimonials-block .testimonials-wrapper h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 47px;
+  font-weight: 400;
+}
 body section.testimonials-block .testimonials-wrapper input[type=range] {
   margin-top: 21px;
-  overflow: hidden;
   width: 599px;
   height: 8px;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   background-color: #ffffff;
   border: 1px solid orange;
@@ -373,13 +373,43 @@ body section.testimonials-block .testimonials-wrapper .testimonials-articles {
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
   width: 268px;
-  height: 351px;
+  height: 391px;
   border: 1px solid orange;
   border-radius: 5px;
   padding: 5px;
+  overflow: hidden;
+  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
+  border-radius: 20px;
+  padding: 16px;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header img {
+  width: 37px;
+  height: 37px;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div {
+  display: block;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div h4 {
+  font-weight: 400;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div span {
+  font-weight: 300;
+  color: #bdbdbd;
+  font-size: 15px;
+  line-height: 120%;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article p {
+  font-weight: 300;
+  font-size: 15px;
 }
 body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit-slider-thumb {
   width: 115px;
+  appearance: none;
   -webkit-appearance: none;
   height: 10px;
   cursor: ew-resize;
@@ -387,6 +417,7 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
   background-color: #f9804b;
 }
 body section.testimonials-block .testimonials-wrapper a button {
+  border-radius: 6px;
   margin-top: 31px;
   align-self: flex-start;
   margin-right: auto;
@@ -439,11 +470,12 @@ body footer .footer-wrapper .first-column button {
 }
 body footer .footer-wrapper .first-column .social-media {
   display: grid;
-  margin-top: auto;
-  margin-bottom: 50px;
 }
 body footer .footer-wrapper .first-column .social-media img {
-  margin-top: 10px;
+  margin-top: 7px;
+}
+body footer .footer-wrapper .first-column .social-media img.first-social {
+  margin-top: 0;
 }
 body footer .footer-wrapper .second-column {
   display: flex;
@@ -452,6 +484,7 @@ body footer .footer-wrapper .second-column {
 body footer .footer-wrapper .second-column nav {
   margin-right: 220px;
   flex: 2;
+  margin-right: 58px;
 }
 body footer .footer-wrapper .second-column nav ul {
   display: flex;
@@ -470,22 +503,28 @@ body footer .footer-wrapper .second-column nav ul li a:is(:link, :active, :visit
   color: #f9804b;
   background-color: transparent;
 }
+body footer .footer-wrapper .second-column nav ul li a.last-item {
+  margin-right: 0;
+}
 body footer .footer-wrapper .third-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-body footer .footer-wrapper .third-column form p {
+body footer .footer-wrapper .third-column form fieldset {
+  border: none;
+}
+body footer .footer-wrapper .third-column form fieldset p {
   font-size: 24px;
   margin-bottom: 14px;
 }
-body footer .footer-wrapper .third-column form input[type=email] {
+body footer .footer-wrapper .third-column form fieldset input[type=email] {
   border: 1px solid #f9804b;
   background-color: transparent;
   color: #ffffff;
   padding: 10px;
 }
-body footer .footer-wrapper .third-column form button.submit-btn {
+body footer .footer-wrapper .third-column form fieldset button.submit-btn {
   border-radius: 5px;
   color: #4b9200;
   border: 1px solid #4b9200;
@@ -493,9 +532,16 @@ body footer .footer-wrapper .third-column form button.submit-btn {
   width: 129px;
   height: 42px;
 }
+body footer .footer-wrapper .third-column .copyrights {
+  text-align: right;
+}
 body footer .footer-wrapper .third-column .copyrights p {
   color: #ababab;
+  font-weight: 100;
 }
 body footer .footer-wrapper .third-column .copyrights p:active {
   color: #4b9200;
+}
+body footer .footer-wrapper .third-column .copyrights strong {
+  font-weight: 100;
 }/*# sourceMappingURL=style.css.map */
