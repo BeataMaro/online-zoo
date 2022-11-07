@@ -5,7 +5,7 @@
 $black_blue: #333b41;
 $gray_smoky: #ababab;
 $yellow: #ffee2e;
-$orange: #f9804b;
+$orange: #f9804b; 
 $green: #4b9200;
 
 *,
@@ -386,15 +386,36 @@ body {
     justify-content: center;
 
     .salomon-wrapper {
-      margin-left: 220px;
+      @extend %d-flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 1160px;
+      height: 835px;
+      background: rgba(253, 253, 255, 0.52);
+      backdrop-filter: blur(2px);
       margin-top: 69px;
-      padding: 41px;
-      display: grid;
-      place-items: center;
+      padding: 41px 99px;
+      color: #333b41;
+
       h3.orange-header {
-        color: $orange;
+        color: #FE9013;
         font-size: 48px;
-        text-align: center;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: 36px;
+        font-weight: 400;
+      }
+
+      p.lead {
+        font-size: 24px;
+        align-self: flex-start;
+      }
+
+      strong {
+        font-weight: 500;
+        align-self: flex-start;
       }
       .instructions {
         display: flex;
@@ -404,6 +425,7 @@ body {
         & img.arrow {
           width: 69px;
           height: 35px;
+          margin: 0 30px 75px;
         }
       }
       button {
@@ -455,7 +477,6 @@ body {
           border-radius: 5px;
           padding: 5px;
           overflow: hidden;
-
 
           // https://unused-css.com/tools/border-gradient-generator?p=22EYcwvALgxAZn8BoBMyAMCCMA2BAHAHpgNwA2AFAMxIAcAJgKYgKwUCGAnDNQARZYCkzGPWC1WwbgHYALIKj1WMScO4ZUqOfVS1qMVKvX8AlEA
 
@@ -539,12 +560,14 @@ body {
         border-radius: 5px;
         background-color: $orange;
       }
-      a button {
-        @extend .orange-button;
-        border-radius: 6px;
-        margin-top: 31px;
+      a {
         align-self: flex-start;
-        margin-right: auto;
+        & button {
+          @extend .orange-button;
+          border-radius: 6px;
+          margin-top: 31px;
+          margin-right: auto;
+        }
       }
     }
 

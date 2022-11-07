@@ -17,6 +17,12 @@ img {
   max-width: 100%;
 }
 
+body section.pick-and-feed-a-friend .salomon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .orange-button, body footer .footer-wrapper .first-column button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
@@ -315,16 +321,33 @@ body section.pick-and-feed-a-friend {
   justify-content: center;
 }
 body section.pick-and-feed-a-friend .salomon-wrapper {
-  margin-left: 220px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 1160px;
+  height: 835px;
+  background: rgba(253, 253, 255, 0.52);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   margin-top: 69px;
-  padding: 41px;
-  display: grid;
-  place-items: center;
+  padding: 41px 99px;
+  color: #333b41;
 }
 body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
-  color: #f9804b;
+  color: #FE9013;
   font-size: 48px;
-  text-align: center;
+  font-weight: 400;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper h3 {
+  font-size: 36px;
+  font-weight: 400;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper p.lead {
+  font-size: 24px;
+  align-self: flex-start;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper strong {
+  font-weight: 500;
+  align-self: flex-start;
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .instructions {
   display: flex;
@@ -334,6 +357,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper .instructions {
 body section.pick-and-feed-a-friend .salomon-wrapper .instructions img.arrow {
   width: 69px;
   height: 35px;
+  margin: 0 30px 75px;
 }
 body section.testimonials-block {
   height: 922px;
@@ -416,10 +440,12 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
   border-radius: 5px;
   background-color: #f9804b;
 }
+body section.testimonials-block .testimonials-wrapper a {
+  align-self: flex-start;
+}
 body section.testimonials-block .testimonials-wrapper a button {
   border-radius: 6px;
   margin-top: 31px;
-  align-self: flex-start;
   margin-right: auto;
 }
 body section.testimonials-block img.plant4 {
