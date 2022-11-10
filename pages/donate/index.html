@@ -76,8 +76,8 @@
         </div>
 
         <form action="" method="POST">
+          <legend>Amount</legend>
           <fieldset class="donation-radio">
-            <legend>Amount</legend>
             <div class="wrapper">
               <input
                 type="radio"
@@ -163,25 +163,28 @@
               />
             </span>
           </fieldset>
-          <fieldset class="radio-frequency">
-            <input
-              type="radio"
-              name="frequency"
-              value="monthly"
-              class="custom-radio"
-              id="monthly"
-            />
-            <label for="monthly">Monthly</label>
-
-            <input
-              type="radio"
-              name="frequency"
-              value="once"
-              class="custom-radio"
-              id="once"
-              checked
-            />
-            <label for="once">Once</label>
+          <fieldset>
+            <div class="radio-frequency">
+              <input
+                type="radio"
+                name="frequency"
+                value="monthly"
+                class="custom-radio"
+                id="monthly"
+              />
+              <label for="monthly" class="label-small">Monthly</label>
+            </div>
+            <div class="radio-frequency">
+              <input
+                type="radio"
+                name="frequency"
+                value="once"
+                class="custom-radio"
+                id="once"
+                checked
+              />
+              <label for="once" class="label-small">Once</label>
+            </div>
           </fieldset>
         </form>
         <a href="#"
