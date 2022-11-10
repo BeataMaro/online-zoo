@@ -67,6 +67,13 @@ img {
     font-weight: 500;
     line-height: 22.4px;
   }
+
+  &:hover {
+    background-image: linear-gradient(#e47209, #e47209);
+  }
+  &:active {
+    background-image: linear-gradient(#4b9200, #4b9200);
+  }
 }
 
 body {
@@ -630,6 +637,11 @@ body {
 
           & img {
             margin-top: 7px;
+            &:active {
+              color: #4b9200;
+              background-color: #4B9200;;
+            }
+
             &.first-social {
               margin-top: 0;
             }
@@ -641,9 +653,7 @@ body {
         align-items: flex-end;
         // NAVIGATION
         nav {
-          margin-right: 220px;
           flex: 2;
-          margin-right: 58px;
           ul {
             display: flex;
             list-style: none;
@@ -663,8 +673,11 @@ body {
                   background-color: transparent;
                 }
               }
-              & a.last-item {
-                margin-right: 0;
+              &:last-child {
+                margin-left: auto;
+                & a.last-item {
+                  margin-right: 0;
+                }
               }
             }
           }
@@ -674,6 +687,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         form {
           fieldset {
             border: none;

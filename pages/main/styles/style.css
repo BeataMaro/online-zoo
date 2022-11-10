@@ -38,6 +38,12 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   font-weight: 500;
   line-height: 22.4px;
 }
+.orange-button:hover, body footer .footer-wrapper .first-column button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block button.pets-button:hover, body main section.favorite-animal-block button:hover {
+  background-image: linear-gradient(#e47209, #e47209);
+}
+.orange-button:active, body footer .footer-wrapper .first-column button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block button.pets-button:active, body main section.favorite-animal-block button:active {
+  background-image: linear-gradient(#4b9200, #4b9200);
+}
 
 body {
   scroll-behavior: smooth;
@@ -505,6 +511,10 @@ body footer .footer-wrapper .first-column .social-media {
 body footer .footer-wrapper .first-column .social-media img {
   margin-top: 7px;
 }
+body footer .footer-wrapper .first-column .social-media img:active {
+  color: #4b9200;
+  background-color: #4B9200;
+}
 body footer .footer-wrapper .first-column .social-media img.first-social {
   margin-top: 0;
 }
@@ -513,9 +523,7 @@ body footer .footer-wrapper .second-column {
   align-items: flex-end;
 }
 body footer .footer-wrapper .second-column nav {
-  margin-right: 220px;
   flex: 2;
-  margin-right: 58px;
 }
 body footer .footer-wrapper .second-column nav ul {
   display: flex;
@@ -534,7 +542,10 @@ body footer .footer-wrapper .second-column nav ul li a:is(:link, :active, :visit
   color: #f9804b;
   background-color: transparent;
 }
-body footer .footer-wrapper .second-column nav ul li a.last-item {
+body footer .footer-wrapper .second-column nav ul li:last-child {
+  margin-left: auto;
+}
+body footer .footer-wrapper .second-column nav ul li:last-child a.last-item {
   margin-right: 0;
 }
 body footer .footer-wrapper .third-column {
