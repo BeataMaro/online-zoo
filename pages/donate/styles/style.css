@@ -542,6 +542,9 @@ body footer .footer-wrapper .second-column nav ul li a:is(:link, :active, :visit
   color: #f9804b;
   background-color: transparent;
 }
+body footer .footer-wrapper .second-column nav ul li a:hover {
+  color: #ffee2e;
+}
 body footer .footer-wrapper .second-column nav ul li:last-child {
   margin-left: auto;
 }
