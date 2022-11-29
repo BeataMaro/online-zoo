@@ -1,16 +1,16 @@
 @import "../../main/styles/style";
 
 aside.hero-banner {
-  width: 100vw;
+  // width: 100vw;
   height: 390px;
-  background-image: url("../../../assets/images/panda_bg.png");
+  background-image: url(../../../assets/images/panda_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 section.donate-section {
-  width: 100vw;
+  // width: 100vw;
   background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
   display: flex;
   flex-direction: column;
