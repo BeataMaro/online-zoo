@@ -53,52 +53,70 @@ body {
 }
 body header.navigation {
   width: 100vw;
-  height: 80px;
-  padding: 10px;
+  height: 34px;
+  padding: 0 10px;
   background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
+  body header.navigation {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1000px) {
   body header.navigation {
     padding-left: 220px;
+    height: 80px;
+    padding: 10px;
   }
 }
 body header.navigation .logo {
-  width: 82px;
-  height: 52px;
+  width: 46px;
   border-radius: 2px;
   padding: 2px;
   border: none;
 }
-@media (min-width: 321px) {
+@media (min-width: 1000px) {
   body header.navigation .logo {
+    width: 82px;
     border: 1px solid #ffffff;
   }
 }
 body header.navigation .logo h1 {
-  font-size: 19px;
+  font-size: 12px;
   font-weight: 400;
   color: #ffffff;
   position: relative;
   text-align: center;
+}
+@media (min-width: 1000px) {
+  body header.navigation .logo h1 {
+    font-size: 19px;
+  }
 }
 body header.navigation .logo h1 span::before {
   content: url("../../../assets/icons/bamboo.svg");
   width: 7px;
   height: 21px;
   position: absolute;
-  left: 7px;
-  bottom: 4px;
+  left: 0;
+  bottom: 0;
+}
+@media (min-width: 1000px) {
+  body header.navigation .logo h1 span::before {
+    left: 7px;
+    bottom: 4px;
+  }
 }
 body header.navigation nav {
-  flex: 2;
   display: flex;
   margin-right: 10px;
 }
-@media (min-width: 321px) {
+@media (min-width: 1000px) {
   body header.navigation nav {
+    flex: 2;
     margin-right: 220px;
   }
 }
@@ -108,8 +126,7 @@ body header.navigation nav .hamburger-menu {
   border-radius: 2px;
   background-color: white;
   position: relative;
-  justify-self: flex-end;
-  margin-left: auto;
+  cursor: pointer;
 }
 body header.navigation nav .hamburger-menu::before {
   content: "";
@@ -119,7 +136,7 @@ body header.navigation nav .hamburger-menu::before {
   border-radius: 2px;
   background-color: white;
   position: absolute;
-  top: 2px;
+  bottom: 5px;
 }
 body header.navigation nav .hamburger-menu::after {
   content: "";
@@ -129,21 +146,21 @@ body header.navigation nav .hamburger-menu::after {
   border-radius: 2px;
   background-color: white;
   position: absolute;
-  bottom: 2px;
+  top: 5px;
 }
-@media (min-width: 321px) {
+@media (min-width: 1000px) {
   body header.navigation nav .hamburger-menu {
     display: none;
   }
 }
 body header.navigation nav ul {
-  display: flex;
-  list-style: none;
+  display: none;
+  flex-direction: column;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1000px) {
   body header.navigation nav ul {
-    flex-direction: column;
-    display: none;
+    display: flex;
+    list-style: none;
   }
 }
 body header.navigation nav ul li a {
@@ -166,14 +183,20 @@ body header.navigation nav ul li:last-child a {
   margin-right: 0;
 }
 body main section.favorite-animal-block {
-  background-image: url("../../../assets/images/panda_bg.png");
+  background-image: url("../../../assets/images/animals/Giant Panda.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 186px;
+  height: 187px;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
+  body main section.favorite-animal-block {
+    background-image: url("../../../assets/images/panda_bg.png");
+    height: 373px;
+  }
+}
+@media (min-width: 1000px) {
   body main section.favorite-animal-block {
     height: 780px;
   }
@@ -188,7 +211,13 @@ body main section.favorite-animal-block .orange-circle {
   top: 22px;
   right: 30px;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
+  body main section.favorite-animal-block .orange-circle {
+    width: 238px;
+    height: 238px;
+  }
+}
+@media (min-width: 1000px) {
   body main section.favorite-animal-block .orange-circle {
     top: 12px;
     right: 328px;
@@ -207,7 +236,17 @@ body main section.favorite-animal-block h2 {
   right: 10px;
   line-height: 20px;
 }
-@media (min-width: 321px) {
+body main section.favorite-animal-block h2 p {
+  margin-top: 2px;
+}
+@media (min-width: 640px) {
+  body main section.favorite-animal-block h2 {
+    font-size: 54px;
+    top: 48px;
+    right: 20px;
+  }
+}
+@media (min-width: 1000px) {
   body main section.favorite-animal-block h2 {
     font-size: 106px;
     top: 86px;
@@ -678,4 +717,4 @@ body footer .footer-wrapper .third-column .copyrights p:active {
 }
 body footer .footer-wrapper .third-column .copyrights strong {
   font-weight: 100;
-}
+}/*# sourceMappingURL=style.css.map */
