@@ -53,27 +53,43 @@ body {
 }
 body header.navigation {
   width: 100vw;
-  height: 80px;
-  padding: 10px;
+  height: 34px;
+  padding: 0 10px;
   background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 40;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
   body header.navigation {
-    padding-left: 220px;
+    width: 100vw;
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1000px) {
+  body header.navigation {
+    width: 100vw;
+    gap: 63px;
+    height: 80px;
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  body header.navigation {
+    width: 100vw;
+    padding: 0 220px;
   }
 }
 body header.navigation .logo {
-  width: 82px;
-  height: 52px;
+  width: 46px;
   border-radius: 2px;
   padding: 2px;
   border: none;
 }
 @media (min-width: 1000px) {
   body header.navigation .logo {
+    width: 82px;
     border: 1px solid #ffffff;
   }
 }
@@ -94,18 +110,21 @@ body header.navigation .logo h1 span::before {
   width: 7px;
   height: 21px;
   position: absolute;
-  left: 7px;
-  bottom: 4px;
+  left: 0;
+  bottom: 0;
+}
+@media (min-width: 1000px) {
+  body header.navigation .logo h1 span::before {
+    left: 7px;
+    bottom: 4px;
+  }
 }
 body header.navigation nav {
-  flex: 2;
   display: flex;
+  justify-content: space-between;
   margin-right: 10px;
-}
-@media (min-width: 321px) {
-  body header.navigation nav {
-    margin-right: 220px;
-  }
+  flex: 2;
+  border: 1px solid yellow;
 }
 body header.navigation nav .hamburger-menu {
   width: 18px;
@@ -113,8 +132,7 @@ body header.navigation nav .hamburger-menu {
   border-radius: 2px;
   background-color: white;
   position: relative;
-  justify-self: flex-end;
-  margin-left: auto;
+  cursor: pointer;
 }
 body header.navigation nav .hamburger-menu::before {
   content: "";
@@ -124,7 +142,7 @@ body header.navigation nav .hamburger-menu::before {
   border-radius: 2px;
   background-color: white;
   position: absolute;
-  top: 2px;
+  bottom: 5px;
 }
 body header.navigation nav .hamburger-menu::after {
   content: "";
@@ -134,7 +152,7 @@ body header.navigation nav .hamburger-menu::after {
   border-radius: 2px;
   background-color: white;
   position: absolute;
-  bottom: 2px;
+  top: 5px;
 }
 @media (min-width: 1000px) {
   body header.navigation nav .hamburger-menu {
@@ -143,19 +161,33 @@ body header.navigation nav .hamburger-menu::after {
 }
 body header.navigation nav ul {
   display: flex;
-  list-style: none;
+  flex-direction: column;
+  display: none;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1000px) {
   body header.navigation nav ul {
-    flex-direction: column;
-    display: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+body header.navigation nav ul li {
+  border: 1px solid pink;
+}
+body header.navigation nav ul li:last-child {
+  margin-left: auto;
+}
+@media (min-width: 1600px) {
+  body header.navigation nav ul li:last-child a {
+    text-transform: uppercase;
   }
 }
 body header.navigation nav ul li a {
   transition: all 0.35s linear;
   color: #ffffff;
   font-weight: 500;
-  margin-right: 3.6rem;
+  text-align: center;
 }
 body header.navigation nav ul li a:is(:link, :active, :visited) {
   color: #ffffff;
@@ -164,22 +196,27 @@ body header.navigation nav ul li a:is(:link, :active, :visited).active {
   color: #f9804b;
   background-color: transparent;
 }
-body header.navigation nav ul li:last-child {
-  margin-left: auto;
-}
-body header.navigation nav ul li:last-child a {
-  margin-right: 0;
-}
 body main section.favorite-animal-block {
-  background-image: url("../../../assets/images/panda_bg.png");
+  background-image: url("../../../assets/images/animals/Giant Panda.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 186px;
+  height: 187px;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
   body main section.favorite-animal-block {
+    height: 373px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.favorite-animal-block {
+    height: 504px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.favorite-animal-block {
+    background-image: url("../../../assets/images/panda_bg.png");
     height: 780px;
   }
 }
@@ -193,7 +230,23 @@ body main section.favorite-animal-block .orange-circle {
   top: 22px;
   right: 30px;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
+  body main section.favorite-animal-block .orange-circle {
+    width: 238px;
+    height: 238px;
+    top: 10px;
+    right: 100px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.favorite-animal-block .orange-circle {
+    top: -12px;
+    right: 177px;
+    width: 367px;
+    height: 367px;
+  }
+}
+@media (min-width: 1600px) {
   body main section.favorite-animal-block .orange-circle {
     top: 12px;
     right: 328px;
@@ -210,9 +263,25 @@ body main section.favorite-animal-block h2 {
   position: absolute;
   top: 41px;
   right: 10px;
-  line-height: 20px;
+  line-height: 21px;
 }
-@media (min-width: 321px) {
+@media (min-width: 640px) {
+  body main section.favorite-animal-block h2 {
+    font-size: 54px;
+    top: 48px;
+    right: 20px;
+    line-height: 43px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.favorite-animal-block h2 {
+    font-size: 85px;
+    top: 42px;
+    right: 85px;
+    line-height: 64px;
+  }
+}
+@media (min-width: 1600px) {
   body main section.favorite-animal-block h2 {
     font-size: 106px;
     top: 86px;
@@ -222,12 +291,43 @@ body main section.favorite-animal-block h2 {
 }
 body main section.favorite-animal-block h2 span {
   color: #ffee2e;
+  line-height: 0.2;
+}
+@media screen and (min-width: 1000px) {
+  body main section.favorite-animal-block h2 span {
+    line-height: 0;
+  }
 }
 body main section.favorite-animal-block button {
-  position: absolute;
-  bottom: 100px;
-  right: 319px;
   cursor: pointer;
+  width: 298px;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: none;
+  position: absolute;
+}
+@media screen and (min-width: 640px) {
+  body main section.favorite-animal-block button {
+    display: block;
+    left: 20px;
+    bottom: 40px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body main section.favorite-animal-block button {
+    display: block;
+    left: auto;
+    bottom: 47px;
+    right: 200px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body main section.favorite-animal-block button {
+    right: 319px;
+    bottom: 100px;
+  }
 }
 body main section.backstage-block {
   height: 610px;
