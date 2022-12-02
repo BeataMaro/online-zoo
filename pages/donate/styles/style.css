@@ -341,7 +341,7 @@ body main section.backstage-block div {
   grid-gap: 87px;
   margin-right: 20px;
 }
-@media (min-width: 1000px) and (max-width: 1599px) {
+@media (min-width: 1000px) {
   body main section.backstage-block div {
     margin-right: 30px;
   }
@@ -380,14 +380,28 @@ body main section.backstage-block div article.backstage-block-article p.backstag
 }
 body main section.backstage-block img.plant1 {
   position: absolute;
-  top: 12px;
-  right: 0;
-  height: 605px;
-  width: 220px;
+  top: 35px;
+  right: -70%;
+}
+@media (min-width: 640px) {
+  body main section.backstage-block img.plant1 {
+    width: 231px;
+    height: 476px;
+    top: 0;
+    right: -115px;
+  }
 }
 @media screen and (min-width: 1000px) and (max-width: 1599px) {
   body main section.backstage-block img.plant1 {
     display: none;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.backstage-block img.plant1 {
+    top: 12px;
+    right: 0;
+    height: 605px;
+    width: 293px;
   }
 }
 body main section.pets-block {
