@@ -59,7 +59,10 @@ body header.navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4000;
 }
 @media (min-width: 640px) {
   body header.navigation {
@@ -121,61 +124,26 @@ body header.navigation .logo h1 span::before {
 }
 body header.navigation nav {
   display: flex;
-  justify-content: space-between;
-  margin-right: 10px;
-  flex: 2;
-  border: 1px solid yellow;
-}
-body header.navigation nav .hamburger-menu {
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: white;
-  position: relative;
-  cursor: pointer;
-}
-body header.navigation nav .hamburger-menu::before {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: 5px;
-}
-body header.navigation nav .hamburger-menu::after {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: white;
-  position: absolute;
-  top: 5px;
-}
-@media (min-width: 1000px) {
-  body header.navigation nav .hamburger-menu {
-    display: none;
-  }
+  flex: 4;
 }
 body header.navigation nav ul {
+  width: 100%;
+  list-style: none;
   display: flex;
   flex-direction: column;
   display: none;
 }
 @media screen and (min-width: 1000px) {
   body header.navigation nav ul {
-    list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 }
 body header.navigation nav ul li {
-  border: 1px solid pink;
+  margin-right: 58px;
 }
 body header.navigation nav ul li:last-child {
+  margin-right: 0;
   margin-left: auto;
 }
 @media (min-width: 1600px) {
@@ -196,13 +164,46 @@ body header.navigation nav ul li a:is(:link, :active, :visited).active {
   color: #f9804b;
   background-color: transparent;
 }
+body header.navigation div.hamburger-menu {
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+body header.navigation div.hamburger-menu::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 5px;
+}
+body header.navigation div.hamburger-menu::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  position: absolute;
+  top: 5px;
+}
+@media (min-width: 1000px) {
+  body header.navigation div.hamburger-menu {
+    display: none;
+  }
+}
 body main section.favorite-animal-block {
   background-image: url("../../../assets/images/animals/Giant Panda.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 187px;
+  height: 221px;
 }
 @media (min-width: 640px) {
   body main section.favorite-animal-block {
@@ -211,7 +212,7 @@ body main section.favorite-animal-block {
 }
 @media (min-width: 1000px) {
   body main section.favorite-animal-block {
-    height: 504px;
+    height: 584px;
   }
 }
 @media (min-width: 1600px) {
@@ -227,20 +228,20 @@ body main section.favorite-animal-block .orange-circle {
   background-color: #f9804b;
   border-radius: 50%;
   position: absolute;
-  top: 22px;
+  top: 56px;
   right: 30px;
 }
 @media (min-width: 640px) {
   body main section.favorite-animal-block .orange-circle {
     width: 238px;
     height: 238px;
-    top: 10px;
+    top: 64px;
     right: 100px;
   }
 }
 @media (min-width: 1000px) {
   body main section.favorite-animal-block .orange-circle {
-    top: -12px;
+    top: 69px;
     right: 177px;
     width: 367px;
     height: 367px;
@@ -248,7 +249,7 @@ body main section.favorite-animal-block .orange-circle {
 }
 @media (min-width: 1600px) {
   body main section.favorite-animal-block .orange-circle {
-    top: 12px;
+    top: 92px;
     right: 328px;
     width: 465px;
     height: 465px;
@@ -261,14 +262,14 @@ body main section.favorite-animal-block h2 {
   color: #ffffff;
   z-index: 2;
   position: absolute;
-  top: 41px;
+  top: 75px;
   right: 10px;
   line-height: 21px;
 }
 @media (min-width: 640px) {
   body main section.favorite-animal-block h2 {
     font-size: 54px;
-    top: 48px;
+    top: 82px;
     right: 20px;
     line-height: 43px;
   }
@@ -276,7 +277,7 @@ body main section.favorite-animal-block h2 {
 @media (min-width: 1000px) {
   body main section.favorite-animal-block h2 {
     font-size: 85px;
-    top: 42px;
+    top: 123px;
     right: 85px;
     line-height: 64px;
   }
@@ -284,7 +285,7 @@ body main section.favorite-animal-block h2 {
 @media (min-width: 1600px) {
   body main section.favorite-animal-block h2 {
     font-size: 106px;
-    top: 86px;
+    top: 166px;
     right: 220px;
     line-height: 0.8;
   }

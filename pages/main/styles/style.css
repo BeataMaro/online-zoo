@@ -235,7 +235,7 @@ body main section.favorite-animal-block .orange-circle {
   body main section.favorite-animal-block .orange-circle {
     width: 238px;
     height: 238px;
-    top: 10px;
+    top: 64px;
     right: 100px;
   }
 }
@@ -269,7 +269,7 @@ body main section.favorite-animal-block h2 {
 @media (min-width: 640px) {
   body main section.favorite-animal-block h2 {
     font-size: 54px;
-    top: 48px;
+    top: 82px;
     right: 20px;
     line-height: 43px;
   }
