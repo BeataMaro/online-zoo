@@ -45,6 +45,10 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   background-image: linear-gradient(#4b9200, #4b9200);
 }
 
+section {
+  overflow: hidden;
+}
+
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -205,6 +209,7 @@ body main section.favorite-animal-block {
   position: relative;
   height: 259px;
   z-index: 3;
+  overflow: visible;
 }
 @media (max-width: 639px) {
   body main section.favorite-animal-block {
@@ -342,10 +347,12 @@ body main section.backstage-block {
   display: flex;
   position: relative;
   padding: 1.875rem 1.0625rem 2.5rem;
+  overflow-y: visible;
 }
 @media (min-width: 640px) {
   body main section.backstage-block {
     padding: 3.75rem 1.25rem;
+    overflow: hidden;
   }
 }
 @media (min-width: 1000px) {
@@ -355,7 +362,8 @@ body main section.backstage-block {
 }
 @media (min-width: 1600px) {
   body main section.backstage-block {
-    padding: 8.75rem 13.7rem;
+    display: grid;
+    place-items: center;
   }
 }
 body main section.backstage-block div {
@@ -374,8 +382,9 @@ body main section.backstage-block div {
 }
 @media (min-width: 1600px) {
   body main section.backstage-block div {
-    grid-template-columns: 1fr 465px;
+    grid-template-columns: 1fr 1.5fr;
     grid-gap: 87px;
+    width: 1158px;
   }
 }
 body main section.backstage-block div img {
@@ -492,7 +501,6 @@ body main section.backstage-block img.plant1 {
   }
 }
 body main section.pets-block {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -511,6 +519,7 @@ body main section.pets-block {
 @media (min-width: 1600px) {
   body main section.pets-block {
     margin: auto;
+    position: relative;
   }
 }
 body main section.pets-block .pets-wrapper {
@@ -518,6 +527,7 @@ body main section.pets-block .pets-wrapper {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 @media (min-width: 640px) {
   body main section.pets-block .pets-wrapper {
@@ -530,12 +540,16 @@ body main section.pets-block .pets-wrapper {
   body main section.pets-block .pets-wrapper {
     grid-template-columns: repeat(3, 1fr);
     width: 942px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 92px;
   }
 }
 @media (min-width: 1600px) {
   body main section.pets-block .pets-wrapper {
     width: 1158px;
     margin: auto;
+    gap: 30px;
   }
 }
 body main section.pets-block .pets-wrapper a.arrow-l {
@@ -545,8 +559,8 @@ body main section.pets-block .pets-wrapper a.arrow-l {
   body main section.pets-block .pets-wrapper a.arrow-l {
     order: 1;
     position: absolute;
-    top: 35%;
-    left: 138px;
+    top: 46%;
+    left: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -567,6 +581,11 @@ body main section.pets-block .pets-wrapper a.arrow-l {
     height: 16px;
   }
 }
+@media (min-width: 1600px) {
+  body main section.pets-block .pets-wrapper a.arrow-l {
+    left: -4.875rem;
+  }
+}
 body main section.pets-block .pets-wrapper a.arrow-r {
   display: none;
 }
@@ -576,8 +595,8 @@ body main section.pets-block .pets-wrapper a.arrow-r {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
-    right: 50%;
+    top: 46%;
+    right: 35%;
     width: 62px;
     height: 62px;
     background-image: linear-gradient(#f9804b, #fe9013);
@@ -593,6 +612,11 @@ body main section.pets-block .pets-wrapper a.arrow-r {
     content: "⟶";
     width: 16px;
     height: 16px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .pets-wrapper a.arrow-r {
+    right: -4.875rem;
   }
 }
 body main section.pets-block .pets-wrapper article.animal-card {
