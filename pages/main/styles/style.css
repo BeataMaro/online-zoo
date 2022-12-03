@@ -339,10 +339,9 @@ body main section.favorite-animal-block button {
   }
 }
 body main section.backstage-block {
-  height: 610px;
   display: flex;
   position: relative;
-  padding: 1.875rem 0.625rem;
+  padding: 1.875rem 1.0625rem 2.5rem;
 }
 @media (min-width: 640px) {
   body main section.backstage-block {
@@ -493,26 +492,142 @@ body main section.backstage-block img.plant1 {
   }
 }
 body main section.pets-block {
-  margin-top: 184px;
-  height: 1190px;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding: 0 1.0625rem 3.75rem;
+}
+@media (min-width: 640px) {
+  body main section.pets-block {
+    padding: 0 1.25rem 13.375rem;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block {
+    flex-direction: row;
+    padding: 0 1.875rem 17.19rem;
+    margin-top: 184px;
+  }
 }
 body main section.pets-block .pets-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
+  border: 2px solid green;
+}
+@media (min-width: 640px) {
+  body main section.pets-block .pets-wrapper {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .pets-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 220px;
+  }
+}
+body main section.pets-block .pets-wrapper a.arrow-l {
+  display: none;
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper a.arrow-l {
+    order: 1;
+    position: absolute;
+    top: 35%;
+    left: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background-image: linear-gradient(#f9804b, #fe9013);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+  body main section.pets-block .pets-wrapper a.arrow-l:hover {
+    transform: scale(1.1);
+  }
+  body main section.pets-block .pets-wrapper a.arrow-l::after {
+    content: "⟵";
+    width: 16px;
+    height: 16px;
+  }
+}
+body main section.pets-block .pets-wrapper a.arrow-r {
+  display: none;
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper a.arrow-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 62px;
+    height: 62px;
+    background-image: linear-gradient(#f9804b, #fe9013);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+  body main section.pets-block .pets-wrapper a.arrow-r:hover {
+    transform: scale(1.1);
+  }
+  body main section.pets-block .pets-wrapper a.arrow-r::after {
+    content: "⟶";
+    width: 16px;
+    height: 16px;
+  }
 }
 body main section.pets-block .pets-wrapper article.animal-card {
-  width: 366px;
-  height: 426px;
   background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 4px, transparent 4px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 4px, transparent 4px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 4px, transparent 4px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 4px, transparent 4px) 100% 100%/5px 5px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 10px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 2px) no-repeat, linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
   border-radius: 5px;
   transition: all 2s linear;
   cursor: pointer;
   overflow: hidden;
+  display: none;
+}
+@media (min-width: 640px) {
+  body main section.pets-block .pets-wrapper article.animal-card {
+    width: 285px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper article.animal-card {
+    display: block;
+    width: 295px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .pets-wrapper article.animal-card {
+    width: 366px;
+  }
+}
+body main section.pets-block .pets-wrapper article.animal-card.sm-md {
+  display: block;
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper article.animal-card.sm-md.aligator {
+    display: none;
+  }
+}
+body main section.pets-block .pets-wrapper article.animal-card.sm-md.aligator div.animal-card-desc {
+  padding: 1px 5px;
 }
 body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper {
   overflow: hidden;
@@ -525,10 +640,22 @@ body main section.pets-block .pets-wrapper article.animal-card .animal-image-wra
 }
 body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
   max-width: 100%;
-  width: 366px;
-  height: 366px;
+  width: 285px;
+  height: 285px;
   transform-origin: center center;
   transition: all 0.2s linear;
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
+    width: 294px;
+    height: 294px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
+    height: 366px;
+    width: 366px;
+  }
 }
 body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img:hover {
   transform: scale(1.03, 1.03);
@@ -540,14 +667,23 @@ body main section.pets-block .pets-wrapper article.animal-card div {
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc {
   display: flex;
   flex-direction: column;
-  padding: 12px 16px;
+  padding: 12px 10px;
+  border-radius: 5px;
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc {
+    padding: 12px 16px;
+  }
 }
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc h4 {
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 16px;
 }
 body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc p {
   font-weight: 300;
+  font-size: 15px;
+  width: 12.8rem;
 }
 body main section.pets-block .pets-wrapper article.animal-card div img.food-icon {
   width: 48px;
@@ -555,83 +691,81 @@ body main section.pets-block .pets-wrapper article.animal-card div img.food-icon
   align-self: center;
   margin-right: 12px;
 }
-body main section.pets-block button.arrow-left {
-  width: 62px;
-  height: 62px;
-  background-image: linear-gradient(#f9804b, #fe9013);
-  color: white;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-  position: absolute;
-  top: 35%;
-  left: 138px;
-}
-body main section.pets-block button.arrow-left:hover {
-  transform: scale(1.1);
-}
-body main section.pets-block button.arrow-left::after {
-  content: "⟵";
-  width: 16px;
-  height: 8px;
-}
-body main section.pets-block button.arrow-right {
-  width: 62px;
-  height: 62px;
-  background-image: linear-gradient(#f9804b, #fe9013);
-  color: white;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-  position: absolute;
-  top: 35%;
-  right: 140px;
-}
-body main section.pets-block button.arrow-right:hover {
-  transform: scale(1.1);
-}
-body main section.pets-block button.arrow-right::after {
-  content: "⟶";
-  width: 16px;
-  height: 8px;
-}
 body main section.pets-block button.pets-button {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 640px) {
+  body main section.pets-block button.pets-button {
+    margin-top: 3.75rem;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 body main section.pets-block img.plant2 {
-  width: 292px;
-  height: 460px;
+  width: 58px;
+  height: 72px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
+@media (min-width: 640px) {
+  body main section.pets-block img.plant2 {
+    width: 134px;
+    height: 202px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block img.plant2 {
+    width: 194px;
+    height: 202px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block img.plant2 {
+    width: 292px;
+    height: 460px;
+  }
+}
 body main section.pets-block img.plant3 {
-  width: 368px;
-  height: 275px;
+  width: 58px;
+  height: 72px;
   position: absolute;
   bottom: 0;
   right: 0;
 }
+@media (min-width: 640px) {
+  body main section.pets-block img.plant3 {
+    width: 175px;
+    height: 131px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block img.plant3 {
+    width: 368px;
+    height: 275px;
+  }
+}
 body section.pick-and-feed-a-friend {
-  height: 1000px;
   background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
   display: flex;
   justify-content: center;
 }
 body section.pick-and-feed-a-friend .salomon-wrapper {
   flex-direction: column;
-  width: 1160px;
-  height: 835px;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   margin-top: 69px;
   color: #333b41;
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper {
+    height: 835px;
+  }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
   color: #fe9013;
@@ -639,8 +773,10 @@ body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
   font-weight: 400;
   margin-bottom: 30px;
 }
-body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text {
-  margin-left: 99px;
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text {
+    margin-left: 99px;
+  }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead {
   font-size: 24px;
@@ -669,15 +805,12 @@ body section.pick-and-feed-a-friend .salomon-wrapper button {
   margin: 60px 0;
 }
 body section.testimonials-block {
-  height: 922px;
   position: relative;
   padding: 140px 0;
   display: flex;
   justify-content: center;
 }
 body section.testimonials-block .testimonials-wrapper {
-  width: 1160px;
-  height: 575px;
   margin: 0 220px;
   display: flex;
   flex-direction: column;

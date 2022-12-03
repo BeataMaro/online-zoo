@@ -37,7 +37,6 @@ img {
   background-image: linear-gradient(#f9804b, #fe9013);
   color: white;
   border-radius: 50%;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in;
 
@@ -48,7 +47,7 @@ img {
   &::after {
     content: $direction;
     width: 16px;
-    height: 8px;
+    height: 16px;
   }
 }
 
@@ -366,10 +365,10 @@ body {
     }
     //BACKSTAGE BLOCK
     section.backstage-block {
-      height: 610px;
+      // height: 610px;
       display: flex;
       position: relative;
-      padding: 1.875rem 0.625rem;
+      padding: 1.875rem 1.0625rem 2.5rem;
       
 
       @media (min-width: 640px) {
@@ -512,23 +511,93 @@ body {
     }
     //PETS BLOCK
     section.pets-block {
-      margin-top: 184px;
-      height: 1190px;
       position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      padding: 0 1.0625rem 3.75rem;
+
+      @media (min-width: 640px) {
+        padding: 0 1.25rem 13.375rem;
+      }
+      
+      @media (min-width: 1000px) {
+        flex-direction: row;
+        padding: 0 1.875rem 17.19rem;
+        margin-top: 184px;
+      }
 
       .pets-wrapper {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
-        // width: 1158px;
+        justify-content: center;
+        gap: 20px;
         width:100%;
-        // height: 872px;
+        border: 2px solid green;
+  
+        @media (min-width: 640px) {
+          gap: 30px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          // grid-template-rows: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1000px) {
+        
+          grid-template-columns: repeat(3, 1fr);
+          // grid-template-rows: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1600px) {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 220px;
+        }
+
+        //ARROWS
+        a.arrow-l {
+          display: none;
+          @media (min-width: 1000px) {
+            order: 1;
+            position: absolute;
+            top: 35%;
+            left: 138px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include arrow-button("\27F5");
+          }
+        // button.arrow-left {
+        //   display: none;
+  
+        //   @media (min-width: 1000px) {
+        //   }
+        // }
+      }
+        a.arrow-r {
+          display: none;
+          @media (min-width: 1000px) {
+          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            @include arrow-button("\27F6");
+          }
+        // button.arrow-right {
+  
+        //   @media (min-width: 1000px) {
+        //   }
+        // }
+      }
+        //
 
         article.animal-card {
-          width: 366px;
-          height: 426px;
+          // width: 366px;
+          // height: 426px;
+          // aspect-ratio: 1 / 1.2;
           //https://unused-css.com/tools/border-gradient-generator?p=12Ymc9dCNmZmZmZmYsMSw1LDAscHgsMTtsKDIwMWRlZywjZmE2ZjMyIDAlLCNmZTkwMTMgMTAwJSk
           background: radial-gradient(
                 circle at 100% 100%,
@@ -567,6 +636,40 @@ body {
           transition: all 2s linear;
           cursor: pointer;
           overflow: hidden;
+          display: none;
+
+          @media (min-width: 640px) {
+            width: 285px;
+          }
+
+          @media (min-width: 1000px) {
+            display: block;
+            // width: 30%;
+            width: 295px;
+            // height: 354px;
+          }
+
+          @media (min-width: 1600px) {
+            width: 366px;
+            
+          }
+
+          &.sm-md {
+            display: block;
+
+            &.aligator {
+            
+              @media (min-width: 1000px) {
+                display: none;
+              }
+              div {
+                &.animal-card-desc {
+                  padding: 1px 5px;
+                }
+              }
+            
+            }
+          }
 
           .animal-image-wrapper {
             overflow: hidden;
@@ -579,10 +682,21 @@ body {
             }
             img {
               max-width: 100%;
-              width: 366px;
-              height: 366px;
+              width: 285px;
+              height: 285px;
               transform-origin: center center;
               transition: all 0.2s linear;
+
+              @media (min-width: 1000px) {
+                width: 294px;
+                height: 294px;
+              }
+              
+              @media (min-width: 1600px) {
+                
+                height: 366px;
+                width: 366px;
+              }
 
               &:hover {
                 transform: scale(1.03, 1.03);
@@ -597,13 +711,22 @@ body {
             &.animal-card-desc {
               display: flex;
               flex-direction: column;
-              padding: 12px 16px;
+              padding: 12px 10px;
+              border-radius: 5px;
+              
+              @media (min-width: 1000px) {
+                padding: 12px 16px;
+              }
+
               h4 {
                 text-transform: uppercase;
                 font-weight: 500;
+                font-size: 16px;
               }
               p {
                 font-weight: 300;
+                font-size: 15px;
+                width: 12.8rem;
               }
             }
             img.food-icon {
@@ -615,45 +738,66 @@ body {
           }
         }
       }
-      button.arrow-left {
-        @include arrow-button("\27F5");
-        position: absolute;
-        top: 35%;
-        left: 138px;
-      }
-      button.arrow-right {
-        @include arrow-button("\27F6");
-        position: absolute;
-        top: 35%;
-        right: 140px;
-      }
+
       button.pets-button {
         @extend .orange-button;
-        position: absolute;
-        bottom: 100px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin-top: 1.25rem;
+        font-size: 1rem;
+        font-weight: 500;
+
+        @media (min-width: 640px) {
+          margin-top: 3.75rem;
+          position: absolute;
+          bottom: 100px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
 
       img.plant2 {
-        width: 292px;
-        height: 460px;
+        width: 58px;
+        height: 72px;
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @media (min-width: 640px) {
+          width: 134px;
+          height: 202px;
+        }
+
+        @media (min-width: 1000px) {
+          width: 194px;
+          height: 202px;
+        }
+        
+        @media (min-width: 1600px) {
+          width: 292px;
+          height: 460px;
+        }
       }
       img.plant3 {
-        width: 368px;
-        height: 275px;
+        width: 58px;
+        height: 72px;
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @media (min-width: 640px) {
+          width: 175px;
+          height: 131px;
+        }
+        
+        @media (min-width: 1000px) {
+          width: 368px;
+          height: 275px;
+        }
       }
     }
   }
   //PICK A FRIEND BLOCK
   section.pick-and-feed-a-friend {
-    height: 1000px;
+    // height: 1000px;
     background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
     display: flex;
     justify-content: center;
@@ -661,12 +805,15 @@ body {
     .salomon-wrapper {
       @extend %d-flex;
       flex-direction: column;
-      width: 1160px;
-      height: 835px;
+      // width: 1160px;
       background: rgba(253, 253, 255, 0.52);
       backdrop-filter: blur(2px);
       margin-top: 69px;
       color: #333b41;
+      
+      @media (min-width: 1000px) {
+        height: 835px;
+      }
 
       h3.orange-header {
         color: #fe9013;
@@ -675,7 +822,10 @@ body {
         margin-bottom: 30px;
       }
       .pick-and-feed-text {
-        margin-left: 99px;
+
+        @media (min-width: 1000px) {
+          margin-left: 99px;
+        }
 
         & p.lead {
           font-size: 24px;
@@ -713,15 +863,15 @@ body {
   }
   //TESTIMONIALS BLOCK
   section.testimonials-block {
-    height: 922px;
+    // height: 922px;
     position: relative;
     padding: 140px 0;
     display: flex;
     justify-content: center;
 
     .testimonials-wrapper {
-      width: 1160px;
-      height: 575px;
+      // width: 1160px;
+      // height: 575px;
       margin: 0 220px;
       display: flex;
       flex-direction: column;
