@@ -522,9 +522,13 @@ body {
       }
       
       @media (min-width: 1000px) {
-        flex-direction: row;
+        // flex-direction: row;
         padding: 0 1.875rem 17.19rem;
-        margin-top: 184px;
+        // margin-top: 184px;
+      }
+
+      @media (min-width: 1600px) {
+        margin: auto;
       }
 
       .pets-wrapper {
@@ -532,8 +536,6 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        width:100%;
-        border: 2px solid green;
   
         @media (min-width: 640px) {
           gap: 30px;
@@ -543,15 +545,14 @@ body {
         }
 
         @media (min-width: 1000px) {
-        
           grid-template-columns: repeat(3, 1fr);
-          // grid-template-rows: repeat(2, 1fr);
+          width: 942px;
         }
 
         @media (min-width: 1600px) {
-          display: flex;
-          flex-wrap: wrap;
-          padding: 0 220px;
+          width: 1158px;
+          margin: auto;
+
         }
 
         //ARROWS
@@ -595,6 +596,7 @@ body {
         //
 
         article.animal-card {
+          margin: auto;
           // width: 366px;
           // height: 426px;
           // aspect-ratio: 1 / 1.2;
@@ -644,9 +646,7 @@ body {
 
           @media (min-width: 1000px) {
             display: block;
-            // width: 30%;
             width: 295px;
-            // height: 354px;
           }
 
           @media (min-width: 1600px) {
@@ -688,8 +688,8 @@ body {
               transition: all 0.2s linear;
 
               @media (min-width: 1000px) {
-                width: 294px;
-                height: 294px;
+                width: 295px;
+                height: 295px;
               }
               
               @media (min-width: 1600px) {

@@ -505,9 +505,12 @@ body main section.pets-block {
 }
 @media (min-width: 1000px) {
   body main section.pets-block {
-    flex-direction: row;
     padding: 0 1.875rem 17.19rem;
-    margin-top: 184px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block {
+    margin: auto;
   }
 }
 body main section.pets-block .pets-wrapper {
@@ -515,8 +518,6 @@ body main section.pets-block .pets-wrapper {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  width: 100%;
-  border: 2px solid green;
 }
 @media (min-width: 640px) {
   body main section.pets-block .pets-wrapper {
@@ -528,13 +529,13 @@ body main section.pets-block .pets-wrapper {
 @media (min-width: 1000px) {
   body main section.pets-block .pets-wrapper {
     grid-template-columns: repeat(3, 1fr);
+    width: 942px;
   }
 }
 @media (min-width: 1600px) {
   body main section.pets-block .pets-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 220px;
+    width: 1158px;
+    margin: auto;
   }
 }
 body main section.pets-block .pets-wrapper a.arrow-l {
@@ -595,6 +596,7 @@ body main section.pets-block .pets-wrapper a.arrow-r {
   }
 }
 body main section.pets-block .pets-wrapper article.animal-card {
+  margin: auto;
   background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 4px, transparent 4px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 4px, transparent 4px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 4px, transparent 4px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 4px, transparent 4px) 100% 100%/5px 5px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 10px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 2px) no-repeat, linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
   border-radius: 5px;
   transition: all 2s linear;
@@ -647,8 +649,8 @@ body main section.pets-block .pets-wrapper article.animal-card .animal-image-wra
 }
 @media (min-width: 1000px) {
   body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
-    width: 294px;
-    height: 294px;
+    width: 295px;
+    height: 295px;
   }
 }
 @media (min-width: 1600px) {
