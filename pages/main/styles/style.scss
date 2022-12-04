@@ -877,6 +877,14 @@ body {
     justify-content: center;
     padding: 30px 10px;
 
+    @media (min-width: 640px) {
+      padding: 60px 20px;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 100px 30px 0;
+    }
+
     @media (min-width: 1600px) {
       padding: 140px 0;
     }
@@ -893,8 +901,11 @@ body {
         font-weight: 400;
         margin-bottom: 20px;
         
-        @media (min-width: 1000px) {
+        @media (min-width: 640px) {
           font-size: 36px;
+          margin-bottom: 30px;
+        }
+        @media (min-width: 1600px) {
           margin-bottom: 47px;
         }
       }
@@ -920,7 +931,11 @@ body {
         flex-direction: column;
         gap: 30px;
 
-        @media (min-width: 1600px) {
+        @media (min-width: 640px) {
+          gap: 15px;
+        }
+        @media (min-width: 1000px) {
+          gap: 30px;
           flex-direction: row;
         }
         article {
@@ -933,46 +948,54 @@ body {
           // https://unused-css.com/tools/border-gradient-generator?p=22EYcwvALgxAZn8BoBMyAMCCMA2BAHAHpgNwA2AFAMxIAcAJgKYgKwUCGAnDNQARZYCkzGPWC1WwbgHYALIKj1WMScO4ZUqOfVS1qMVKvX8AlEA
 
           background: radial-gradient(
-                circle at 100% 100%,
-                #ffffff 0,
-                #ffffff 18px,
-                transparent 18px
-              )
-              0% 0%/20px 20px no-repeat,
-            radial-gradient(
-                circle at 0 100%,
-                #ffffff 0,
-                #ffffff 18px,
-                transparent 18px
-              )
-              100% 0%/20px 20px no-repeat,
-            radial-gradient(
-                circle at 100% 0,
-                #ffffff 0,
-                #ffffff 18px,
-                transparent 18px
-              )
-              0% 100%/20px 20px no-repeat,
-            radial-gradient(
-                circle at 0 0,
-                #ffffff 0,
-                #ffffff 18px,
-                transparent 18px
-              )
-              100% 100%/20px 20px no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
-              calc(100% - 40px) no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 40px)
-              calc(100% - 4px) no-repeat,
-            linear-gradient(
-              328deg,
-              #f3a9f8 66%,
-              #febdab 74%,
-              #eaf7fe 100%,
-              #e0d8f0 100%
-            );
+            circle at 100% 100%,
+             #F5F7F6 0,
+             #F5F7F6 18px,
+            transparent 18px
+          )
+          0% 0%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 0 100%,
+             #F5F7F6 0,
+             #F5F7F6 18px,
+            transparent 18px
+          )
+          100% 0%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 100% 0,
+             #F5F7F6 0,
+             #F5F7F6 18px,
+            transparent 18px
+          )
+          0% 100%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 0 0,
+            #F5F7F6 0,
+            #F5F7F6 18px,
+            transparent 18px
+          )
+          100% 100%/20px 20px no-repeat,
+        linear-gradient( #F5F7F6, #F5F7F6) 50% 50% / calc(100% - 4px)
+          calc(100% - 40px) no-repeat,
+        linear-gradient( #F5F7F6, #F5F7F6) 50% 50% / calc(100% - 40px)
+          calc(100% - 4px) no-repeat,
+        linear-gradient(
+          328deg,
+          #f3a9f8 66%,
+          #febdab 74%,
+          #eaf7fe 100%,
+          #e0d8f0 100%
+        );
           border-radius: 20px;
           padding: 16px;
+
+          @media (min-width: 640px) {
+            width: 600px;
+          }
+
+          @media (min-width: 1000px) {
+            width: 293px;
+          }
 
           @media (min-width: 1000px) {
             height: 391px;
@@ -981,7 +1004,7 @@ body {
           &.desktop {
             display: none;
 
-            @media (min-width: 1000px) {
+            @media (min-width: 1600px) {
               display: block;
             }
           }
@@ -1024,12 +1047,14 @@ body {
         border-radius: 5px;
         background-color: $orange;
 
-        @media (min-width: 1600px) {
+        @media (min-width: 1000px) {
           display: block;
         }
       }
       a {
-
+        @media (min-width: 1000px) {
+          margin-right: auto;
+        }
         @media (min-width: 1600px) {
           align-self: flex-start;
         }
@@ -1038,6 +1063,15 @@ body {
           width: 240px;
           border-radius: 6px;
           margin: 30px auto 60px;
+
+          @media (min-width: 640px) {
+            margin: 40px auto 80px;
+          }
+
+          @media (min-width: 1000px) {
+            margin: 50px 0 140px;
+            width: 298px;
+          }
           
           @media (min-width: 1600px) {
             margin-top: 31px;
@@ -1053,6 +1087,15 @@ body {
       right: 0;
       bottom: -50px;
       width: 75px;
+
+      @media (min-width: 640px) {
+        width: 150px;
+      }
+
+      @media (min-width: 1000px) {
+        width: 240px;
+        bottom: -130px;
+      }
 
       @media (min-width: 1600px) {
         width: auto;
