@@ -23,7 +23,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
-.orange-button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block a button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -32,16 +32,16 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block a button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 22.4px;
 }
-.orange-button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block button.pets-button:hover, body main section.favorite-animal-block button:hover {
+.orange-button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block a button.pets-button:hover, body main section.favorite-animal-block button:hover {
   background-image: linear-gradient(#e47209, #e47209);
 }
-.orange-button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block button.pets-button:active, body main section.favorite-animal-block button:active {
+.orange-button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block a button.pets-button:active, body main section.favorite-animal-block button:active {
   background-image: linear-gradient(#4b9200, #4b9200);
 }
 
@@ -58,7 +58,7 @@ body {
 body header.navigation {
   width: 100vw;
   height: 34px;
-  padding: 0 10px;
+  padding: 3px 10px;
   background-color: #000000;
   display: flex;
   align-items: center;
@@ -514,6 +514,7 @@ body main section.pets-block {
   flex-direction: column;
   justify-content: center;
   padding: 0 1.0625rem 3.75rem;
+  position: relative;
 }
 @media (min-width: 640px) {
   body main section.pets-block {
@@ -528,7 +529,6 @@ body main section.pets-block {
 @media (min-width: 1600px) {
   body main section.pets-block {
     margin: auto;
-    position: relative;
   }
 }
 body main section.pets-block .pets-wrapper {
@@ -726,13 +726,16 @@ body main section.pets-block .pets-wrapper article.animal-card div img.food-icon
   align-self: center;
   margin-right: 12px;
 }
-body main section.pets-block button.pets-button {
+body main section.pets-block a {
+  margin: auto;
+}
+body main section.pets-block a button.pets-button {
   margin-top: 1.25rem;
   font-size: 1rem;
   font-weight: 500;
 }
 @media (min-width: 640px) {
-  body main section.pets-block button.pets-button {
+  body main section.pets-block a button.pets-button {
     margin-top: 3.75rem;
     position: absolute;
     bottom: 100px;
@@ -1081,7 +1084,6 @@ body footer .footer-wrapper .first-column a.footer-logo-link {
 }
 @media (min-width: 640px) {
   body footer .footer-wrapper .first-column a.footer-logo-link {
-    grid-area: "logo";
     order: 2;
   }
 }

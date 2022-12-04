@@ -1,8 +1,18 @@
 @import "../../main/styles/style";
 
+body {
+// & header.navigation {
+  
+//  width: 100vw;
+//  height: 80px;
+
+//  @media (min-width: 1600px) {
+  //  padding: 0;
+//  }
+// }
+
 aside.hero-banner {
-  // width: 100vw;
-  height: 390px;
+  height: 470px;
   background-image: url(../../../assets/images/panda_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -230,4 +240,33 @@ section.donate-section {
       display: block;
     }
   }
-}
+ }
+
+ footer {
+  div.footer-wrapper {
+    div.first-column {
+      a.donate-link {
+        text-align: center;
+        }
+        a {
+          text-align: center;
+       
+        div.footer-logo {
+          & h5 {
+            font-size: 1.1875rem;
+            span {
+              position: relative;
+              &::before {
+                position: absolute;
+                content: url("../../../assets/icons/bamboo.svg");
+                bottom: -1px;
+                left: -5px;          
+              }
+            }
+          }
+        }
+       }
+      }
+    }
+  }
+ }

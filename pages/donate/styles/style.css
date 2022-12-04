@@ -23,7 +23,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
-.orange-button, section.donate-section .salomon-square button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body section.donate-section .salomon-square button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -32,16 +32,16 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, section.donate-section .salomon-square button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body section.donate-section .salomon-square button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 22.4px;
 }
-.orange-button:hover, section.donate-section .salomon-square button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block button.pets-button:hover, body main section.favorite-animal-block button:hover {
+.orange-button:hover, body section.donate-section .salomon-square button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block button.pets-button:hover, body main section.favorite-animal-block button:hover {
   background-image: linear-gradient(#e47209, #e47209);
 }
-.orange-button:active, section.donate-section .salomon-square button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block button.pets-button:active, body main section.favorite-animal-block button:active {
+.orange-button:active, body section.donate-section .salomon-square button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block button.pets-button:active, body main section.favorite-animal-block button:active {
   background-image: linear-gradient(#4b9200, #4b9200);
 }
 
@@ -58,7 +58,7 @@ body {
 body header.navigation {
   width: 100vw;
   height: 34px;
-  padding: 0 10px;
+  padding: 3px 10px;
   background-color: #000000;
   display: flex;
   align-items: center;
@@ -845,6 +845,16 @@ body section.testimonials-block {
   justify-content: center;
   padding: 30px 10px;
 }
+@media (min-width: 640px) {
+  body section.testimonials-block {
+    padding: 60px 20px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block {
+    padding: 100px 30px 0;
+  }
+}
 @media (min-width: 1600px) {
   body section.testimonials-block {
     padding: 140px 0;
@@ -858,9 +868,20 @@ body section.testimonials-block .testimonials-wrapper {
 }
 body section.testimonials-block .testimonials-wrapper h3 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 47px;
+  font-size: 24px;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+@media (min-width: 640px) {
+  body section.testimonials-block .testimonials-wrapper h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper h3 {
+    margin-bottom: 47px;
+  }
 }
 body section.testimonials-block .testimonials-wrapper input[type=range] {
   margin-top: 21px;
@@ -872,26 +893,61 @@ body section.testimonials-block .testimonials-wrapper input[type=range] {
   background-color: #ffffff;
   border: 1px solid orange;
   border-radius: 5px;
+  display: none;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper input[type=range] {
+    display: block;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-@media (min-width: 1600px) {
+@media (min-width: 640px) {
   body section.testimonials-block .testimonials-wrapper .testimonials-articles {
+    gap: 15px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles {
+    gap: 30px;
     flex-direction: row;
   }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
   width: 268px;
-  height: 391px;
+  height: 109px;
   border-radius: 5px;
   padding: 5px;
   overflow: hidden;
-  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
+  background: radial-gradient(circle at 100% 100%, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#F5F7F6, #F5F7F6) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#F5F7F6, #F5F7F6) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
   border-radius: 20px;
   padding: 16px;
+}
+@media (min-width: 640px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+    width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+    width: 293px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+    height: 391px;
+  }
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+  display: none;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+    display: block;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header {
   display: flex;
@@ -926,11 +982,15 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
   cursor: ew-resize;
   border-radius: 5px;
   background-color: #f9804b;
-  display: none;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit-slider-thumb {
     display: block;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper a {
+    margin-right: auto;
   }
 }
 @media (min-width: 1600px) {
@@ -941,25 +1001,46 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
 body section.testimonials-block .testimonials-wrapper a button {
   width: 240px;
   border-radius: 6px;
-  margin-top: 31px;
-  margin-right: auto;
+  margin: 30px auto 60px;
+}
+@media (min-width: 640px) {
+  body section.testimonials-block .testimonials-wrapper a button {
+    margin: 40px auto 80px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper a button {
+    margin: 50px 0 140px;
+    width: 298px;
+  }
 }
 @media (min-width: 1600px) {
   body section.testimonials-block .testimonials-wrapper a button {
+    margin-top: 31px;
     width: 298px;
+    margin-right: auto;
   }
 }
 body section.testimonials-block img.plant4 {
   position: absolute;
   right: 0;
-  bottom: 0;
-  width: 33px;
-  height: 76px;
+  bottom: -50px;
+  width: 75px;
+}
+@media (min-width: 640px) {
+  body section.testimonials-block img.plant4 {
+    width: 150px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block img.plant4 {
+    width: 240px;
+    bottom: -130px;
+  }
 }
 @media (min-width: 1600px) {
   body section.testimonials-block img.plant4 {
     width: auto;
-    height: auto;
   }
 }
 body footer {
@@ -1000,7 +1081,6 @@ body footer .footer-wrapper .first-column a.footer-logo-link {
 }
 @media (min-width: 640px) {
   body footer .footer-wrapper .first-column a.footer-logo-link {
-    grid-area: "logo";
     order: 2;
   }
 }
@@ -1235,15 +1315,14 @@ body footer .footer-wrapper .third-column .copyrights strong {
   font-weight: 100;
 }
 
-aside.hero-banner {
-  height: 390px;
+body aside.hero-banner {
+  height: 470px;
   background-image: url(../../../assets/images/panda_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
-section.donate-section {
+body section.donate-section {
   background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
   display: flex;
   flex-direction: column;
@@ -1251,30 +1330,30 @@ section.donate-section {
   align-items: center;
   padding: 40px 220px 180px 220px;
 }
-section.donate-section .donate-section-text {
+body section.donate-section .donate-section-text {
   color: white;
 }
-section.donate-section .donate-section-text h3.donate-header {
+body section.donate-section .donate-section-text h3.donate-header {
   font-size: 36px;
   font-weight: 400;
   text-transform: uppercase;
   white-space: nowrap;
   margin-bottom: 10px;
 }
-section.donate-section .donate-section-text p {
+body section.donate-section .donate-section-text p {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 45px;
   line-height: 22.4px;
 }
-section.donate-section .donate-section-text h3.orange-header {
+body section.donate-section .donate-section-text h3.orange-header {
   font-size: 36px;
   font-weight: 400;
   color: #f9804b;
   margin-bottom: 65px;
   line-height: 46.8px;
 }
-section.donate-section .salomon-square {
+body section.donate-section .salomon-square {
   width: 1160px;
   height: 964px;
   background: rgba(253, 253, 255, 0.52);
@@ -1286,37 +1365,37 @@ section.donate-section .salomon-square {
   align-items: center;
   flex-direction: column;
 }
-section.donate-section .salomon-square h2.orange-header {
+body section.donate-section .salomon-square h2.orange-header {
   font-size: 48px;
   color: #f9804b;
   text-align: center;
   font-weight: 400;
 }
-section.donate-section .salomon-square span.lead {
+body section.donate-section .salomon-square span.lead {
   font-size: 24px;
   font-weight: 400;
   color: #333b41;
   align-self: flex-start;
   margin-top: 20px;
 }
-section.donate-section .salomon-square div.panda-diet {
+body section.donate-section .salomon-square div.panda-diet {
   display: flex;
   gap: 90px;
   margin-top: 60px;
   margin-bottom: 48px;
 }
-section.donate-section .salomon-square div.panda-diet .amount {
+body section.donate-section .salomon-square div.panda-diet .amount {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
-section.donate-section .salomon-square div.panda-diet .amount strong {
+body section.donate-section .salomon-square div.panda-diet .amount strong {
   font-size: 70px;
   text-align: center;
   margin-top: 30px;
 }
-section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
+body section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
   width: 14px;
   height: 14px;
   position: absolute;
@@ -1324,22 +1403,22 @@ section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
   right: -20px;
   margin-left: 50px;
 }
-section.donate-section .salomon-square div.panda-diet .amount span {
+body section.donate-section .salomon-square div.panda-diet .amount span {
   color: #333b41;
   font-size: 16px;
   line-height: 22.4px;
 }
-section.donate-section .salomon-square div.panda-diet .panda img {
+body section.donate-section .salomon-square div.panda-diet .panda img {
   width: 284px;
   height: 246px;
 }
-section.donate-section .salomon-square form {
+body section.donate-section .salomon-square form {
   padding-left: 10px;
 }
-section.donate-section .salomon-square form legend {
+body section.donate-section .salomon-square form legend {
   margin-bottom: 10px;
 }
-section.donate-section .salomon-square form fieldset.donation-radio {
+body section.donate-section .salomon-square form fieldset.donation-radio {
   width: 976px;
   height: 40px;
   padding: 8px 30px 9px 26px;
@@ -1349,19 +1428,19 @@ section.donate-section .salomon-square form fieldset.donation-radio {
   justify-content: space-between;
   align-items: center;
 }
-section.donate-section .salomon-square form fieldset.donation-radio .wrapper {
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper {
   height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px;
 }
-section.donate-section .salomon-square form fieldset.donation-radio .wrapper label {
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper label {
   display: block;
   text-align: center;
   font-size: 22px;
 }
-section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio] {
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1374,17 +1453,17 @@ section.donate-section .salomon-square form fieldset.donation-radio .wrapper inp
   cursor: pointer;
   transition: all 0.2s linear;
 }
-section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked {
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked {
   outline-offset: 6px;
   outline: 2px solid #f9804b;
 }
-section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked + label {
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked + label {
   color: #f9804b;
 }
-section.donate-section .salomon-square form span.dollar-icon {
+body section.donate-section .salomon-square form span.dollar-icon {
   position: relative;
 }
-section.donate-section .salomon-square form span.dollar-icon::after {
+body section.donate-section .salomon-square form span.dollar-icon::after {
   content: url("../../../assets/icons/dollar.png");
   right: 0;
   position: absolute;
@@ -1393,7 +1472,7 @@ section.donate-section .salomon-square form span.dollar-icon::after {
   width: 10px;
   height: 20px;
 }
-section.donate-section .salomon-square form span.dollar-icon input[type=number] {
+body section.donate-section .salomon-square form span.dollar-icon input[type=number] {
   width: 268px;
   height: 54px;
   padding: 16px;
@@ -1408,18 +1487,18 @@ section.donate-section .salomon-square form span.dollar-icon input[type=number] 
   /* Firefox */
   -moz-appearance: textfield;
 }
-section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-outer-spin-button, section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-inner-spin-button {
+body section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-outer-spin-button, body section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-inner-spin-button {
   appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
-section.donate-section .salomon-square form fieldset {
+body section.donate-section .salomon-square form fieldset {
   border: 0;
   display: flex;
   justify-content: center;
   gap: 50px;
 }
-section.donate-section .salomon-square form fieldset input.custom-radio {
+body section.donate-section .salomon-square form fieldset input.custom-radio {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1432,17 +1511,35 @@ section.donate-section .salomon-square form fieldset input.custom-radio {
   cursor: pointer;
   transition: all 0.2s linear;
 }
-section.donate-section .salomon-square form fieldset input.custom-radio:checked {
+body section.donate-section .salomon-square form fieldset input.custom-radio:checked {
   background-color: #f9804b;
 }
-section.donate-section .salomon-square button {
+body section.donate-section .salomon-square button {
   margin: 30px 0;
 }
-section.donate-section .salomon-square button span {
+body section.donate-section .salomon-square button span {
   font-size: 16px;
 }
-section.donate-section .salomon-square span {
+body section.donate-section .salomon-square span {
   font-size: 16px;
   font-weight: 400;
   display: block;
+}
+body footer div.footer-wrapper div.first-column a.donate-link {
+  text-align: center;
+}
+body footer div.footer-wrapper div.first-column a {
+  text-align: center;
+}
+body footer div.footer-wrapper div.first-column a div.footer-logo h5 {
+  font-size: 1.1875rem;
+}
+body footer div.footer-wrapper div.first-column a div.footer-logo h5 span {
+  position: relative;
+}
+body footer div.footer-wrapper div.first-column a div.footer-logo h5 span::before {
+  position: absolute;
+  content: url("../../../assets/icons/bamboo.svg");
+  bottom: -1px;
+  left: -5px;
 }/*# sourceMappingURL=style.css.map */
