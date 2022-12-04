@@ -100,6 +100,11 @@ body header.navigation .logo {
     border: 1px solid #ffffff;
   }
 }
+@media (min-width: 1600px) {
+  body header.navigation .logo {
+    padding: 3.5px 4.75px;
+  }
+}
 body header.navigation .logo h1 {
   font-size: 12px;
   font-weight: 400;
@@ -145,6 +150,7 @@ body header.navigation nav ul {
 }
 body header.navigation nav ul li {
   margin-right: 58px;
+  font-size: 1rem;
 }
 body header.navigation nav ul li:last-child {
   margin-right: 0;
@@ -228,8 +234,7 @@ body main section.favorite-animal-block {
 }
 @media (min-width: 1600px) {
   body main section.favorite-animal-block {
-    background-image: url("../../../assets/images/panda_bg.png");
-    height: 780px;
+    height: 800px;
   }
 }
 body main section.favorite-animal-block .orange-circle {
@@ -261,7 +266,7 @@ body main section.favorite-animal-block .orange-circle {
 @media (min-width: 1600px) {
   body main section.favorite-animal-block .orange-circle {
     top: 92px;
-    right: 328px;
+    right: 19.5rem;
     width: 465px;
     height: 465px;
   }
@@ -295,10 +300,10 @@ body main section.favorite-animal-block h2 {
 }
 @media (min-width: 1600px) {
   body main section.favorite-animal-block h2 {
-    font-size: 106px;
+    font-size: 106.5px;
     top: 166px;
     right: 220px;
-    line-height: 0.8;
+    line-height: 79.87px;
   }
 }
 body main section.favorite-animal-block h2 span {
@@ -339,9 +344,13 @@ body main section.favorite-animal-block button {
 }
 @media screen and (min-width: 1600px) {
   body main section.favorite-animal-block button {
-    margin-top: 60px;
-    right: 319px;
+    margin-top: 3.75rem;
+    margin-bottom: 6.25rem;
+    right: 19.9rem;
   }
+}
+body main section.favorite-animal-block button span {
+  font-weight: 500;
 }
 body main section.backstage-block {
   display: flex;
@@ -832,9 +841,14 @@ body section.pick-and-feed-a-friend .salomon-wrapper button {
 }
 body section.testimonials-block {
   position: relative;
-  padding: 140px 0;
   display: flex;
   justify-content: center;
+  padding: 30px 10px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block {
+    padding: 140px 0;
+  }
 }
 body section.testimonials-block .testimonials-wrapper {
   margin: 0 220px;
@@ -844,9 +858,15 @@ body section.testimonials-block .testimonials-wrapper {
 }
 body section.testimonials-block .testimonials-wrapper h3 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 47px;
+  font-size: 24px;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper h3 {
+    font-size: 36px;
+    margin-bottom: 47px;
+  }
 }
 body section.testimonials-block .testimonials-wrapper input[type=range] {
   margin-top: 21px;
@@ -858,20 +878,45 @@ body section.testimonials-block .testimonials-wrapper input[type=range] {
   background-color: #ffffff;
   border: 1px solid orange;
   border-radius: 5px;
+  display: none;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper input[type=range] {
+    display: block;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles {
   display: flex;
+  flex-direction: column;
   gap: 30px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles {
+    flex-direction: row;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
   width: 268px;
-  height: 391px;
+  height: 109px;
   border-radius: 5px;
   padding: 5px;
   overflow: hidden;
   background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
   border-radius: 20px;
   padding: 16px;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+    height: 391px;
+  }
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+  display: none;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+    display: block;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header {
   display: flex;
@@ -907,18 +952,38 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
   border-radius: 5px;
   background-color: #f9804b;
 }
-body section.testimonials-block .testimonials-wrapper a {
-  align-self: flex-start;
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit-slider-thumb {
+    display: block;
+  }
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper a {
+    align-self: flex-start;
+  }
 }
 body section.testimonials-block .testimonials-wrapper a button {
+  width: 240px;
   border-radius: 6px;
-  margin-top: 31px;
-  margin-right: auto;
+  margin: 30px auto 60px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper a button {
+    margin-top: 31px;
+    width: 298px;
+    margin-right: auto;
+  }
 }
 body section.testimonials-block img.plant4 {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -50px;
+  width: 75px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block img.plant4 {
+    width: auto;
+  }
 }
 body footer {
   width: 100vw;

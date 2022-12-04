@@ -100,6 +100,11 @@ body header.navigation .logo {
     border: 1px solid #ffffff;
   }
 }
+@media (min-width: 1600px) {
+  body header.navigation .logo {
+    padding: 3.5px 4.75px;
+  }
+}
 body header.navigation .logo h1 {
   font-size: 12px;
   font-weight: 400;
@@ -145,6 +150,7 @@ body header.navigation nav ul {
 }
 body header.navigation nav ul li {
   margin-right: 58px;
+  font-size: 1rem;
 }
 body header.navigation nav ul li:last-child {
   margin-right: 0;
@@ -228,8 +234,7 @@ body main section.favorite-animal-block {
 }
 @media (min-width: 1600px) {
   body main section.favorite-animal-block {
-    background-image: url("../../../assets/images/panda_bg.png");
-    height: 780px;
+    height: 800px;
   }
 }
 body main section.favorite-animal-block .orange-circle {
@@ -261,7 +266,7 @@ body main section.favorite-animal-block .orange-circle {
 @media (min-width: 1600px) {
   body main section.favorite-animal-block .orange-circle {
     top: 92px;
-    right: 328px;
+    right: 19.5rem;
     width: 465px;
     height: 465px;
   }
@@ -295,10 +300,10 @@ body main section.favorite-animal-block h2 {
 }
 @media (min-width: 1600px) {
   body main section.favorite-animal-block h2 {
-    font-size: 106px;
+    font-size: 106.5px;
     top: 166px;
     right: 220px;
-    line-height: 0.8;
+    line-height: 79.87px;
   }
 }
 body main section.favorite-animal-block h2 span {
@@ -339,9 +344,13 @@ body main section.favorite-animal-block button {
 }
 @media screen and (min-width: 1600px) {
   body main section.favorite-animal-block button {
-    margin-top: 60px;
-    right: 319px;
+    margin-top: 3.75rem;
+    margin-bottom: 6.25rem;
+    right: 19.9rem;
   }
+}
+body main section.favorite-animal-block button span {
+  font-weight: 500;
 }
 body main section.backstage-block {
   display: flex;
@@ -519,6 +528,7 @@ body main section.pets-block {
 @media (min-width: 1600px) {
   body main section.pets-block {
     margin: auto;
+    position: relative;
   }
 }
 body main section.pets-block .pets-wrapper {
@@ -615,7 +625,7 @@ body main section.pets-block .pets-wrapper a.arrow-r {
 }
 @media (min-width: 1600px) {
   body main section.pets-block .pets-wrapper a.arrow-r {
-    right: 5.125rem;
+    right: -4.875rem;
   }
 }
 body main section.pets-block .pets-wrapper article.animal-card {
@@ -831,9 +841,14 @@ body section.pick-and-feed-a-friend .salomon-wrapper button {
 }
 body section.testimonials-block {
   position: relative;
-  padding: 140px 0;
   display: flex;
   justify-content: center;
+  padding: 30px 10px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block {
+    padding: 140px 0;
+  }
 }
 body section.testimonials-block .testimonials-wrapper {
   margin: 0 220px;
@@ -860,7 +875,13 @@ body section.testimonials-block .testimonials-wrapper input[type=range] {
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles {
   display: flex;
+  flex-direction: column;
   gap: 30px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles {
+    flex-direction: row;
+  }
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
   width: 268px;
@@ -905,19 +926,41 @@ body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit
   cursor: ew-resize;
   border-radius: 5px;
   background-color: #f9804b;
+  display: none;
 }
-body section.testimonials-block .testimonials-wrapper a {
-  align-self: flex-start;
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper input[type=range]::-webkit-slider-thumb {
+    display: block;
+  }
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper a {
+    align-self: flex-start;
+  }
 }
 body section.testimonials-block .testimonials-wrapper a button {
+  width: 240px;
   border-radius: 6px;
   margin-top: 31px;
   margin-right: auto;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper a button {
+    width: 298px;
+  }
 }
 body section.testimonials-block img.plant4 {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 33px;
+  height: 76px;
+}
+@media (min-width: 1600px) {
+  body section.testimonials-block img.plant4 {
+    width: auto;
+    height: auto;
+  }
 }
 body footer {
   width: 100vw;

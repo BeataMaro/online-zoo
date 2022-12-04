@@ -124,6 +124,9 @@ body {
         width: 82px;
         border: 1px solid #ffffff;
       }
+      @media (min-width: 1600px) {
+        padding: 3.5px 4.75px;
+      }
 
       h1 {
         font-size: 12px;
@@ -168,6 +171,7 @@ body {
 
         li {
           margin-right: 58px;
+          font-size: 1rem;
           
           &:last-child {
            margin-right: 0;
@@ -258,8 +262,7 @@ body {
       }
       
       @media (min-width: 1600px) {
-        background-image: url("../../../assets/images/panda_bg.png");
-        height: 780px;
+        height: 800px;
       }
       .orange-circle {
         z-index: 1;
@@ -287,7 +290,7 @@ body {
         
         @media (min-width: 1600px) {
           top: 92px;
-          right: 328px;
+          right: 19.5rem;
           width: 465px;
           height: 465px;
         }
@@ -321,10 +324,10 @@ body {
 
         @media (min-width: 1600px) {
 
-          font-size: 106px;
+          font-size: 106.5px;
           top: 166px;
           right: 220px;
-          line-height: 0.8;
+          line-height: 79.87px;
         }
 
         & span {
@@ -354,7 +357,6 @@ body {
           bottom: 40px;
           translate: 0;
         }
-
         @media screen and (min-width: 1000px) {
           left: auto;
           bottom: 47px;
@@ -363,8 +365,13 @@ body {
         }
         
         @media screen and (min-width: 1600px) {
-          margin-top: 60px;
-          right: 319px;
+          margin-top: 3.75rem;
+          margin-bottom: 6.25rem;
+          right: 19.9rem;
+        }
+
+        & span {
+          font-weight: 500;
         }
       }
     }
@@ -375,7 +382,6 @@ body {
       padding: 1.875rem 1.0625rem 2.5rem;
       overflow-y: visible;
       
-
       @media (min-width: 640px) {
         padding: 3.75rem 1.25rem;
         overflow: hidden;
@@ -388,7 +394,6 @@ body {
         display: grid;
         place-items: center;  
       }
-
 
       div {
         display: grid;
@@ -802,7 +807,6 @@ body {
   }
   //PICK A FRIEND BLOCK
   section.pick-and-feed-a-friend {
-    // height: 1000px;
     background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
     display: flex;
     justify-content: center;
@@ -868,15 +872,16 @@ body {
   }
   //TESTIMONIALS BLOCK
   section.testimonials-block {
-    // height: 922px;
     position: relative;
-    padding: 140px 0;
     display: flex;
     justify-content: center;
+    padding: 30px 10px;
+
+    @media (min-width: 1600px) {
+      padding: 140px 0;
+    }
 
     .testimonials-wrapper {
-      // width: 1160px;
-      // height: 575px;
       margin: 0 220px;
       display: flex;
       flex-direction: column;
@@ -884,9 +889,14 @@ body {
 
       h3 {
         text-align: center;
-        font-size: 36px;
-        margin-bottom: 47px;
+        font-size: 24px;
         font-weight: 400;
+        margin-bottom: 20px;
+        
+        @media (min-width: 1000px) {
+          font-size: 36px;
+          margin-bottom: 47px;
+        }
       }
 
       input[type="range"] {
@@ -898,14 +908,24 @@ body {
         background-color: #ffffff;
         border: 1px solid orange;
         border-radius: 5px;
+        display: none;
+
+        @media (min-width: 1000px) {
+          display: block;
+        }
       }
 
       .testimonials-articles {
         display: flex;
+        flex-direction: column;
         gap: 30px;
+
+        @media (min-width: 1600px) {
+          flex-direction: row;
+        }
         article {
           width: 268px;
-          height: 391px;
+          height: 109px;
           border-radius: 5px;
           padding: 5px;
           overflow: hidden;
@@ -954,6 +974,18 @@ body {
           border-radius: 20px;
           padding: 16px;
 
+          @media (min-width: 1000px) {
+            height: 391px;
+          }
+
+          &.desktop {
+            display: none;
+
+            @media (min-width: 1000px) {
+              display: block;
+            }
+          }
+
           .testimonials-articles_header {
             display: flex;
             gap: 10px;
@@ -991,14 +1023,27 @@ body {
         cursor: ew-resize;
         border-radius: 5px;
         background-color: $orange;
+
+        @media (min-width: 1600px) {
+          display: block;
+        }
       }
       a {
-        align-self: flex-start;
+
+        @media (min-width: 1600px) {
+          align-self: flex-start;
+        }
         & button {
           @extend .orange-button;
+          width: 240px;
           border-radius: 6px;
-          margin-top: 31px;
-          margin-right: auto;
+          margin: 30px auto 60px;
+          
+          @media (min-width: 1600px) {
+            margin-top: 31px;
+            width: 298px;
+            margin-right: auto;
+          }
         }
       }
     }
@@ -1006,7 +1051,12 @@ body {
     img.plant4 {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -50px;
+      width: 75px;
+
+      @media (min-width: 1600px) {
+        width: auto;
+      }
     }
   }
   //FOOTER
