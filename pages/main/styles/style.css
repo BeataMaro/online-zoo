@@ -811,12 +811,26 @@ body section.pick-and-feed-a-friend {
   justify-content: center;
   padding: 20px 10px;
 }
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend {
+    padding: 30px 30px 50px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.pick-and-feed-a-friend {
+    padding: 69px 220px 100px;
+  }
+}
 body section.pick-and-feed-a-friend .salomon-wrapper {
   flex-direction: column;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  margin-top: 20px;
   color: #333b41;
   border-radius: 20px;
   width: 300px;
@@ -824,18 +838,18 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
 @media (min-width: 640px) {
   body section.pick-and-feed-a-friend .salomon-wrapper {
     width: 600px;
+    padding: 10px 20px;
   }
 }
 @media (min-width: 1000px) {
   body section.pick-and-feed-a-friend .salomon-wrapper {
     width: 940px;
-    margin-top: 69px;
   }
 }
 @media (min-width: 1600px) {
   body section.pick-and-feed-a-friend .salomon-wrapper {
-    padding: 20px 5px;
     width: 1160px;
+    padding: 20px 5px;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
@@ -843,6 +857,12 @@ body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
   font-size: 24px;
   font-weight: 400;
   margin-top: 20px;
+}
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
+    margin-top: 10px;
+    font-size: 42px;
+  }
 }
 @media (min-width: 1000px) {
   body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
@@ -867,21 +887,27 @@ body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead 
   margin: 10px auto 20px;
   display: block;
 }
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead {
+    font-size: 22px;
+    text-align: left;
+  }
+}
 @media (min-width: 1600px) {
   body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead {
     font-size: 24px;
-    text-align: left;
     margin-bottom: 40px;
   }
 }
-body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong, body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
+body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong,
+body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
   display: none;
 }
 @media (min-width: 640px) {
-  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong, body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
+  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong,
+body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
     display: block;
-    font-weight: 500;
-    line-height: 3;
+    line-height: 26.4px;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper h4 {
@@ -889,20 +915,44 @@ body section.pick-and-feed-a-friend .salomon-wrapper h4 {
   font-size: 24px;
   margin-bottom: 20px;
 }
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper h4 {
+    margin-top: 30px;
+  }
+}
 body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container {
   display: flex;
+}
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container {
+    flex-direction: column;
+  }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container {
   order: 2;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container {
+    order: 1;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container {
+    display: none;
+  }
+}
 body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container img.green-arrow {
   margin-top: 168px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 640px) {
   body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container img.green-arrow {
-    display: none;
+    margin-top: 0;
+    margin-left: 168px;
+    transform: rotate(270deg);
+    margin-bottom: -40px;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions {
@@ -912,9 +962,10 @@ body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container
   justify-content: space-around;
   align-items: center;
 }
-@media (min-width: 1000px) {
+@media (min-width: 640px) {
   body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions {
     flex-direction: row;
+    order: 2;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions img.arrow {
@@ -925,7 +976,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container
 }
 @media (min-width: 1000px) {
   body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions img.arrow {
-    display: block;
+    display: flex;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper button {
@@ -1034,7 +1085,7 @@ body section.testimonials-block .testimonials-wrapper .testimonials-articles art
   border-radius: 5px;
   padding: 5px;
   overflow: hidden;
-  background: radial-gradient(circle at 100% 100%, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #F5F7F6 0, #F5F7F6 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#F5F7F6, #F5F7F6) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#F5F7F6, #F5F7F6) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
+  background: radial-gradient(circle at 100% 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
   border-radius: 20px;
   padding: 16px;
 }
@@ -1309,7 +1360,7 @@ body footer .footer-wrapper .first-column .social-media a img {
 }
 body footer .footer-wrapper .first-column .social-media a img:active {
   color: #4b9200;
-  background-color: #4B9200;
+  background-color: #4b9200;
 }
 body footer .footer-wrapper .first-column .social-media a img.first-social {
   margin-top: 30px;
