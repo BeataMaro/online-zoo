@@ -809,25 +809,52 @@ body section.pick-and-feed-a-friend {
   background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
   display: flex;
   justify-content: center;
+  padding: 20px 10px;
 }
 body section.pick-and-feed-a-friend .salomon-wrapper {
   flex-direction: column;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  margin-top: 69px;
+  margin-top: 20px;
   color: #333b41;
+  border-radius: 20px;
+  width: 300px;
+}
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper {
+    width: 600px;
+  }
 }
 @media (min-width: 1000px) {
   body section.pick-and-feed-a-friend .salomon-wrapper {
-    height: 835px;
+    width: 940px;
+    margin-top: 69px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper {
+    padding: 20px 5px;
+    width: 1160px;
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
   color: #fe9013;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-top: 20px;
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
+    font-size: 36px;
+    margin: 60px 0 40px 0;
+  }
+}
+@media (min-width: 1600px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 1000px) {
   body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text {
@@ -835,30 +862,79 @@ body section.pick-and-feed-a-friend .salomon-wrapper h3.orange-header {
   }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead {
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px auto 20px;
+  display: block;
 }
-body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong {
-  font-weight: 500;
-  line-height: 3;
+@media (min-width: 1600px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p.lead {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
-body section.pick-and-feed-a-friend .salomon-wrapper h3 {
-  font-size: 36px;
+body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong, body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
+  display: none;
+}
+@media (min-width: 640px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text strong, body section.pick-and-feed-a-friend .salomon-wrapper .pick-and-feed-text p {
+    display: block;
+    font-weight: 500;
+    line-height: 3;
+  }
+}
+body section.pick-and-feed-a-friend .salomon-wrapper h4 {
   font-weight: 400;
-  margin: 60px 0 40px 0;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-body section.pick-and-feed-a-friend .salomon-wrapper .instructions {
+body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container {
   display: flex;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container img.green-arrow {
+  margin-top: 168px;
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .green-arrows-container img.green-arrow {
+    display: none;
+  }
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-around;
   align-items: center;
 }
-body section.pick-and-feed-a-friend .salomon-wrapper .instructions img.arrow {
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions {
+    flex-direction: row;
+  }
+}
+body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions img.arrow {
   width: 69px;
   height: 35px;
   margin: 0 30px 75px;
+  display: none;
+}
+@media (min-width: 1000px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper .icons-and-arrows-container .instructions img.arrow {
+    display: block;
+  }
 }
 body section.pick-and-feed-a-friend .salomon-wrapper button {
-  margin: 60px 0;
+  margin: 40px 0;
+}
+@media (min-width: 1600px) {
+  body section.pick-and-feed-a-friend .salomon-wrapper button {
+    margin: 60px 0;
+  }
 }
 body section.testimonials-block {
   position: relative;

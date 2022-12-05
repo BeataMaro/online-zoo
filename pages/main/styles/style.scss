@@ -831,25 +831,47 @@ body {
     background-image: linear-gradient(#fed290, #febdab, #febdab 74%);
     display: flex;
     justify-content: center;
+    padding: 20px 10px;
 
     .salomon-wrapper {
       @extend %d-flex;
       flex-direction: column;
-      // width: 1160px;
       background: rgba(253, 253, 255, 0.52);
       backdrop-filter: blur(2px);
-      margin-top: 69px;
+      margin-top: 20px;
       color: #333b41;
+      border-radius: 20px;
+      width: 300px;
+      
+      @media (min-width: 640px) {
+        width: 600px;
+      }
       
       @media (min-width: 1000px) {
-        height: 835px;
+        width: 940px;
+        margin-top: 69px;
+      }
+      
+      @media (min-width: 1600px) {
+        padding: 20px 5px;
+        width: 1160px;
       }
 
       h3.orange-header {
         color: #fe9013;
-        font-size: 48px;
+        font-size: 24px;
         font-weight: 400;
-        margin-bottom: 30px;
+        margin-top: 20px;
+        
+        @media (min-width: 1000px) {
+          font-size: 36px;
+          margin: 60px 0 40px 0;
+        }
+        
+        @media (min-width: 1600px) {
+          font-size: 48px;
+          margin-bottom: 30px;
+        }
       }
       .pick-and-feed-text {
 
@@ -858,36 +880,84 @@ body {
         }
 
         & p.lead {
-          font-size: 24px;
-          margin-bottom: 40px;
+          font-size: 18px;
+          text-align: center;
+          margin: 10px auto 20px;
+          display: block;
+          
+          @media (min-width: 1600px) {
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 40px;
+          }
         }
 
-        & strong {
-          font-weight: 500;
-          line-height: 3;
+        & strong, p {
+          display: none;
+
+          @media (min-width: 640px) {
+            display: block;
+            font-weight: 500;
+            line-height: 3;
+          }
         }
       }
-      h3 {
-        font-size: 36px;
+
+      h4 {
         font-weight: 400;
-        margin: 60px 0 40px 0;
+        font-size: 24px;
+        margin-bottom: 20px;
       }
+
+      .icons-and-arrows-container {
+        display: flex;
+
+        
+        .green-arrows-container {
+          order: 2;
+          display: flex;
+          flex-direction: column;
+
+          & img.green-arrow {
+            margin-top: 168px;
+    
+            @media (min-width: 1000px) {
+              display: none;
+            }
+          }
+        }
 
       .instructions {
         display: flex;
+        flex-direction: column;
+        gap: 20px;
         justify-content: space-around;
         align-items: center;
+
+        @media (min-width: 1000px) {
+          flex-direction: row;
+        }
 
         & img.arrow {
           width: 69px;
           height: 35px;
           margin: 0 30px 75px;
+          display: none;
+
+          @media (min-width: 1000px) {
+            display: block;
+          }
         }
       }
+    }
 
       button {
         @extend .orange-button;
-        margin: 60px 0;
+          margin: 40px 0;
+
+        @media (min-width: 1600px) {
+          margin: 60px 0;
+        }
       }
     }
   }
