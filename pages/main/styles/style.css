@@ -71,6 +71,7 @@ body header.navigation {
 @media (min-width: 640px) {
   body header.navigation {
     padding: 0 20px;
+    position: fixed;
   }
 }
 @media (min-width: 1000px) {
