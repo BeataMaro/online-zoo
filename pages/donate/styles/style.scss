@@ -2,87 +2,168 @@
 
 body {
 // & header.navigation {
-  
-//  width: 100vw;
-//  height: 80px;
-
-//  @media (min-width: 1600px) {
-  //  padding: 0;
-//  }
+//   a {
+//     div.logo {
+//       @media (min-width: 1000px) {
+//         border: 1px solid white;
+//       }
+//     }
+//   }
 // }
 
 aside.hero-banner {
-  height: 470px;
+  height: 221px;
   background-image: url(../../../assets/images/panda_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
+  @media (min-width: 1000px) {
+    height: 470px;
+  }
 }
 
 section.donate-section {
-  // width: 100vw;
   background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 220px 180px 220px;
+  padding: 30px 10px;
+
+  @media (min-width: 1000px) {
+    padding: 40px 220px 180px;
+  }
 
   .donate-section-text {
     color: #ffff;
+    width: 300px;
+
+    @media (min-width: 640px) {
+      width: 600px;
+    }
+
+    @media (min-width: 1000px) {
+      width: 939px;
+    }
+
+    @media (min-width: 1600px) {
+      width: 1160px;
+    }
 
     h3.donate-header {
-      font-size: 36px;
+      font-size: 1.5rem;
       font-weight: 400;
       text-transform: uppercase;
-      white-space: nowrap;
-      margin-bottom: 10px;
+      width: 300px;
+      margin-bottom: 20px;
+
+      @media (min-width: 640px) {
+        width: 600px;
+      }
+      
+      @media (min-width: 1000px) {
+        margin-bottom: 20px;
+        white-space: nowrap;
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
     }
     p {
       font-size: 16px;
       font-weight: 500;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
       line-height: 22.4px;
+      
+      @media (min-width: 1000px) {  
+        margin-bottom: 45px;
+      }
     }
 
     h3.orange-header {
-      font-size: 36px;
+      font-size: 24px;
       font-weight: 400;
       color: $orange;
-      margin-bottom: 65px;
+      margin-bottom: 30px;
       line-height: 46.8px;
+
+      @media (min-width: 640px) {
+        font-size: 36px;
+      }
+      
+      @media (min-width: 1000px) {
+        font-size: 48px;
+      }
+      
+      @media (min-width: 1600px) {
+        margin-bottom: 65px;
+      }
     }
   }
 
   .salomon-square {
-    width: 1160px;
-    height: 964px;
+    width: 300px;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    padding: 43px 99px 60px 99px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 20px 0;
+    
+    @media (min-width: 640px) {
+      width: 600px;
+      padding: 20px 30px;
+    }
+    
+    @media (min-width: 1000px) {
+      padding: 43px 99px 60px 99px;
+      width: 1160px;
+
+    }
 
     h2.orange-header {
-      font-size: 48px;
+      font-size: 24px;
       color: $orange;
       text-align: center;
       font-weight: 400;
+
+      @media (min-width: 640px) {
+        font-size: 48px;
+      }
     }
-    span.lead {
-      font-size: 24px;
+    p.lead {
+      @media (max-width: 640px) {
+        display: grid;
+      }
+      span {
+      font-size: 16px;
       font-weight: 400;
       color: #333b41;
       align-self: flex-start;
-      margin-top: 20px;
+      margin: 20px auto 0;
+
+      &:nth-child(2) {
+        @media (max-width: 640px) {
+          margin: 0 auto;
+        }
+      }
+      
+      @media (min-width: 640px) {
+        font-size: 24px;
+      }
     }
+  }
+  
     div.panda-diet {
       display: flex;
-      gap: 90px;
+      gap: 50px;
       margin-top: 60px;
       margin-bottom: 48px;
+      
+      @media (min-width: 640px) {
+        gap: 90px;
+      }
 
       .amount {
         display: flex;
@@ -91,30 +172,46 @@ section.donate-section {
         position: relative;
 
         strong {
-          font-size: 70px;
+          font-size: 40px;
           text-align: center;
           margin-top: 30px;
+          
+          @media (min-width: 1600px) {
+            font-size: 70px;
+          }
         }
         img.x-icon {
-          width: 14px;
-          height: 14px;
+          width: 8px;
+          height: 8px;
           position: absolute;
           top: 50%;
           right: -20px;
           margin-left: 50px;
+          
+          @media (min-width: 1600px) {
+            width: 14px;
+            height: 14px;
+          }
         }
 
         span {
           color: #333b41;
-          font-size: 16px;
-          line-height: 22.4px;
+          font-size: 9px;
+          
+          @media (min-width: 640px) {
+            line-height: 22.4px;
+            font-size: 16px;
+          }
         }
       }
 
       .panda {
         & img {
-          width: 284px;
-          height: 246px;
+          width: 151px;
+
+          @media (min-width: 640px) {
+            width: 268px;
+          }
         }
       }
     }
@@ -123,10 +220,11 @@ section.donate-section {
 
       legend {
         margin-bottom: 10px;
+        font-size: 1rem;
       }
       fieldset.donation-radio {
-        width: 976px;
-        height: 40px;
+        width: 300px;
+        height: 13.5px;
         padding: 8px 30px 9px 26px;
         background-color: $black_blue;
         border-radius: 2px;
@@ -134,12 +232,30 @@ section.donate-section {
         justify-content: space-between;
         align-items: center;
 
+        @media (min-width: 1600px) {
+          width: 100%;
+          height: 40px;
+        }
+
         .wrapper {
           height: 90px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
+          align-items: center;
           margin-top: 20px;
+          
+          @media (min-width: 1000px) {
+            justify-content: space-between;
+          }
+          
+          &.desktop {
+            display: none;
+            
+            @media (min-width: 1000px) {
+              display: flex;
+            }
+          }
 
           label {
             display: block;
@@ -149,14 +265,19 @@ section.donate-section {
 
           input[type="radio"] {
             appearance: none;
-            width: 16px;
-            height: 16px;
+            width: 5px;
+            height: 5px;
             background-color: $yellow;
             border-radius: 50%;
             padding: 2px;
             margin-top: 25px;
             cursor: pointer;
             transition: all 0.2s linear;
+
+            @media (min-width: 1600px) {
+              width: 16px;
+              height: 16px;
+            }
 
             &:checked {
               outline-offset: 6px;
@@ -171,6 +292,7 @@ section.donate-section {
 
       span.dollar-icon {
         position: relative;
+        font-size: 13px;
 
         &::after {
           content: url("../../../assets/icons/dollar.png");
@@ -237,7 +359,8 @@ section.donate-section {
     span {
       font-size: 16px;
       font-weight: 400;
-      display: block;
+      display: inline-block;
+      white-space: nowrap;    
     }
   }
  }
@@ -247,22 +370,53 @@ section.donate-section {
     div.first-column {
       a.donate-link {
         text-align: center;
+
+        @media (min-width: 640px) {
+          margin-right: auto;
+        }
         }
         a {
           text-align: center;
        
         div.footer-logo {
+
+          @media (min-width: 640px) {
+            border: 1px solid white;
+            width: 82px;
+            border-radius: 2px;
+          }
           & h5 {
             font-size: 1.1875rem;
             span {
               position: relative;
+              display: inline-block;
               &::before {
                 position: absolute;
                 content: url("../../../assets/icons/bamboo.svg");
-                bottom: -1px;
-                left: -5px;          
+                left: 0;
+                bottom: 0;
+
+                @media (min-width: 640px) {
+                  left: -0.2rem;
+                }
               }
             }
+          }
+        }
+       }
+       div.social-media {
+        a {
+          img {
+          @media (min-width: 640px) {
+            margin-right: 0;
+           }
+          }
+        strong {
+          display: none;
+             @media (min-width: 1000px) {
+              display: block;
+              margin-left: 12px;
+             }
           }
         }
        }

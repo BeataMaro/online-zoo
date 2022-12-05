@@ -23,7 +23,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
-.orange-button, body section.donate-section .salomon-square button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body section.donate-section .salomon-square button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block a button.pets-button, body main section.favorite-animal-block button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -32,16 +32,16 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body section.donate-section .salomon-square button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body section.donate-section .salomon-square button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block a button.pets-button span, body main section.favorite-animal-block button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 22.4px;
 }
-.orange-button:hover, body section.donate-section .salomon-square button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block button.pets-button:hover, body main section.favorite-animal-block button:hover {
+.orange-button:hover, body section.donate-section .salomon-square button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block a button.pets-button:hover, body main section.favorite-animal-block button:hover {
   background-image: linear-gradient(#e47209, #e47209);
 }
-.orange-button:active, body section.donate-section .salomon-square button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block button.pets-button:active, body main section.favorite-animal-block button:active {
+.orange-button:active, body section.donate-section .salomon-square button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block a button.pets-button:active, body main section.favorite-animal-block button:active {
   background-image: linear-gradient(#4b9200, #4b9200);
 }
 
@@ -514,6 +514,7 @@ body main section.pets-block {
   flex-direction: column;
   justify-content: center;
   padding: 0 1.0625rem 3.75rem;
+  position: relative;
 }
 @media (min-width: 640px) {
   body main section.pets-block {
@@ -528,7 +529,6 @@ body main section.pets-block {
 @media (min-width: 1600px) {
   body main section.pets-block {
     margin: auto;
-    position: relative;
   }
 }
 body main section.pets-block .pets-wrapper {
@@ -726,13 +726,16 @@ body main section.pets-block .pets-wrapper article.animal-card div img.food-icon
   align-self: center;
   margin-right: 12px;
 }
-body main section.pets-block button.pets-button {
+body main section.pets-block a {
+  margin: auto;
+}
+body main section.pets-block a button.pets-button {
   margin-top: 1.25rem;
   font-size: 1rem;
   font-weight: 500;
 }
 @media (min-width: 640px) {
-  body main section.pets-block button.pets-button {
+  body main section.pets-block a button.pets-button {
     margin-top: 3.75rem;
     position: absolute;
     bottom: 100px;
@@ -1316,11 +1319,16 @@ body footer .footer-wrapper .third-column .copyrights strong {
 }
 
 body aside.hero-banner {
-  height: 470px;
+  height: 221px;
   background-image: url(../../../assets/images/panda_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 1000px) {
+  body aside.hero-banner {
+    height: 470px;
+  }
 }
 body section.donate-section {
   background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
@@ -1328,61 +1336,151 @@ body section.donate-section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 220px 180px 220px;
+  padding: 30px 10px;
+}
+@media (min-width: 1000px) {
+  body section.donate-section {
+    padding: 40px 220px 180px;
+  }
 }
 body section.donate-section .donate-section-text {
   color: white;
+  width: 300px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .donate-section-text {
+    width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.donate-section .donate-section-text {
+    width: 939px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.donate-section .donate-section-text {
+    width: 1160px;
+  }
 }
 body section.donate-section .donate-section-text h3.donate-header {
-  font-size: 36px;
+  font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
-  white-space: nowrap;
-  margin-bottom: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .donate-section-text h3.donate-header {
+    width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.donate-section .donate-section-text h3.donate-header {
+    margin-bottom: 20px;
+    white-space: nowrap;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 }
 body section.donate-section .donate-section-text p {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   line-height: 22.4px;
 }
+@media (min-width: 1000px) {
+  body section.donate-section .donate-section-text p {
+    margin-bottom: 45px;
+  }
+}
 body section.donate-section .donate-section-text h3.orange-header {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 400;
   color: #f9804b;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
   line-height: 46.8px;
 }
+@media (min-width: 640px) {
+  body section.donate-section .donate-section-text h3.orange-header {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.donate-section .donate-section-text h3.orange-header {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.donate-section .donate-section-text h3.orange-header {
+    margin-bottom: 65px;
+  }
+}
 body section.donate-section .salomon-square {
-  width: 1160px;
-  height: 964px;
+  width: 300px;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border-radius: 20px;
-  padding: 43px 99px 60px 99px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 20px 0;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square {
+    width: 600px;
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.donate-section .salomon-square {
+    padding: 43px 99px 60px 99px;
+    width: 1160px;
+  }
 }
 body section.donate-section .salomon-square h2.orange-header {
-  font-size: 48px;
+  font-size: 24px;
   color: #f9804b;
   text-align: center;
   font-weight: 400;
 }
-body section.donate-section .salomon-square span.lead {
-  font-size: 24px;
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square h2.orange-header {
+    font-size: 48px;
+  }
+}
+@media (max-width: 640px) {
+  body section.donate-section .salomon-square p.lead {
+    display: grid;
+  }
+}
+body section.donate-section .salomon-square p.lead span {
+  font-size: 16px;
   font-weight: 400;
   color: #333b41;
   align-self: flex-start;
-  margin-top: 20px;
+  margin: 20px auto 0;
+}
+@media (max-width: 640px) {
+  body section.donate-section .salomon-square p.lead span:nth-child(2) {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square p.lead span {
+    font-size: 24px;
+  }
 }
 body section.donate-section .salomon-square div.panda-diet {
   display: flex;
-  gap: 90px;
+  gap: 50px;
   margin-top: 60px;
   margin-bottom: 48px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square div.panda-diet {
+    gap: 90px;
+  }
 }
 body section.donate-section .salomon-square div.panda-diet .amount {
   display: flex;
@@ -1391,36 +1489,57 @@ body section.donate-section .salomon-square div.panda-diet .amount {
   position: relative;
 }
 body section.donate-section .salomon-square div.panda-diet .amount strong {
-  font-size: 70px;
+  font-size: 40px;
   text-align: center;
   margin-top: 30px;
 }
+@media (min-width: 1600px) {
+  body section.donate-section .salomon-square div.panda-diet .amount strong {
+    font-size: 70px;
+  }
+}
 body section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   position: absolute;
   top: 50%;
   right: -20px;
   margin-left: 50px;
 }
+@media (min-width: 1600px) {
+  body section.donate-section .salomon-square div.panda-diet .amount img.x-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
 body section.donate-section .salomon-square div.panda-diet .amount span {
   color: #333b41;
-  font-size: 16px;
-  line-height: 22.4px;
+  font-size: 9px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square div.panda-diet .amount span {
+    line-height: 22.4px;
+    font-size: 16px;
+  }
 }
 body section.donate-section .salomon-square div.panda-diet .panda img {
-  width: 284px;
-  height: 246px;
+  width: 151px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square div.panda-diet .panda img {
+    width: 268px;
+  }
 }
 body section.donate-section .salomon-square form {
   padding-left: 10px;
 }
 body section.donate-section .salomon-square form legend {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 body section.donate-section .salomon-square form fieldset.donation-radio {
-  width: 976px;
-  height: 40px;
+  width: 300px;
+  height: 13.5px;
   padding: 8px 30px 9px 26px;
   background-color: #333b41;
   border-radius: 2px;
@@ -1428,12 +1547,32 @@ body section.donate-section .salomon-square form fieldset.donation-radio {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 1600px) {
+  body section.donate-section .salomon-square form fieldset.donation-radio {
+    width: 100%;
+    height: 40px;
+  }
+}
 body section.donate-section .salomon-square form fieldset.donation-radio .wrapper {
   height: 90px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 20px;
+}
+@media (min-width: 1000px) {
+  body section.donate-section .salomon-square form fieldset.donation-radio .wrapper {
+    justify-content: space-between;
+  }
+}
+body section.donate-section .salomon-square form fieldset.donation-radio .wrapper.desktop {
+  display: none;
+}
+@media (min-width: 1000px) {
+  body section.donate-section .salomon-square form fieldset.donation-radio .wrapper.desktop {
+    display: flex;
+  }
 }
 body section.donate-section .salomon-square form fieldset.donation-radio .wrapper label {
   display: block;
@@ -1444,14 +1583,20 @@ body section.donate-section .salomon-square form fieldset.donation-radio .wrappe
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 5px;
+  height: 5px;
   background-color: #ffee2e;
   border-radius: 50%;
   padding: 2px;
   margin-top: 25px;
   cursor: pointer;
   transition: all 0.2s linear;
+}
+@media (min-width: 1600px) {
+  body section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio] {
+    width: 16px;
+    height: 16px;
+  }
 }
 body section.donate-section .salomon-square form fieldset.donation-radio .wrapper input[type=radio]:checked {
   outline-offset: 6px;
@@ -1462,6 +1607,7 @@ body section.donate-section .salomon-square form fieldset.donation-radio .wrappe
 }
 body section.donate-section .salomon-square form span.dollar-icon {
   position: relative;
+  font-size: 13px;
 }
 body section.donate-section .salomon-square form span.dollar-icon::after {
   content: url("../../../assets/icons/dollar.png");
@@ -1523,23 +1669,56 @@ body section.donate-section .salomon-square button span {
 body section.donate-section .salomon-square span {
   font-size: 16px;
   font-weight: 400;
-  display: block;
+  display: inline-block;
+  white-space: nowrap;
 }
 body footer div.footer-wrapper div.first-column a.donate-link {
   text-align: center;
 }
+@media (min-width: 640px) {
+  body footer div.footer-wrapper div.first-column a.donate-link {
+    margin-right: auto;
+  }
+}
 body footer div.footer-wrapper div.first-column a {
   text-align: center;
+}
+@media (min-width: 640px) {
+  body footer div.footer-wrapper div.first-column a div.footer-logo {
+    border: 1px solid white;
+    width: 82px;
+    border-radius: 2px;
+  }
 }
 body footer div.footer-wrapper div.first-column a div.footer-logo h5 {
   font-size: 1.1875rem;
 }
 body footer div.footer-wrapper div.first-column a div.footer-logo h5 span {
   position: relative;
+  display: inline-block;
 }
 body footer div.footer-wrapper div.first-column a div.footer-logo h5 span::before {
   position: absolute;
   content: url("../../../assets/icons/bamboo.svg");
-  bottom: -1px;
-  left: -5px;
+  left: 0;
+  bottom: 0;
+}
+@media (min-width: 640px) {
+  body footer div.footer-wrapper div.first-column a div.footer-logo h5 span::before {
+    left: -0.2rem;
+  }
+}
+@media (min-width: 640px) {
+  body footer div.footer-wrapper div.first-column div.social-media a img {
+    margin-right: 0;
+  }
+}
+body footer div.footer-wrapper div.first-column div.social-media a strong {
+  display: none;
+}
+@media (min-width: 1000px) {
+  body footer div.footer-wrapper div.first-column div.social-media a strong {
+    display: block;
+    margin-left: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */
