@@ -896,18 +896,18 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 30px 10px;
+    padding-top: 30px;
 
     @media (min-width: 640px) {
-      padding: 60px 20px;
+      padding-top: 60px;
     }
 
     @media (min-width: 1000px) {
-      padding: 100px 30px 0;
+      padding-top: 100px;
     }
 
     @media (min-width: 1600px) {
-      padding: 140px 0;
+      padding-top: 140px;
     }
 
     .testimonials-wrapper {
@@ -915,6 +915,20 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 300px;
+
+      @media (min-width: 640px) {
+        width: 600px;
+      }
+      
+      @media (min-width: 1000px) {
+        width: 940px;
+      }
+      
+      @media (min-width: 1600px) {
+        width: 1160px;
+      }
+      
 
       h3 {
         text-align: center;
@@ -961,7 +975,6 @@ body {
         }
         article {
           width: 268px;
-          height: 109px;
           border-radius: 5px;
           padding: 5px;
           overflow: hidden;
@@ -1013,14 +1026,13 @@ body {
           @media (min-width: 640px) {
             width: 600px;
           }
-
           @media (min-width: 1000px) {
             width: 293px;
           }
-
-          @media (min-width: 1000px) {
-            height: 391px;
+          @media (min-width: 1600px) {
+            width: 266px;
           }
+
 
           &.desktop {
             display: none;
@@ -1096,6 +1108,7 @@ body {
           
           @media (min-width: 1600px) {
             margin-top: 31px;
+            margin-bottom: 180px;
             width: 298px;
             margin-right: auto;
           }
@@ -1111,6 +1124,7 @@ body {
 
       @media (min-width: 640px) {
         width: 150px;
+        bottom: -90px;
       }
 
       @media (min-width: 1000px) {
@@ -1129,6 +1143,8 @@ body {
     background-color: #111115;
     color: #ffffff;
     padding: 1.25rem 0.8rem;
+    display: flex;
+    justify-content: center;
     
     @media (min-width: 640px) {
       padding: 0.75rem 1.25rem;
@@ -1142,10 +1158,20 @@ body {
     }
     .footer-wrapper {
       display: grid;
+      width: 300px;
+
+      @media (min-width: 640px) {
+        width: 600px;
+      }
   
       @media (min-width: 1000px) {
+        width: 939px;
         display: flex;
         justify-content: space-between;
+      }
+  
+      @media (min-width: 1600px) {
+        width: 1160px;
       }
 
       .first-column {
