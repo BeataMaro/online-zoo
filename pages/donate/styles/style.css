@@ -1449,26 +1449,19 @@ body section.donate-section .salomon-square h2.orange-header {
     font-size: 48px;
   }
 }
-@media (max-width: 640px) {
-  body section.donate-section .salomon-square p.lead {
-    display: grid;
-  }
-}
-body section.donate-section .salomon-square p.lead span {
-  font-size: 16px;
+body section.donate-section .salomon-square p.lead {
+  font-size: 1rem;
   font-weight: 400;
   color: #333b41;
   align-self: flex-start;
-  margin: 20px auto 0;
-}
-@media (max-width: 640px) {
-  body section.donate-section .salomon-square p.lead span:nth-child(2) {
-    margin: 0 auto;
-  }
+  margin: 10px auto 0;
+  text-align: center;
 }
 @media (min-width: 640px) {
-  body section.donate-section .salomon-square p.lead span {
+  body section.donate-section .salomon-square p.lead {
+    display: grid;
     font-size: 24px;
+    margin: 20px auto 0;
   }
 }
 body section.donate-section .salomon-square div.panda-diet {
@@ -1524,6 +1517,7 @@ body section.donate-section .salomon-square div.panda-diet .amount span {
 }
 body section.donate-section .salomon-square div.panda-diet .panda img {
   width: 151px;
+  height: 112px;
 }
 @media (min-width: 640px) {
   body section.donate-section .salomon-square div.panda-diet .panda img {
@@ -1531,7 +1525,23 @@ body section.donate-section .salomon-square div.panda-diet .panda img {
   }
 }
 body section.donate-section .salomon-square form {
-  padding-left: 10px;
+  width: 300px;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square form {
+    padding-left: 10px;
+    width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body section.donate-section .salomon-square form {
+    width: 940px;
+  }
+}
+@media (min-width: 1600px) {
+  body section.donate-section .salomon-square form {
+    width: 1160px;
+  }
 }
 body section.donate-section .salomon-square form legend {
   margin-bottom: 10px;
@@ -1544,11 +1554,11 @@ body section.donate-section .salomon-square form fieldset.donation-radio {
   background-color: #333b41;
   border-radius: 2px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 1600px) {
   body section.donate-section .salomon-square form fieldset.donation-radio {
+    justify-content: space-between;
     width: 100%;
     height: 40px;
   }
@@ -1620,7 +1630,7 @@ body section.donate-section .salomon-square form span.dollar-icon::after {
 }
 body section.donate-section .salomon-square form span.dollar-icon input[type=number] {
   width: 268px;
-  height: 54px;
+  height: 42px;
   padding: 16px;
   border: 2px solid #929699;
   border-radius: 4px;
@@ -1632,6 +1642,11 @@ body section.donate-section .salomon-square form span.dollar-icon input[type=num
           appearance: textfield;
   /* Firefox */
   -moz-appearance: textfield;
+}
+@media (min-width: 640px) {
+  body section.donate-section .salomon-square form span.dollar-icon input[type=number] {
+    height: 54px;
+  }
 }
 body section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-outer-spin-button, body section.donate-section .salomon-square form span.dollar-icon input[type=number]::-webkit-inner-spin-button {
   appearance: none;

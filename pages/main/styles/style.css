@@ -62,7 +62,7 @@ body header.navigation {
   background-color: #000000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,42 +70,59 @@ body header.navigation {
 }
 @media (min-width: 640px) {
   body header.navigation {
-    width: 100vw;
     padding: 0 20px;
   }
 }
 @media (min-width: 1000px) {
   body header.navigation {
-    width: 100vw;
-    gap: 63px;
     height: 80px;
     padding: 0 30px;
   }
 }
 @media (min-width: 1600px) {
   body header.navigation {
-    width: 100vw;
     padding: 0 220px;
   }
 }
-body header.navigation .logo {
+body header.navigation div.navigation-wrapper {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 640px) {
+  body header.navigation div.navigation-wrapper {
+    width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body header.navigation div.navigation-wrapper {
+    width: 939px;
+  }
+}
+@media (min-width: 1600px) {
+  body header.navigation div.navigation-wrapper {
+    width: 1160px;
+  }
+}
+body header.navigation div.navigation-wrapper .logo {
   width: 46px;
   border-radius: 2px;
   padding: 2px;
   border: none;
 }
 @media (min-width: 1000px) {
-  body header.navigation .logo {
+  body header.navigation div.navigation-wrapper .logo {
     width: 82px;
     border: 1px solid #ffffff;
   }
 }
 @media (min-width: 1600px) {
-  body header.navigation .logo {
+  body header.navigation div.navigation-wrapper .logo {
     padding: 3.5px 4.75px;
   }
 }
-body header.navigation .logo h1 {
+body header.navigation div.navigation-wrapper .logo h1 {
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
@@ -113,11 +130,11 @@ body header.navigation .logo h1 {
   text-align: center;
 }
 @media (min-width: 1000px) {
-  body header.navigation .logo h1 {
+  body header.navigation div.navigation-wrapper .logo h1 {
     font-size: 19px;
   }
 }
-body header.navigation .logo h1 span::before {
+body header.navigation div.navigation-wrapper .logo h1 span::before {
   content: url("../../../assets/icons/bamboo.svg");
   width: 7px;
   height: 21px;
@@ -126,16 +143,17 @@ body header.navigation .logo h1 span::before {
   bottom: 0;
 }
 @media (min-width: 1000px) {
-  body header.navigation .logo h1 span::before {
+  body header.navigation div.navigation-wrapper .logo h1 span::before {
     left: 7px;
     bottom: 4px;
   }
 }
-body header.navigation nav {
+body header.navigation div.navigation-wrapper nav {
   display: flex;
   flex: 4;
+  margin-left: 63px;
 }
-body header.navigation nav ul {
+body header.navigation div.navigation-wrapper nav ul {
   width: 100%;
   list-style: none;
   display: flex;
@@ -143,38 +161,38 @@ body header.navigation nav ul {
   display: none;
 }
 @media screen and (min-width: 1000px) {
-  body header.navigation nav ul {
+  body header.navigation div.navigation-wrapper nav ul {
     display: flex;
     flex-direction: row;
   }
 }
-body header.navigation nav ul li {
+body header.navigation div.navigation-wrapper nav ul li {
   margin-right: 58px;
   font-size: 1rem;
 }
-body header.navigation nav ul li:last-child {
+body header.navigation div.navigation-wrapper nav ul li:last-child {
   margin-right: 0;
   margin-left: auto;
 }
 @media (min-width: 1600px) {
-  body header.navigation nav ul li:last-child a {
+  body header.navigation div.navigation-wrapper nav ul li:last-child a {
     text-transform: uppercase;
   }
 }
-body header.navigation nav ul li a {
+body header.navigation div.navigation-wrapper nav ul li a {
   transition: all 0.35s linear;
   color: #ffffff;
   font-weight: 500;
   text-align: center;
 }
-body header.navigation nav ul li a:is(:link, :active, :visited) {
+body header.navigation div.navigation-wrapper nav ul li a:is(:link, :active, :visited) {
   color: #ffffff;
 }
-body header.navigation nav ul li a:is(:link, :active, :visited).active {
+body header.navigation div.navigation-wrapper nav ul li a:is(:link, :active, :visited).active {
   color: #f9804b;
   background-color: transparent;
 }
-body header.navigation div.hamburger-menu {
+body header.navigation div.navigation-wrapper div.hamburger-menu {
   width: 18px;
   height: 2px;
   border-radius: 2px;
@@ -182,7 +200,7 @@ body header.navigation div.hamburger-menu {
   position: relative;
   cursor: pointer;
 }
-body header.navigation div.hamburger-menu::before {
+body header.navigation div.navigation-wrapper div.hamburger-menu::before {
   content: "";
   display: block;
   width: 18px;
@@ -192,7 +210,7 @@ body header.navigation div.hamburger-menu::before {
   position: absolute;
   bottom: 5px;
 }
-body header.navigation div.hamburger-menu::after {
+body header.navigation div.navigation-wrapper div.hamburger-menu::after {
   content: "";
   display: block;
   width: 18px;
@@ -203,7 +221,7 @@ body header.navigation div.hamburger-menu::after {
   top: 5px;
 }
 @media (min-width: 1000px) {
-  body header.navigation div.hamburger-menu {
+  body header.navigation div.navigation-wrapper div.hamburger-menu {
     display: none;
   }
 }
