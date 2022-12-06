@@ -278,113 +278,119 @@ body {
       @media (min-width: 1600px) {
         height: 800px;
       }
-      .orange-circle {
-        z-index: 1;
-        width: 119px;
-        height: 119px;
-        background-color: $orange;
-        border-radius: 50%;
-        position: absolute;
-        top: 56px;
-        right: 30px;
+      .circle-wrapper {
+        // position: absolute;
+        // // top: 92px;
+        // // right: 19.5rem;
+        border: 1px solid green;
+        .orange-circle {
+          z-index: 1;
+          width: 119px;
+          height: 119px;
+          background-color: $orange;
+          border-radius: 50%;
+          position: absolute;
+          top: 56px;
+          right: 30px;
 
-        @media (min-width: 640px) {
-          width: 238px;
-          height: 238px;
-          top: 64px;
-          right: 100px;
-        }
+          @media (min-width: 640px) {
+            width: 238px;
+            height: 238px;
+            top: 64px;
+            right: 100px;
+          }
 
-        @media (min-width: 1000px) {
-          top: 69px;
-          right: 177px;
-          width: 367px;
-          height: 367px;
-        }
+          @media (min-width: 1000px) {
+            top: 69px;
+            right: 177px;
+            width: 367px;
+            height: 367px;
+          }
 
-        @media (min-width: 1600px) {
-          top: 92px;
-          right: 19.5rem;
-          width: 465px;
-          height: 465px;
-        }
-      }
-
-      h2 {
-        font-size: 27px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #ffffff;
-        z-index: 2;
-        position: absolute;
-        top: 75px;
-        right: 10px;
-        line-height: 21px;
-
-        @media (min-width: 640px) {
-          font-size: 54px;
-          top: 82px;
-          right: 20px;
-          line-height: 43px;
-        }
-
-        @media (min-width: 1000px) {
-          font-size: 85px;
-          top: 123px;
-          right: 85px;
-          line-height: 64px;
-        }
-
-        @media (min-width: 1600px) {
-          font-size: 106.5px;
-          top: 166px;
-          right: 220px;
-          line-height: 79.87px;
-        }
-
-        & span {
-          color: $yellow;
-          line-height: 0.2;
-
-          @media screen and (min-width: 1000px) {
-            line-height: 0;
+          @media (min-width: 1600px) {
+            top: 92px;
+            right: 19.5rem;
+            width: 465px;
+            height: 465px;
           }
         }
-      }
 
-      button {
-        @extend .orange-button;
-        cursor: pointer;
-        width: 298px;
-        height: 54px;
-        font-size: 16px;
-        font-weight: 500;
-        text-transform: uppercase;
-        position: absolute;
-        left: 50%;
-        translate: -50%;
-        bottom: -80px;
+        h2 {
+          font-size: 27px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          z-index: 2;
+          position: absolute;
+          top: 75px;
+          right: 10px;
+          line-height: 21px;
 
-        @media screen and (min-width: 640px) {
-          left: 20px;
-          bottom: 40px;
-          translate: 0;
+          @media (min-width: 640px) {
+            font-size: 54px;
+            top: 82px;
+            right: 20px;
+            line-height: 43px;
+          }
+
+          @media (min-width: 1000px) {
+            font-size: 85px;
+            top: 123px;
+            right: 85px;
+            line-height: 64px;
+          }
+
+          @media (min-width: 1600px) {
+            font-size: 106.5px;
+            top: 166px;
+            right: 220px;
+            line-height: 79.87px;
+          }
+
+          & span {
+            color: $yellow;
+            line-height: 0.2;
+
+            @media screen and (min-width: 1000px) {
+              line-height: 0;
+            }
+          }
         }
-        @media screen and (min-width: 1000px) {
-          left: auto;
-          bottom: 47px;
-          right: 200px;
-          margin-top: 40px;
-        }
 
-        @media screen and (min-width: 1600px) {
-          margin-top: 3.75rem;
-          margin-bottom: 6.25rem;
-          right: 19.9rem;
-        }
-
-        & span {
+        button {
+          @extend .orange-button;
+          cursor: pointer;
+          width: 298px;
+          height: 54px;
+          font-size: 16px;
           font-weight: 500;
+          text-transform: uppercase;
+          position: absolute;
+          left: 50%;
+          bottom: -80px;
+          translate: -50%;
+
+          @media screen and (min-width: 640px) {
+            left: 20px;
+            bottom: 40px;
+            translate: 0;
+          }
+          @media screen and (min-width: 1000px) {
+            left: auto;
+            bottom: 47px;
+            right: 200px;
+            margin-top: 40px;
+          }
+
+          @media screen and (min-width: 1600px) {
+            margin-top: 3.75rem;
+            margin-bottom: 6.25rem;
+            right: 19.9rem;
+          }
+
+          & span {
+            font-weight: 500;
+          }
         }
       }
     }

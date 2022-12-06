@@ -23,7 +23,7 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
-.orange-button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block a button.pets-button, body main section.favorite-animal-block button {
+.orange-button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block a button.pets-button, body main section.favorite-animal-block .circle-wrapper button {
   width: 298px;
   height: 54px;
   background-image: linear-gradient(#f9804b, #fe9013);
@@ -32,16 +32,16 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   padding-left: 5px;
   cursor: pointer;
 }
-.orange-button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block a button.pets-button span, body main section.favorite-animal-block button span {
+.orange-button span, body footer .footer-wrapper .first-column a.donate-link button span, body section.testimonials-block .testimonials-wrapper a button span, body section.pick-and-feed-a-friend .salomon-wrapper button span, body main section.pets-block a button.pets-button span, body main section.favorite-animal-block .circle-wrapper button span {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 22.4px;
 }
-.orange-button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block a button.pets-button:hover, body main section.favorite-animal-block button:hover {
+.orange-button:hover, body footer .footer-wrapper .first-column a.donate-link button:hover, body section.testimonials-block .testimonials-wrapper a button:hover, body section.pick-and-feed-a-friend .salomon-wrapper button:hover, body main section.pets-block a button.pets-button:hover, body main section.favorite-animal-block .circle-wrapper button:hover {
   background-image: linear-gradient(#e47209, #e47209);
 }
-.orange-button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block a button.pets-button:active, body main section.favorite-animal-block button:active {
+.orange-button:active, body footer .footer-wrapper .first-column a.donate-link button:active, body section.testimonials-block .testimonials-wrapper a button:active, body section.pick-and-feed-a-friend .salomon-wrapper button:active, body main section.pets-block a button.pets-button:active, body main section.favorite-animal-block .circle-wrapper button:active {
   background-image: linear-gradient(#4b9200, #4b9200);
 }
 
@@ -256,7 +256,10 @@ body main section.favorite-animal-block {
     height: 800px;
   }
 }
-body main section.favorite-animal-block .orange-circle {
+body main section.favorite-animal-block .circle-wrapper {
+  border: 1px solid green;
+}
+body main section.favorite-animal-block .circle-wrapper .orange-circle {
   z-index: 1;
   width: 119px;
   height: 119px;
@@ -267,7 +270,7 @@ body main section.favorite-animal-block .orange-circle {
   right: 30px;
 }
 @media (min-width: 640px) {
-  body main section.favorite-animal-block .orange-circle {
+  body main section.favorite-animal-block .circle-wrapper .orange-circle {
     width: 238px;
     height: 238px;
     top: 64px;
@@ -275,7 +278,7 @@ body main section.favorite-animal-block .orange-circle {
   }
 }
 @media (min-width: 1000px) {
-  body main section.favorite-animal-block .orange-circle {
+  body main section.favorite-animal-block .circle-wrapper .orange-circle {
     top: 69px;
     right: 177px;
     width: 367px;
@@ -283,14 +286,14 @@ body main section.favorite-animal-block .orange-circle {
   }
 }
 @media (min-width: 1600px) {
-  body main section.favorite-animal-block .orange-circle {
+  body main section.favorite-animal-block .circle-wrapper .orange-circle {
     top: 92px;
     right: 19.5rem;
     width: 465px;
     height: 465px;
   }
 }
-body main section.favorite-animal-block h2 {
+body main section.favorite-animal-block .circle-wrapper h2 {
   font-size: 27px;
   text-align: center;
   text-transform: uppercase;
@@ -302,7 +305,7 @@ body main section.favorite-animal-block h2 {
   line-height: 21px;
 }
 @media (min-width: 640px) {
-  body main section.favorite-animal-block h2 {
+  body main section.favorite-animal-block .circle-wrapper h2 {
     font-size: 54px;
     top: 82px;
     right: 20px;
@@ -310,7 +313,7 @@ body main section.favorite-animal-block h2 {
   }
 }
 @media (min-width: 1000px) {
-  body main section.favorite-animal-block h2 {
+  body main section.favorite-animal-block .circle-wrapper h2 {
     font-size: 85px;
     top: 123px;
     right: 85px;
@@ -318,23 +321,23 @@ body main section.favorite-animal-block h2 {
   }
 }
 @media (min-width: 1600px) {
-  body main section.favorite-animal-block h2 {
+  body main section.favorite-animal-block .circle-wrapper h2 {
     font-size: 106.5px;
     top: 166px;
     right: 220px;
     line-height: 79.87px;
   }
 }
-body main section.favorite-animal-block h2 span {
+body main section.favorite-animal-block .circle-wrapper h2 span {
   color: #ffee2e;
   line-height: 0.2;
 }
 @media screen and (min-width: 1000px) {
-  body main section.favorite-animal-block h2 span {
+  body main section.favorite-animal-block .circle-wrapper h2 span {
     line-height: 0;
   }
 }
-body main section.favorite-animal-block button {
+body main section.favorite-animal-block .circle-wrapper button {
   cursor: pointer;
   width: 298px;
   height: 54px;
@@ -343,18 +346,18 @@ body main section.favorite-animal-block button {
   text-transform: uppercase;
   position: absolute;
   left: 50%;
-  translate: -50%;
   bottom: -80px;
+  translate: -50%;
 }
 @media screen and (min-width: 640px) {
-  body main section.favorite-animal-block button {
+  body main section.favorite-animal-block .circle-wrapper button {
     left: 20px;
     bottom: 40px;
     translate: 0;
   }
 }
 @media screen and (min-width: 1000px) {
-  body main section.favorite-animal-block button {
+  body main section.favorite-animal-block .circle-wrapper button {
     left: auto;
     bottom: 47px;
     right: 200px;
@@ -362,13 +365,13 @@ body main section.favorite-animal-block button {
   }
 }
 @media screen and (min-width: 1600px) {
-  body main section.favorite-animal-block button {
+  body main section.favorite-animal-block .circle-wrapper button {
     margin-top: 3.75rem;
     margin-bottom: 6.25rem;
     right: 19.9rem;
   }
 }
-body main section.favorite-animal-block button span {
+body main section.favorite-animal-block .circle-wrapper button span {
   font-weight: 500;
 }
 body main section.backstage-block {

@@ -1,454 +1,451 @@
 @import "../../main/styles/style";
 
 body {
-// & header.navigation {
-//   a {
-//     div.logo {
-//       @media (min-width: 1000px) {
-//         border: 1px solid white;
-//       }
-//     }
-//   }
-// }
+  // & header.navigation {
+  //   a {
+  //     div.logo {
+  //       @media (min-width: 1000px) {
+  //         border: 1px solid white;
+  //       }
+  //     }
+  //   }
+  // }
 
-aside.hero-banner {
-  height: 221px;
-  background-image: url(../../../assets/images/panda_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
-  @media (min-width: 1000px) {
-    height: 470px;
-  }
-}
-
-section.donate-section {
-  background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 10px;
-
-  @media (min-width: 1000px) {
-    padding: 40px 220px 180px;
-  }
-
-  .donate-section-text {
-    color: #ffff;
-    width: 300px;
-
-    @media (min-width: 640px) {
-      width: 600px;
-    }
+  aside.hero-banner {
+    height: 221px;
+    background-image: url(../../../assets/images/panda_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     @media (min-width: 1000px) {
-      width: 939px;
-    }
-
-    @media (min-width: 1600px) {
-      width: 1160px;
-    }
-
-    h3.donate-header {
-      font-size: 1.5rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      width: 300px;
-      margin-bottom: 20px;
-
-      @media (min-width: 640px) {
-        width: 600px;
-      }
-      
-      @media (min-width: 1000px) {
-        margin-bottom: 20px;
-        white-space: nowrap;
-        font-size: 36px;
-        margin-bottom: 10px;
-      }
-    }
-    p {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 30px;
-      line-height: 22.4px;
-      
-      @media (min-width: 1000px) {  
-        margin-bottom: 45px;
-      }
-    }
-
-    h3.orange-header {
-      font-size: 24px;
-      font-weight: 400;
-      color: $orange;
-      margin-bottom: 30px;
-      line-height: 46.8px;
-
-      @media (min-width: 640px) {
-        font-size: 36px;
-      }
-      
-      @media (min-width: 1000px) {
-        font-size: 48px;
-      }
-      
-      @media (min-width: 1600px) {
-        margin-bottom: 65px;
-      }
+      height: 470px;
     }
   }
 
-  .salomon-square {
-    width: 300px;
-    background: rgba(253, 253, 255, 0.52);
-    backdrop-filter: blur(2px);
-    border-radius: 20px;
+  section.donate-section {
+    background-image: linear-gradient(#febdab, #febdab, #fed290 74%);
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 20px 0;
-    
-    @media (min-width: 640px) {
-      width: 600px;
-      padding: 20px 30px;
-    }
-    
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+
     @media (min-width: 1000px) {
-      padding: 43px 99px 60px 99px;
-      width: 1160px;
-
+      padding: 40px 220px 180px;
     }
 
-    h2.orange-header {
-      font-size: 24px;
-      color: $orange;
-      text-align: center;
-      font-weight: 400;
-
-      @media (min-width: 640px) {
-        font-size: 48px;
-      }
-    }
-    p.lead {
-
-      font-size: 1rem;
-      font-weight: 400;
-      color: #333b41;
-      align-self: flex-start;
-      margin: 10px auto 0;
-      text-align: center;
-      
-      @media (min-width: 640px) {
-        display: grid;
-        font-size: 24px;
-        margin: 20px auto 0;
-      }
-
-    //   span {
-    //   font-size: 16px;
-    //   font-weight: 400;
-    //   color: #333b41;
-    //   align-self: flex-start;
-    //   margin: 20px auto 0;
-
-    //   &:nth-child(2) {
-    //     @media (max-width: 640px) {
-    //       margin: 0 auto;
-    //     }
-    //   }
-      
-    //   @media (min-width: 640px) {
-    //     font-size: 24px;
-    //   }
-    // }
-  }
-  
-    div.panda-diet {
-      display: flex;
-      gap: 50px;
-      margin-top: 60px;
-      margin-bottom: 48px;
-      
-      @media (min-width: 640px) {
-        gap: 90px;
-      }
-
-      .amount {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-
-        strong {
-          font-size: 40px;
-          text-align: center;
-          margin-top: 30px;
-          
-          @media (min-width: 1600px) {
-            font-size: 70px;
-          }
-        }
-        img.x-icon {
-          width: 8px;
-          height: 8px;
-          position: absolute;
-          top: 50%;
-          right: -20px;
-          margin-left: 50px;
-          
-          @media (min-width: 1600px) {
-            width: 14px;
-            height: 14px;
-          }
-        }
-
-        span {
-          color: #333b41;
-          font-size: 9px;
-          
-          @media (min-width: 640px) {
-            line-height: 22.4px;
-            font-size: 16px;
-          }
-        }
-      }
-
-      .panda {
-        & img {
-          width: 151px;
-
-          @media (min-width: 640px) {
-            width: 268px;
-          }
-        }
-      }
-    }
-    form {
+    .donate-section-text {
+      color: #ffff;
       width: 300px;
-      
+
       @media (min-width: 640px) {
-        padding-left: 10px;
         width: 600px;
       }
 
       @media (min-width: 1000px) {
-        width: 940px;
+        width: 939px;
       }
 
       @media (min-width: 1600px) {
         width: 1160px;
       }
 
-      legend {
-        margin-bottom: 10px;
-        font-size: 1rem;
-      }
-      fieldset.donation-radio {
+      h3.donate-header {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
         width: 300px;
-        height: 13.5px;
-        padding: 8px 30px 9px 26px;
-        background-color: $black_blue;
-        border-radius: 2px;
-        display: flex;
-        align-items: center;
-        
-        @media (min-width: 1600px) {
-          justify-content: space-between;
-          width: 100%;
-          height: 40px;
+        margin-bottom: 20px;
+
+        @media (min-width: 640px) {
+          width: 600px;
         }
 
-        .wrapper {
-          height: 90px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          margin-top: 20px;
-          
-          @media (min-width: 1000px) {
-            justify-content: space-between;
-          }
-          
-          &.desktop {
-            display: none;
-            
-            @media (min-width: 1000px) {
-              display: flex;
-            }
-          }
-
-          label {
-            display: block;
-            text-align: center;
-            font-size: 22px;
-          }
-
-          input[type="radio"] {
-            appearance: none;
-            width: 5px;
-            height: 5px;
-            background-color: $yellow;
-            border-radius: 50%;
-            padding: 2px;
-            margin-top: 25px;
-            cursor: pointer;
-            transition: all 0.2s linear;
-
-            @media (min-width: 1600px) {
-              width: 16px;
-              height: 16px;
-            }
-
-            &:checked {
-              outline-offset: 6px;
-              outline: 2px solid $orange;
-            }
-            &:checked + label {
-              color: $orange;
-            }
-          }
+        @media (min-width: 1000px) {
+          margin-bottom: 20px;
+          white-space: nowrap;
+          font-size: 36px;
+          margin-bottom: 10px;
         }
       }
-
-      span.dollar-icon {
-        position: relative;
-        font-size: 13px;
-
-        &::after {
-          content: url("../../../assets/icons/dollar.png");
-          right: 0;
-          position: absolute;
-          top: 63%;
-          right: 10px;
-          width: 10px;
-          height: 20px;
-        }
-        input[type="number"] {
-          width: 268px;
-          height: 42px;
-          padding: 16px;
-          border: 2px solid #929699;
-          border-radius: 4px;
-          background-color: transparent;
-          margin-top: 90px;
-          margin-bottom: 25px;
-          position: relative;
-          appearance: textfield;
-          /* Firefox */
-          -moz-appearance: textfield;
-          
-          @media (min-width: 640px) {
-            height: 54px;
-          }
-
-          &::-webkit-outer-spin-button,
-          &::-webkit-inner-spin-button {
-            appearance: none;
-            -webkit-appearance: none;
-            margin: 0;
-          }
-        }
-      }
-
-      fieldset {
-        border: 0;
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-
-        input.custom-radio {
-          appearance: none;
-          width: 16px;
-          height: 16px;
-          border: 1px solid $orange;
-          background-color: transparent;
-          border-radius: 50%;
-          margin-right: 10px;
-          cursor: pointer;
-          transition: all 0.2s linear;
-
-          &:checked {
-            background-color: $orange;
-          }
-        }
-      }
-    }
-    button {
-      @extend .orange-button;
-      margin: 30px 0;
-      span {
+      p {
         font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        line-height: 22.4px;
+
+        @media (min-width: 1000px) {
+          margin-bottom: 45px;
+        }
+      }
+
+      h3.orange-header {
+        font-size: 24px;
+        font-weight: 400;
+        color: $orange;
+        margin-bottom: 30px;
+        line-height: 46.8px;
+
+        @media (min-width: 640px) {
+          font-size: 36px;
+        }
+
+        @media (min-width: 1000px) {
+          font-size: 48px;
+        }
+
+        @media (min-width: 1600px) {
+          margin-bottom: 65px;
+        }
       }
     }
-    span {
-      font-size: 16px;
-      font-weight: 400;
-      display: inline-block;
-      white-space: nowrap;    
-    }
-  }
- }
 
- footer {
-  div.footer-wrapper {
-    div.first-column {
-      a.donate-link {
+    .salomon-square {
+      width: 300px;
+      background: rgba(253, 253, 255, 0.52);
+      backdrop-filter: blur(2px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 0;
+
+      @media (min-width: 640px) {
+        width: 600px;
+        padding: 20px 30px;
+      }
+
+      @media (min-width: 1000px) {
+        padding: 43px 99px 60px 99px;
+        width: 1160px;
+      }
+
+      h2.orange-header {
+        font-size: 24px;
+        color: $orange;
+        text-align: center;
+        font-weight: 400;
+
+        @media (min-width: 640px) {
+          font-size: 48px;
+        }
+      }
+      p.lead {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #333b41;
+        align-self: flex-start;
+        margin: 10px auto 0;
         text-align: center;
 
         @media (min-width: 640px) {
-          margin-right: auto;
+          display: grid;
+          font-size: 24px;
+          margin: 20px auto 0;
         }
+
+        //   span {
+        //   font-size: 16px;
+        //   font-weight: 400;
+        //   color: #333b41;
+        //   align-self: flex-start;
+        //   margin: 20px auto 0;
+
+        //   &:nth-child(2) {
+        //     @media (max-width: 640px) {
+        //       margin: 0 auto;
+        //     }
+        //   }
+
+        //   @media (min-width: 640px) {
+        //     font-size: 24px;
+        //   }
+        // }
+      }
+
+      div.panda-diet {
+        display: flex;
+        gap: 50px;
+        margin-top: 60px;
+        margin-bottom: 48px;
+
+        @media (min-width: 640px) {
+          gap: 90px;
+        }
+
+        .amount {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+
+          strong {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 30px;
+
+            @media (min-width: 1600px) {
+              font-size: 70px;
+            }
+          }
+          img.x-icon {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            margin-left: 50px;
+
+            @media (min-width: 1600px) {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          span {
+            color: #333b41;
+            font-size: 9px;
+
+            @media (min-width: 640px) {
+              line-height: 22.4px;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .panda {
+          & img {
+            width: 151px;
+
+            @media (min-width: 640px) {
+              width: 268px;
+            }
+          }
+        }
+      }
+      form {
+        width: 300px;
+
+        @media (min-width: 640px) {
+          padding-left: 10px;
+          width: 600px;
+        }
+
+        @media (min-width: 1000px) {
+          width: 940px;
+        }
+
+        @media (min-width: 1600px) {
+          width: 1160px;
+        }
+
+        legend {
+          margin-bottom: 10px;
+          font-size: 1rem;
+        }
+        fieldset.donation-radio {
+          width: 300px;
+          height: 13.5px;
+          padding: 8px 30px 9px 26px;
+          background-color: $black_blue;
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+
+          @media (min-width: 1600px) {
+            justify-content: space-between;
+            width: 100%;
+            height: 40px;
+          }
+
+          .wrapper {
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+
+            @media (min-width: 1000px) {
+              justify-content: space-between;
+            }
+
+            &.desktop {
+              display: none;
+
+              @media (min-width: 1000px) {
+                display: flex;
+              }
+            }
+
+            label {
+              display: block;
+              text-align: center;
+              font-size: 22px;
+            }
+
+            input[type="radio"] {
+              appearance: none;
+              width: 5px;
+              height: 5px;
+              background-color: $yellow;
+              border-radius: 50%;
+              padding: 2px;
+              margin-top: 25px;
+              cursor: pointer;
+              transition: all 0.2s linear;
+
+              @media (min-width: 1600px) {
+                width: 16px;
+                height: 16px;
+              }
+
+              &:checked {
+                outline-offset: 6px;
+                outline: 2px solid $orange;
+              }
+              &:checked + label {
+                color: $orange;
+              }
+            }
+          }
+        }
+
+        span.dollar-icon {
+          position: relative;
+          font-size: 13px;
+
+          &::after {
+            content: url("../../../assets/icons/dollar.png");
+            right: 0;
+            position: absolute;
+            top: 63%;
+            right: 10px;
+            width: 10px;
+            height: 20px;
+          }
+          input[type="number"] {
+            width: 268px;
+            height: 42px;
+            padding: 16px;
+            border: 2px solid #929699;
+            border-radius: 4px;
+            background-color: transparent;
+            margin-top: 90px;
+            margin-bottom: 25px;
+            position: relative;
+            appearance: textfield;
+            /* Firefox */
+            -moz-appearance: textfield;
+
+            @media (min-width: 640px) {
+              height: 54px;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              appearance: none;
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+
+        fieldset {
+          border: 0;
+          display: flex;
+          justify-content: center;
+          gap: 50px;
+
+          input.custom-radio {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $orange;
+            background-color: transparent;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:checked {
+              background-color: $orange;
+            }
+          }
+        }
+      }
+      button {
+        @extend .orange-button;
+        margin: 30px 0;
+        span {
+          font-size: 16px;
+        }
+      }
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  footer {
+    div.footer-wrapper {
+      div.first-column {
+        a.donate-link {
+          text-align: center;
+
+          @media (min-width: 640px) {
+            margin-right: auto;
+          }
         }
         a {
           text-align: center;
-       
-        div.footer-logo {
 
-          @media (min-width: 640px) {
-            border: 1px solid white;
-            width: 82px;
-            border-radius: 2px;
-          }
-          & h5 {
-            font-size: 1.1875rem;
-            span {
-              position: relative;
-              display: inline-block;
-              &::before {
-                position: absolute;
-                content: url("../../../assets/icons/bamboo.svg");
-                left: 0;
-                bottom: 0;
+          div.footer-logo {
+            @media (min-width: 640px) {
+              border: 1px solid white;
+              width: 82px;
+              border-radius: 2px;
+            }
+            & h5 {
+              font-size: 1.1875rem;
+              span {
+                position: relative;
+                display: inline-block;
+                &::before {
+                  position: absolute;
+                  content: url("../../../assets/icons/bamboo.svg");
+                  left: 0;
+                  bottom: 0;
 
-                @media (min-width: 640px) {
-                  left: -0.2rem;
+                  @media (min-width: 640px) {
+                    left: -0.2rem;
+                  }
                 }
               }
             }
           }
         }
-       }
-       div.social-media {
-        a {
-          img {
-          @media (min-width: 640px) {
-            margin-right: 0;
-           }
-          }
-        strong {
-          display: none;
-             @media (min-width: 1000px) {
-              display: block;
-              margin-left: 12px;
-             }
+        div.social-media {
+          a {
+            img {
+              @media (min-width: 640px) {
+                margin-right: 0;
+              }
+            }
+            strong {
+              display: none;
+              @media (min-width: 1000px) {
+                display: block;
+                margin-left: 12px;
+              }
+            }
           }
         }
-       }
       }
     }
   }
- }
+}

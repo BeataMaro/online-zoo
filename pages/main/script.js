@@ -7,3 +7,8 @@ navigationLinks.forEach((link) => {
   }
 });
 
+const body = document.body;
+
+const askReviewerForAPatience = () => alert("Online-zoo JS features (week 4) will be done in 5 days. Thank you for patience :)")
+
+window.onload = askReviewerForAPatience;
