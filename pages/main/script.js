@@ -14,6 +14,14 @@ const hamburgerMenu = document.getElementById("hamburger-menu");
 
 hamburgerMenu.addEventListener("click", openMenu);
 
+window.addEventListener('click', (e) => {   
+  if (document.getElementById('navigation').contains(e.target)){
+    return
+  } else{
+    body.classList.remove("open");
+  }
+});
+
 
 
 

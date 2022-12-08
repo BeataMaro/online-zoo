@@ -55,32 +55,59 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 100%;
 }
+body div.overlay {
+  display: none;
+}
+body.open {
+  pointer-events: none;
+}
+body.open div.overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
 body.open header.navigation {
+  background-color: white;
   height: 350px;
   justify-content: flex-start;
+  z-index: 20;
 }
 body.open header.navigation div.navigation-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px 10px;
+  width: 100%;
+  pointer-events: all;
 }
-body.open header.navigation div.navigation-wrapper .logo {
+body.open header.navigation div.navigation-wrapper a {
+  order: 2;
+  color: black;
+}
+body.open header.navigation div.navigation-wrapper a .logo {
   width: 66px;
-  border: 1px solid #f9804b;
+  border: 1px solid #FE9013;
   border-radius: 2px;
   padding: 3px;
 }
-body.open header.navigation div.navigation-wrapper .logo h1 {
-  color: #f9804b;
+body.open header.navigation div.navigation-wrapper a .logo h1 {
+  color: #FE9013;
   font-size: 15px;
 }
-body.open header.navigation div.navigation-wrapper .logo h1 span::before {
+body.open header.navigation div.navigation-wrapper a .logo h1 span::before {
   content: url("../../../assets/icons/bamboo-orange.svg");
+  left: 5px;
 }
 body.open header.navigation div.navigation-wrapper nav {
   margin-left: 0;
   margin-top: 30px;
+  order: 3;
 }
 body.open header.navigation div.navigation-wrapper nav ul {
   display: grid;
@@ -89,9 +116,15 @@ body.open header.navigation div.navigation-wrapper nav ul li {
   margin-bottom: 1.2rem;
 }
 body.open header.navigation div.navigation-wrapper nav ul li a {
-  color: black;
   line-height: 22.4px;
   font-weight: 400;
+}
+body.open header.navigation div.navigation-wrapper nav ul li a:is(:link, :active, :visited) {
+  color: #333b41;
+}
+body.open header.navigation div.navigation-wrapper nav ul li a:is(:link, :active, :visited).active {
+  color: #f9804b;
+  background-color: transparent;
 }
 body.open header.navigation div.navigation-wrapper nav ul li:last-child {
   margin-left: 0;
@@ -99,6 +132,23 @@ body.open header.navigation div.navigation-wrapper nav ul li:last-child {
 body.open header.navigation div.navigation-wrapper div.hamburger-menu {
   justify-self: flex-start;
   align-self: flex-end;
+  margin-bottom: -10px;
+  order: 1;
+  cursor: pointer;
+}
+body.open header.navigation div.navigation-wrapper div.hamburger-menu span {
+  background-color: #FE9013;
+}
+body.open header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(1) {
+  transform: rotate(135deg) translate(-4px, -11px);
+}
+body.open header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(2) {
+  transform: translate(200%);
+  opacity: 0;
+}
+body.open header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(3) {
+  transform: rotate(135deg);
+  transform: rotate(-135deg) translate(-6px, 10px);
 }
 body header.navigation {
   width: 100vw;
@@ -113,10 +163,14 @@ body header.navigation {
   left: 0;
   z-index: 4000;
 }
+@media (max-width: 640px) {
+  body header.navigation {
+    position: fixed;
+  }
+}
 @media (min-width: 640px) {
   body header.navigation {
     padding: 0 20px;
-    position: fixed;
   }
 }
 @media (min-width: 1000px) {
@@ -239,33 +293,28 @@ body header.navigation div.navigation-wrapper nav ul li a:is(:link, :active, :vi
   background-color: transparent;
 }
 body header.navigation div.navigation-wrapper div.hamburger-menu {
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: white;
-  position: relative;
   cursor: pointer;
-  z-index: 500;
+  z-index: 50;
+  margin-bottom: 0;
 }
-body header.navigation div.navigation-wrapper div.hamburger-menu::before {
-  content: "";
-  display: block;
+body header.navigation div.navigation-wrapper div.hamburger-menu span {
   width: 18px;
   height: 2px;
-  border-radius: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: 5px;
-}
-body header.navigation div.navigation-wrapper div.hamburger-menu::after {
-  content: "";
   display: block;
-  width: 18px;
-  height: 2px;
   border-radius: 2px;
   background-color: white;
-  position: absolute;
-  top: 5px;
+  margin-top: 2px;
+  transition: 0.3s ease;
+}
+body header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(1) {
+  transform: rotate(0);
+}
+body header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(2) {
+  transform: translate(0);
+  opacity: 1;
+}
+body header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(3) {
+  transform: rotate(0);
 }
 @media (min-width: 1000px) {
   body header.navigation div.navigation-wrapper div.hamburger-menu {

@@ -85,44 +85,79 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 100%;
 
+  div.overlay {
+    display: none;
+  }
+
   &.open {
+    & {
+      pointer-events: none;
+    }
+    div.overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.5);
+      z-index: 10;
+    }
     header.navigation {
-      // background-color: white;
+      background-color: white;
       height: 350px;
       justify-content: flex-start;
-      
+      z-index: 20;
+
       div.navigation-wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px 10px;
+        width: 100%;
+        pointer-events: all;
+
+        a {
+          order: 2;
+          color: black;
 
         .logo {
           width: 66px;
-          border: 1px solid $orange;
+          border: 1px solid #FE9013;
           border-radius: 2px;
           padding: 3px;
 
           h1 {
-            color: $orange;
-            font-size: 15px; 
+            color: #FE9013;
+            font-size: 15px;
 
             span::before {
               content: url("../../../assets/icons/bamboo-orange.svg");
+              left: 5px;
             }
           }
         }
+      }
         nav {
           margin-left: 0;
           margin-top: 30px;
+          order: 3;
           ul {
             display: grid;
             li {
               margin-bottom: 1.2rem;
               a {
-                color: black;
                 line-height: 22.4px;
                 font-weight: 400;
+
+                &:is(:link, :active, :visited) {
+                  color: $black_blue;
+                }
+                &:is(:link, :active, :visited).active {
+                  color: $orange;
+                  background-color: transparent;
+                }
               }
               &:last-child {
                 margin-left: 0;
@@ -131,24 +166,27 @@ body {
           }
         }
         div.hamburger-menu {
-          // background-color: $black_blue;
           justify-self: flex-start;
           align-self: flex-end;
-          // &::after,
-          // &::before {
-            // background-color: $black_blue;
-          // }
-        }
+          margin-bottom: -10px;
+          order: 1;
+          cursor: pointer;
 
-        // @media (min-width: 640px) {
-        //   width: 640px;
-        // }
-        // @media (min-width: 940px) {
-        //   width: 940px;
-        // }
-        // @media (min-width: 1600px) {
-        //   width: 1600px;
-        // }
+          span {
+            background-color: #FE9013;
+            &:nth-child(1) {
+              transform: rotate(135deg) translate(-4px, -11px);
+            }
+            &:nth-child(2) {
+              transform: translate(200%);
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform: rotate(135deg);
+              transform: rotate(-135deg) translate(-6px, 10px);
+            }
+          }
+        }
       }
     }
   }
@@ -166,9 +204,12 @@ body {
     left: 0;
     z-index: 4000;
 
+    @media (max-width: 640px) {
+      position: fixed;
+    }
+
     @media (min-width: 640px) {
       padding: 0 20px;
-      position: fixed;
     }
 
     @media (min-width: 1000px) {
@@ -285,34 +326,29 @@ body {
         }
       }
       div.hamburger-menu {
-        width: 18px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: #ffff;
-        position: relative;
+     
         cursor: pointer;
-        z-index: 500;
-
-        &::before {
-          content: "";
-          display: block;
+        z-index: 50;
+        margin-bottom: 0;
+        
+        span {
           width: 18px;
           height: 2px;
-          border-radius: 2px;
-          background-color: #ffff;
-          position: absolute;
-          bottom: 5px;
-        }
-
-        &::after {
-          content: "";
           display: block;
-          width: 18px;
-          height: 2px;
           border-radius: 2px;
           background-color: #ffff;
-          position: absolute;
-          top: 5px;
+          margin-top: 2px;
+          transition: 0.3s ease;
+          &:nth-child(1) {
+            transform: rotate(0);
+          }
+          &:nth-child(2) {
+            transform: translate(0);
+            opacity: 1;
+          }
+          &:nth-child(3) {
+            transform: rotate(0);
+          }
         }
 
         @media (min-width: 1000px) {
