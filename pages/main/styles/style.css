@@ -92,12 +92,12 @@ body.open header.navigation div.navigation-wrapper a {
 }
 body.open header.navigation div.navigation-wrapper a .logo {
   width: 66px;
-  border: 1px solid #FE9013;
+  border: 1px solid #fe9013;
   border-radius: 2px;
   padding: 3px;
 }
 body.open header.navigation div.navigation-wrapper a .logo h1 {
-  color: #FE9013;
+  color: #fe9013;
   font-size: 15px;
 }
 body.open header.navigation div.navigation-wrapper a .logo h1 span::before {
@@ -137,7 +137,7 @@ body.open header.navigation div.navigation-wrapper div.hamburger-menu {
   cursor: pointer;
 }
 body.open header.navigation div.navigation-wrapper div.hamburger-menu span {
-  background-color: #FE9013;
+  background-color: #fe9013;
 }
 body.open header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(1) {
   transform: rotate(135deg) translate(-4px, -11px);
@@ -508,7 +508,6 @@ body main section.backstage-block div {
   body main section.backstage-block div {
     grid-template-columns: 1fr 1.5fr;
     grid-gap: 87px;
-    width: 1158px;
   }
 }
 body main section.backstage-block div img {
@@ -631,11 +630,6 @@ body main section.pets-block {
   padding: 0 1.0625rem 3.75rem;
   position: relative;
 }
-@media (min-width: 640px) {
-  body main section.pets-block {
-    padding: 0 1.25rem 13.375rem;
-  }
-}
 @media (min-width: 1000px) {
   body main section.pets-block {
     padding: 0 1.875rem 17.19rem;
@@ -646,45 +640,25 @@ body main section.pets-block {
     margin: auto;
   }
 }
-body main section.pets-block .pets-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+body main section.pets-block .carousel-pets {
+  margin: auto;
+  width: 100%;
+  max-width: 1158px;
   position: relative;
 }
-@media (min-width: 640px) {
-  body main section.pets-block .pets-wrapper {
-    gap: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+body main section.pets-block .carousel-pets button.arrow:disabled {
+  background-image: none;
+  background-color: rgba(128, 128, 128, 0.59);
 }
-@media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    width: 942px;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    row-gap: 92px;
-  }
-}
-@media (min-width: 1600px) {
-  body main section.pets-block .pets-wrapper {
-    width: 1158px;
-    margin: auto;
-    gap: 30px;
-  }
-}
-body main section.pets-block .pets-wrapper a.arrow-l {
+body main section.pets-block .carousel-pets button.arrow-l {
   display: none;
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper a.arrow-l {
+  body main section.pets-block .carousel-pets button.arrow-l {
     order: 1;
     position: absolute;
     top: 46%;
-    left: 35%;
+    left: -8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -695,32 +669,29 @@ body main section.pets-block .pets-wrapper a.arrow-l {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease-in;
+    border: none;
+    outline: none;
   }
-  body main section.pets-block .pets-wrapper a.arrow-l:hover {
+  body main section.pets-block .carousel-pets button.arrow-l:hover {
     transform: scale(1.1);
   }
-  body main section.pets-block .pets-wrapper a.arrow-l::after {
+  body main section.pets-block .carousel-pets button.arrow-l::after {
     content: "⟵";
     width: 16px;
     height: 16px;
   }
 }
-@media (min-width: 1600px) {
-  body main section.pets-block .pets-wrapper a.arrow-l {
-    left: -4.875rem;
-  }
-}
-body main section.pets-block .pets-wrapper a.arrow-r {
+body main section.pets-block .carousel-pets button.arrow-r {
   display: none;
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper a.arrow-r {
+  body main section.pets-block .carousel-pets button.arrow-r {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 46%;
-    right: 35%;
+    right: -8%;
     width: 62px;
     height: 62px;
     background-image: linear-gradient(#f9804b, #fe9013);
@@ -728,114 +699,127 @@ body main section.pets-block .pets-wrapper a.arrow-r {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease-in;
+    border: none;
+    outline: none;
   }
-  body main section.pets-block .pets-wrapper a.arrow-r:hover {
+  body main section.pets-block .carousel-pets button.arrow-r:hover {
     transform: scale(1.1);
   }
-  body main section.pets-block .pets-wrapper a.arrow-r::after {
+  body main section.pets-block .carousel-pets button.arrow-r::after {
     content: "⟶";
     width: 16px;
     height: 16px;
   }
 }
-@media (min-width: 1600px) {
-  body main section.pets-block .pets-wrapper a.arrow-r {
-    right: -4.875rem;
-  }
+body main section.pets-block .carousel-pets .pets-content {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-body main section.pets-block .pets-wrapper article.animal-card {
+body main section.pets-block .carousel-pets .pets-content::-webkit-scrollbar {
+  height: 0;
+}
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card {
   margin: auto;
   background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 4px, transparent 4px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 4px, transparent 4px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 4px, transparent 4px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 4px, transparent 4px) 100% 100%/5px 5px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 10px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 2px) no-repeat, linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
   border-radius: 5px;
   transition: all 2s linear;
   cursor: pointer;
-  overflow: hidden;
   display: none;
 }
 @media (min-width: 640px) {
-  body main section.pets-block .pets-wrapper article.animal-card {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card {
     width: 285px;
   }
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper article.animal-card {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card {
     display: block;
     width: 295px;
   }
 }
 @media (min-width: 1600px) {
-  body main section.pets-block .pets-wrapper article.animal-card {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card {
     width: 366px;
   }
 }
-body main section.pets-block .pets-wrapper article.animal-card.sm-md {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md {
   display: block;
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper article.animal-card.sm-md.aligator {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md.aligator {
     display: none;
   }
 }
-body main section.pets-block .pets-wrapper article.animal-card.sm-md.aligator div.animal-card-desc {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md.aligator div.animal-card-desc {
   padding: 1px 5px;
 }
-body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper {
   overflow: hidden;
   transition: all 0.2s linear;
   cursor: pointer;
 }
-body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper:hover {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper:hover {
   background-color: #333b41;
   opacity: 0.64;
 }
-body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
-  max-width: 100%;
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper img {
   width: 285px;
   height: 285px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   transform-origin: center center;
   transition: all 0.2s linear;
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper img {
     width: 295px;
     height: 295px;
   }
 }
 @media (min-width: 1600px) {
-  body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper img {
     height: 366px;
     width: 366px;
   }
 }
-body main section.pets-block .pets-wrapper article.animal-card .animal-image-wrapper img:hover {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper img:hover {
   transform: scale(1.03, 1.03);
 }
-body main section.pets-block .pets-wrapper article.animal-card div {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div {
   display: flex;
   justify-content: space-between;
 }
-body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div.animal-card-desc {
   display: flex;
   flex-direction: column;
   padding: 12px 10px;
   border-radius: 5px;
 }
 @media (min-width: 1000px) {
-  body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div.animal-card-desc {
     padding: 12px 16px;
   }
 }
-body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc h4 {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div.animal-card-desc h4 {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
 }
-body main section.pets-block .pets-wrapper article.animal-card div.animal-card-desc p {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div.animal-card-desc p {
   font-weight: 300;
   font-size: 15px;
   width: 12.8rem;
 }
-body main section.pets-block .pets-wrapper article.animal-card div img.food-icon {
+body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card div img.food-icon {
   width: 48px;
   height: 38px;
   align-self: center;

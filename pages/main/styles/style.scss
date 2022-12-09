@@ -39,6 +39,8 @@ img {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  border: none;
+  outline: none;
 
   &:hover {
     transform: scale(1.1);
@@ -102,7 +104,7 @@ body {
       bottom: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 10;
     }
     header.navigation {
@@ -122,23 +124,23 @@ body {
           order: 2;
           color: black;
 
-        .logo {
-          width: 66px;
-          border: 1px solid #FE9013;
-          border-radius: 2px;
-          padding: 3px;
+          .logo {
+            width: 66px;
+            border: 1px solid #fe9013;
+            border-radius: 2px;
+            padding: 3px;
 
-          h1 {
-            color: #FE9013;
-            font-size: 15px;
+            h1 {
+              color: #fe9013;
+              font-size: 15px;
 
-            span::before {
-              content: url("../../../assets/icons/bamboo-orange.svg");
-              left: 5px;
+              span::before {
+                content: url("../../../assets/icons/bamboo-orange.svg");
+                left: 5px;
+              }
             }
           }
         }
-      }
         nav {
           margin-left: 0;
           margin-top: 30px;
@@ -173,7 +175,7 @@ body {
           cursor: pointer;
 
           span {
-            background-color: #FE9013;
+            background-color: #fe9013;
             &:nth-child(1) {
               transform: rotate(135deg) translate(-4px, -11px);
             }
@@ -325,11 +327,10 @@ body {
         }
       }
       div.hamburger-menu {
-     
         cursor: pointer;
         z-index: 50;
         margin-bottom: 0;
-        
+
         span {
           width: 18px;
           height: 2px;
@@ -534,7 +535,7 @@ body {
         @media (min-width: 1600px) {
           grid-template-columns: 1fr 1.5fr;
           grid-gap: 87px;
-          width: 1158px;
+          //width: 1158px;
         }
         img {
           width: 455px;
@@ -649,9 +650,9 @@ body {
       padding: 0 1.0625rem 3.75rem;
       position: relative;
 
-      @media (min-width: 640px) {
-        padding: 0 1.25rem 13.375rem;
-      }
+      // @media (min-width: 640px) {
+      //   padding: 0 1.25rem 13.375rem;
+      // }
 
       @media (min-width: 1000px) {
         padding: 0 1.875rem 17.19rem;
@@ -661,51 +662,35 @@ body {
         margin: auto;
       }
 
-      .pets-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+      .carousel-pets {
+        margin: auto;
+        width: 100%;
+        max-width: 1158px;
         position: relative;
 
-        @media (min-width: 640px) {
-          gap: 30px;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (min-width: 1000px) {
-          grid-template-columns: repeat(3, 1fr);
-          width: 942px;
-          column-gap: 30px;
-          row-gap: 92px;
-        }
-
-        @media (min-width: 1600px) {
-          width: 1158px;
-          margin: auto;
-          gap: 30px;
-        }
-
         //ARROWS
-        a.arrow-l {
+        button.arrow:disabled {
+          background-image: none;
+          background-color: rgba(128, 128, 128, 0.59);
+        }
+        button.arrow-l {
           display: none;
           @media (min-width: 1000px) {
             order: 1;
             position: absolute;
             top: 46%;
-            left: 35%;
+            left: -8%;
             display: flex;
             justify-content: center;
             align-items: center;
             @include arrow-button("\27F5");
           }
 
-          @media (min-width: 1600px) {
-            left: -4.875rem;
-          }
+          // @media (min-width: 1600px) {
+          //   left: -4.875rem;
+          // }
         }
-        a.arrow-r {
+        button.arrow-r {
           display: none;
           @media (min-width: 1000px) {
             display: flex;
@@ -713,150 +698,193 @@ body {
             align-items: center;
             position: absolute;
             top: 46%;
-            right: 35%;
+            right: -8%;
             @include arrow-button("\27F6");
           }
 
-          @media (min-width: 1600px) {
-            right: -4.875rem;
-          }
+          // @media (min-width: 1600px) {
+          //   right: -4.875rem;
+          // }
         }
 
-        article.animal-card {
-          margin: auto;
-          // width: 366px;
-          // height: 426px;
-          // aspect-ratio: 1 / 1.2;
-          //https://unused-css.com/tools/border-gradient-generator?p=12Ymc9dCNmZmZmZmYsMSw1LDAscHgsMTtsKDIwMWRlZywjZmE2ZjMyIDAlLCNmZTkwMTMgMTAwJSk
-          background: radial-gradient(
-                circle at 100% 100%,
-                #ffffff 0,
-                #ffffff 4px,
-                transparent 4px
-              )
-              0% 0%/5px 5px no-repeat,
-            radial-gradient(
-                circle at 0 100%,
-                #ffffff 0,
-                #ffffff 4px,
-                transparent 4px
-              )
-              100% 0%/5px 5px no-repeat,
-            radial-gradient(
-                circle at 100% 0,
-                #ffffff 0,
-                #ffffff 4px,
-                transparent 4px
-              )
-              0% 100%/5px 5px no-repeat,
-            radial-gradient(
-                circle at 0 0,
-                #ffffff 0,
-                #ffffff 4px,
-                transparent 4px
-              )
-              100% 100%/5px 5px no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
-              calc(100% - 10px) no-repeat,
-            linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
-              calc(100% - 2px) no-repeat,
-            linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
-          border-radius: 5px;
-          transition: all 2s linear;
-          cursor: pointer;
-          overflow: hidden;
-          display: none;
+        .pets-content {
+          overflow: auto;
+          scroll-behavior: smooth;
+          scrollbar-width: none;
 
-          @media (min-width: 640px) {
-            width: 285px;
+          &::-webkit-scrollbar {
+            height: 0;
           }
 
-          @media (min-width: 1000px) {
-            display: block;
-            width: 295px;
-          }
+          .pets-wrapper {
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: center;
+            // gap: 20px;
+            // position: relative;
+            // transform: translate(-1158px);
+            display: grid;
+            // grid-gap: 20px;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
 
-          @media (min-width: 1600px) {
-            width: 366px;
-          }
+            // @media (min-width: 640px) {
+            //   gap: 30px;
+            //   display: grid;
+            //   grid-template-columns: repeat(11, 1fr);
+            //   grid-template-rows: repeat(2, 1fr);
+            // }
 
-          &.sm-md {
-            display: block;
+            // @media (min-width: 1000px) {
+            //   grid-template-columns: repeat(11, 1fr);
+            //   grid-template-rows: repeat(2, 1fr);
+            //   width: 942px;
+            //   column-gap: 30px;
+            //   row-gap: 92px;
+            // }
 
-            &.aligator {
-              @media (min-width: 1000px) {
-                display: none;
+            // @media (min-width: 1600px) {
+            //   //width: 1158px;
+            //   // margin: auto;
+            //   grid-template-rows: repeat(2, 1fr);
+            //   gap: 30px;
+            // }
+
+            article.animal-card {
+              margin: auto;
+              //https://unused-css.com/tools/border-gradient-generator?p=12Ymc9dCNmZmZmZmYsMSw1LDAscHgsMTtsKDIwMWRlZywjZmE2ZjMyIDAlLCNmZTkwMTMgMTAwJSk
+              background: radial-gradient(
+                    circle at 100% 100%,
+                    #ffffff 0,
+                    #ffffff 4px,
+                    transparent 4px
+                  )
+                  0% 0%/5px 5px no-repeat,
+                radial-gradient(
+                    circle at 0 100%,
+                    #ffffff 0,
+                    #ffffff 4px,
+                    transparent 4px
+                  )
+                  100% 0%/5px 5px no-repeat,
+                radial-gradient(
+                    circle at 100% 0,
+                    #ffffff 0,
+                    #ffffff 4px,
+                    transparent 4px
+                  )
+                  0% 100%/5px 5px no-repeat,
+                radial-gradient(
+                    circle at 0 0,
+                    #ffffff 0,
+                    #ffffff 4px,
+                    transparent 4px
+                  )
+                  100% 100%/5px 5px no-repeat,
+                linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+                  calc(100% - 10px) no-repeat,
+                linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
+                  calc(100% - 2px) no-repeat,
+                linear-gradient(201deg, #fa6f32 0%, #fe9013 100%);
+              border-radius: 5px;
+              transition: all 2s linear;
+              cursor: pointer;
+              display: none;
+
+              @media (min-width: 640px) {
+                width: 285px;
               }
-              div {
-                &.animal-card-desc {
-                  padding: 1px 5px;
-                }
-              }
-            }
-          }
-
-          .animal-image-wrapper {
-            overflow: hidden;
-            transition: all 0.2s linear;
-            cursor: pointer;
-
-            &:hover {
-              background-color: $black_blue;
-              opacity: 0.64;
-            }
-            img {
-              max-width: 100%;
-              width: 285px;
-              height: 285px;
-              transform-origin: center center;
-              transition: all 0.2s linear;
 
               @media (min-width: 1000px) {
+                display: block;
                 width: 295px;
-                height: 295px;
               }
 
               @media (min-width: 1600px) {
-                height: 366px;
                 width: 366px;
               }
 
-              &:hover {
-                transform: scale(1.03, 1.03);
-              }
-            }
-          }
+              &.sm-md {
+                display: block;
 
-          div {
-            display: flex;
-            justify-content: space-between;
-
-            &.animal-card-desc {
-              display: flex;
-              flex-direction: column;
-              padding: 12px 10px;
-              border-radius: 5px;
-
-              @media (min-width: 1000px) {
-                padding: 12px 16px;
+                &.aligator {
+                  @media (min-width: 1000px) {
+                    display: none;
+                  }
+                  div {
+                    &.animal-card-desc {
+                      padding: 1px 5px;
+                    }
+                  }
+                }
               }
 
-              h4 {
-                text-transform: uppercase;
-                font-weight: 500;
-                font-size: 16px;
+              .animal-image-wrapper {
+                overflow: hidden;
+                transition: all 0.2s linear;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: $black_blue;
+                  opacity: 0.64;
+                }
+                img {
+                  width: 285px;
+                  height: 285px;
+                  object-fit: cover;
+                  object-position: top;
+                  transform-origin: center center;
+                  transition: all 0.2s linear;
+
+                  @media (min-width: 1000px) {
+                    width: 295px;
+                    height: 295px;
+                  }
+
+                  @media (min-width: 1600px) {
+                    height: 366px;
+                    width: 366px;
+                  }
+
+                  &:hover {
+                    transform: scale(1.03, 1.03);
+                  }
+                }
               }
-              p {
-                font-weight: 300;
-                font-size: 15px;
-                width: 12.8rem;
+
+              div {
+                display: flex;
+                justify-content: space-between;
+
+                &.animal-card-desc {
+                  display: flex;
+                  flex-direction: column;
+                  padding: 12px 10px;
+                  border-radius: 5px;
+
+                  @media (min-width: 1000px) {
+                    padding: 12px 16px;
+                  }
+
+                  h4 {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 16px;
+                  }
+                  p {
+                    font-weight: 300;
+                    font-size: 15px;
+                    width: 12.8rem;
+                  }
+                }
+                img.food-icon {
+                  width: 48px;
+                  height: 38px;
+                  align-self: center;
+                  margin-right: 12px;
+                }
               }
-            }
-            img.food-icon {
-              width: 48px;
-              height: 38px;
-              align-self: center;
-              margin-right: 12px;
             }
           }
         }
