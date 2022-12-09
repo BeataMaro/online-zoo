@@ -36,19 +36,19 @@ next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);
   setTimeout(() => next.style.disabled = true, 2000)
   if (carousel.scrollWidth !== 0) {
-    prev.style.display = "flex";
+    prev.disabled = false;
   }
   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "none";
+    next.disabled = true;
   }
 });
 prev.addEventListener("click", e => {
   carousel.scrollBy(-(width + gap), 0);
   if (carousel.scrollLeft - width - gap <= 0) {
-    prev.style.display = "none";
+    prev.disabled = true;
   }
   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "flex";
+    next.disabled = false;
   }
 });
 
@@ -57,6 +57,6 @@ window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 //*******//
 
-// const askReviewerForAPatience = () => alert("Online-zoo JS features (week 4) will be done in 5 days. Thank you for patience :)")
+const askReviewerForAPatience = () => alert("Online-zoo JS features (week 4) will be done in 5 days. Thank you for patience :)")
 
-// window.onload = askReviewerForAPatience;
+window.onload = askReviewerForAPatience;

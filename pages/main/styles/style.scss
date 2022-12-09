@@ -672,6 +672,10 @@ body {
         button.arrow:disabled {
           background-image: none;
           background-color: rgba(128, 128, 128, 0.59);
+
+          &:hover {
+            transform: scale(1);
+          }
         }
         button.arrow-l {
           display: none;
@@ -685,10 +689,6 @@ body {
             align-items: center;
             @include arrow-button("\27F5");
           }
-
-          // @media (min-width: 1600px) {
-          //   left: -4.875rem;
-          // }
         }
         button.arrow-r {
           display: none;
@@ -701,10 +701,6 @@ body {
             right: -8%;
             @include arrow-button("\27F6");
           }
-
-          // @media (min-width: 1600px) {
-          //   right: -4.875rem;
-          // }
         }
 
         .pets-content {

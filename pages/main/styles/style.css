@@ -650,6 +650,9 @@ body main section.pets-block .carousel-pets button.arrow:disabled {
   background-image: none;
   background-color: rgba(128, 128, 128, 0.59);
 }
+body main section.pets-block .carousel-pets button.arrow:disabled:hover {
+  transform: scale(1);
+}
 body main section.pets-block .carousel-pets button.arrow-l {
   display: none;
 }
