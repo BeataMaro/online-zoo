@@ -14,27 +14,25 @@ const hamburgerMenu = document.getElementById("hamburger-menu");
 
 hamburgerMenu.addEventListener("click", openMenu);
 
-window.addEventListener('click', (e) => {   
-  if (document.getElementById('navigation').contains(e.target)){
-    return
-  } else{
+window.addEventListener("click", (e) => {
+  if (document.getElementById("navigation").contains(e.target)) {
+    return;
+  } else {
     body.classList.remove("open");
   }
 });
 //Carousel Pets
 
-
-
 const carousel = document.getElementById("pets-content"),
-content = document.getElementById("corousel-pets-wrapper"),
-prev = document.getElementById("prev-pet"),
-next = document.getElementById("next-pet");
+  content = document.getElementById("corousel-pets-wrapper"),
+  prev = document.getElementById("prev-pet"),
+  next = document.getElementById("next-pet");
 const gap = 30;
 let width = carousel.offsetWidth;
 
-next.addEventListener("click", e => {
+next.addEventListener("click", (e) => {
   carousel.scrollBy(width + gap, 0);
-  setTimeout(() => next.style.disabled = true, 2000)
+
   if (carousel.scrollWidth !== 0) {
     prev.disabled = false;
   }
@@ -42,7 +40,7 @@ next.addEventListener("click", e => {
     next.disabled = true;
   }
 });
-prev.addEventListener("click", e => {
+prev.addEventListener("click", (e) => {
   carousel.scrollBy(-(width + gap), 0);
   if (carousel.scrollLeft - width - gap <= 0) {
     prev.disabled = true;
@@ -52,11 +50,13 @@ prev.addEventListener("click", e => {
   }
 });
 
-
-window.addEventListener("resize", e => (width = carousel.offsetWidth));
+window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
 
 //*******//
 
-const askReviewerForAPatience = () => alert("Online-zoo JS features (week 4) will be done in 5 days. Thank you for patience :)")
+const askReviewerForAPatience = () =>
+  alert(
+    "Online-zoo JS features (week 4) will be done in 2 days. Thank you for patience :)"
+  );
 
 window.onload = askReviewerForAPatience;
