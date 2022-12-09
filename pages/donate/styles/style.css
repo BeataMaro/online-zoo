@@ -75,9 +75,10 @@ body.open div.overlay {
 }
 body.open header.navigation {
   background-color: white;
-  height: 350px;
+  height: 400px;
   justify-content: flex-start;
   z-index: 20;
+  position: fixed;
 }
 body.open header.navigation div.navigation-wrapper {
   display: flex;
