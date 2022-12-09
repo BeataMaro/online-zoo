@@ -122,4 +122,4 @@ const askReviewerForAPatience = () =>
     "Online-zoo JS features (week 4) will be done in 2 days. Thank you for patience :)"
   );
 
-// window.onload = askReviewerForAPatience;
+window.onload = askReviewerForAPatience;
