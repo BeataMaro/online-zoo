@@ -630,6 +630,11 @@ body main section.pets-block {
   padding: 0 1.0625rem 3.75rem;
   position: relative;
 }
+@media (min-width: 640px) {
+  body main section.pets-block {
+    padding: 0 1.25rem 13.375rem;
+  }
+}
 @media (min-width: 1000px) {
   body main section.pets-block {
     padding: 0 1.875rem 17.19rem;
@@ -647,8 +652,8 @@ body main section.pets-block .carousel-pets {
   position: relative;
 }
 body main section.pets-block .carousel-pets button.arrow:disabled {
-  background-image: none;
-  background-color: rgba(128, 128, 128, 0.59);
+  opacity: 0.5;
+  cursor: auto;
 }
 body main section.pets-block .carousel-pets button.arrow:disabled:hover {
   transform: scale(1);
@@ -656,15 +661,8 @@ body main section.pets-block .carousel-pets button.arrow:disabled:hover {
 body main section.pets-block .carousel-pets button.arrow-l {
   display: none;
 }
-@media (min-width: 1000px) {
+@media (min-width: 640px) {
   body main section.pets-block .carousel-pets button.arrow-l {
-    order: 1;
-    position: absolute;
-    top: 46%;
-    left: -8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 62px;
     height: 62px;
     background-image: linear-gradient(#f9804b, #fe9013);
@@ -674,6 +672,12 @@ body main section.pets-block .carousel-pets button.arrow-l {
     transition: all 0.2s ease-in;
     border: none;
     outline: none;
+    position: absolute;
+    top: 46%;
+    left: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body main section.pets-block .carousel-pets button.arrow-l:hover {
     transform: scale(1.1);
@@ -684,17 +688,30 @@ body main section.pets-block .carousel-pets button.arrow-l {
     height: 16px;
   }
 }
+@media (min-width: 1000px) {
+  body main section.pets-block .carousel-pets button.arrow-l {
+    top: 46%;
+    left: 34%;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .carousel-pets button.arrow-l {
+    order: 1;
+    top: 46%;
+    left: -8%;
+  }
+}
 body main section.pets-block .carousel-pets button.arrow-r {
   display: none;
 }
-@media (min-width: 1000px) {
+@media (min-width: 640px) {
   body main section.pets-block .carousel-pets button.arrow-r {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 46%;
-    right: -8%;
+    right: 38%;
     width: 62px;
     height: 62px;
     background-image: linear-gradient(#f9804b, #fe9013);
@@ -714,6 +731,18 @@ body main section.pets-block .carousel-pets button.arrow-r {
     height: 16px;
   }
 }
+@media (min-width: 1000px) {
+  body main section.pets-block .carousel-pets button.arrow-r {
+    top: 46%;
+    right: 34%;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .carousel-pets button.arrow-r {
+    top: 46%;
+    right: -8%;
+  }
+}
 body main section.pets-block .carousel-pets .pets-content {
   overflow: auto;
   scroll-behavior: smooth;
@@ -724,9 +753,30 @@ body main section.pets-block .carousel-pets .pets-content::-webkit-scrollbar {
 }
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 30px;
+  grid-auto-flow: row;
+  gap: 20px;
+}
+@media (min-width: 640px) {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 92px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
+    grid-auto-flow: column;
+    row-gap: 30px;
+  }
 }
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card {
   margin: auto;

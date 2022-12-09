@@ -650,9 +650,9 @@ body {
       padding: 0 1.0625rem 3.75rem;
       position: relative;
 
-      // @media (min-width: 640px) {
-      //   padding: 0 1.25rem 13.375rem;
-      // }
+      @media (min-width: 640px) {
+        padding: 0 1.25rem 13.375rem;
+      }
 
       @media (min-width: 1000px) {
         padding: 0 1.875rem 17.19rem;
@@ -670,8 +670,8 @@ body {
 
         //ARROWS
         button.arrow:disabled {
-          background-image: none;
-          background-color: rgba(128, 128, 128, 0.59);
+          opacity: .5;
+          cursor: auto;
 
           &:hover {
             transform: scale(1);
@@ -679,27 +679,54 @@ body {
         }
         button.arrow-l {
           display: none;
-          @media (min-width: 1000px) {
-            order: 1;
+
+          @media (min-width: 640px) {
+            @include arrow-button("\27F5");
             position: absolute;
             top: 46%;
-            left: -8%;
+            left: 38%;
             display: flex;
             justify-content: center;
             align-items: center;
-            @include arrow-button("\27F5");
+          }
+
+          @media (min-width: 1000px) {
+            top: 46%;
+            left: 34%;
+          }
+
+          @media (min-width: 1600px) {
+            order: 1;
+            // position: absolute;
+            top: 46%;
+            left: -8%;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // @include arrow-button("\27F5");
           }
         }
         button.arrow-r {
           display: none;
-          @media (min-width: 1000px) {
+
+          @media (min-width: 640px) {
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
             top: 46%;
-            right: -8%;
+            right: 38%;
             @include arrow-button("\27F6");
+          }
+
+          @media (min-width: 1000px) {
+            top: 46%;
+            right: 34%;
+          }
+
+          @media (min-width: 1600px) {   
+            top: 46%;
+            right: -8%;
           }
         }
 
@@ -721,31 +748,27 @@ body {
             // transform: translate(-1158px);
             display: grid;
             // grid-gap: 20px;
-            grid-auto-flow: column;
-            grid-template-rows: repeat(2, 1fr);
-            gap: 30px;
+            grid-auto-flow: row;
+            // grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
 
-            // @media (min-width: 640px) {
-            //   gap: 30px;
-            //   display: grid;
-            //   grid-template-columns: repeat(11, 1fr);
-            //   grid-template-rows: repeat(2, 1fr);
-            // }
+            @media (min-width: 640px) {
+              grid-auto-flow: column;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(2, 1fr);
+              column-gap: 30px;
+              row-gap: 92px;
+            }
 
-            // @media (min-width: 1000px) {
-            //   grid-template-columns: repeat(11, 1fr);
-            //   grid-template-rows: repeat(2, 1fr);
-            //   width: 942px;
-            //   column-gap: 30px;
-            //   row-gap: 92px;
-            // }
-
-            // @media (min-width: 1600px) {
-            //   //width: 1158px;
-            //   // margin: auto;
-            //   grid-template-rows: repeat(2, 1fr);
-            //   gap: 30px;
-            // }
+            @media (min-width: 1000px) {
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: repeat(2, 1fr);
+            }
+            
+            @media (min-width: 1600px) {
+              grid-auto-flow: column;
+              row-gap: 30px;
+            }
 
             article.animal-card {
               margin: auto;

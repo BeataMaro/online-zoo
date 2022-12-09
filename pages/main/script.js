@@ -2,6 +2,11 @@ const body = document.body;
 const pagePath = window.location.pathname;
 const navigationLinks = document.querySelectorAll(".nav-item");
 
+const mobile = 320;
+const tablet = 640;
+const smallDesktop = 1000;
+const desktop = 1600;
+
 navigationLinks.forEach((link) => {
   if (link.href.includes(`${pagePath}`)) {
     link.classList.add("active");
@@ -26,12 +31,37 @@ window.addEventListener("click", (e) => {
 const carousel = document.getElementById("pets-content"),
   content = document.getElementById("corousel-pets-wrapper"),
   prev = document.getElementById("prev-pet"),
-  next = document.getElementById("next-pet");
-const gap = 30;
+  next = document.getElementById("next-pet"),
+  cards = document.getElementsByClassName("animal-card");
+
+const shuffleCards = (min, max) => {
+  let order = Math.random() * (max - min) + min;
+  return Math.floor(order);
+};
+
+console.log(shuffleCards(1, cards.length));
+
+let windowWidth = window.innerWidth;
+const gap = windowWidth < 640 ? 20 : windowWidth >= 640 ? 30 : 30;
 let width = carousel.offsetWidth;
+console.log(width);
 
 next.addEventListener("click", (e) => {
-  carousel.scrollBy(width + gap, 0);
+  e.preventDefault();
+  e.stopImmediatePropagation();
+
+  const animationTablet = () => console.log("Tablet");
+
+  const animationDesktop = () => {
+    for (let card of cards) {
+      let o = shuffleCards(1, cards.length);
+      card.style.order = o;
+    }
+    carousel.scrollBy(width + gap, 0);
+    // console.log(
+    //   `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}`
+    // );
+  };
 
   if (carousel.scrollWidth !== 0) {
     prev.disabled = false;
@@ -39,18 +69,51 @@ next.addEventListener("click", (e) => {
   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
     next.disabled = true;
   }
-});
-prev.addEventListener("click", (e) => {
-  carousel.scrollBy(-(width + gap), 0);
-  if (carousel.scrollLeft - width - gap <= 0) {
-    prev.disabled = true;
-  }
-  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.disabled = false;
+  console.log(
+    `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}, content.scrollWidth: ${content.scrollWidth}, carousel.scrollWidth: ${carousel.scrollWidth}`
+  );
+
+  if (window.matchMedia(`(min-width: ${smallDesktop}px)`).matches) {
+    animationDesktop();
+  } else {
+    animationTablet();
   }
 });
 
-window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
+prev.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+
+  const animationTablet = () => console.log("Tablet");
+
+  const animationDesktop = () => {
+    for (let card of cards) {
+      let o = shuffleCards(1, cards.length);
+      card.style.order = o;
+    }
+    carousel.scrollBy(-(width + gap), 0);
+    console.log(
+      `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}`
+    );
+    if (carousel.scrollLeft - width - gap <= 0) {
+      prev.disabled = true;
+    }
+    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+      next.disabled = false;
+    }
+  };
+
+  if (window.matchMedia(`(min-width: ${smallDesktop}px)`).matches) {
+    animationDesktop();
+  } else {
+    animationTablet();
+  }
+});
+
+window.addEventListener("resize", (e) => {
+  width = carousel.offsetWidth;
+  windowWidth = e.target.innerWidth;
+});
 
 //*******//
 
@@ -59,4 +122,4 @@ const askReviewerForAPatience = () =>
     "Online-zoo JS features (week 4) will be done in 2 days. Thank you for patience :)"
   );
 
-window.onload = askReviewerForAPatience;
+// window.onload = askReviewerForAPatience;
