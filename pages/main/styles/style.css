@@ -812,21 +812,14 @@ body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md {
   display: block;
 }
-@media (min-width: 1000px) {
-  body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md.aligator {
-    display: none;
-  }
-}
-body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md.aligator div.animal-card-desc {
-  padding: 1px 5px;
-}
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper {
   overflow: hidden;
   transition: all 0.2s linear;
   cursor: pointer;
 }
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper:hover {
-  background-color: #333b41;
+  background-color: rgba(51, 59, 65, 0.9);
+  height: 100%;
   opacity: 0.64;
 }
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper img {

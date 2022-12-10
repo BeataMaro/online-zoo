@@ -819,16 +819,16 @@ body {
               &.sm-md {
                 display: block;
 
-                &.aligator {
-                  @media (min-width: 1000px) {
-                    display: none;
-                  }
-                  div {
-                    &.animal-card-desc {
-                      padding: 1px 5px;
-                    }
-                  }
-                }
+                // &.aligator {
+                //   @media (min-width: 1000px) {
+                //     display: none;
+                //   }
+                //   div {
+                //     &.animal-card-desc {
+                //       padding: 1px 5px;
+                //     }
+                //   }
+                // }
               }
 
               .animal-image-wrapper {
@@ -837,7 +837,8 @@ body {
                 cursor: pointer;
 
                 &:hover {
-                  background-color: $black_blue;
+                  background-color: rgba($black_blue, .9);
+                  height: 100%;
                   opacity: 0.64;
                 }
                 img {
