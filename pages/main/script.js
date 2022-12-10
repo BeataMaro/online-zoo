@@ -140,7 +140,6 @@ const cloneTestimonial = (e) => {
   crossBtn.addEventListener("click", closePopup);
   const overlay = document.getElementById("overlay");
   overlay.addEventListener("click", closePopup);
-
 };
 
 if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
