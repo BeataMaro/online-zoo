@@ -23,6 +23,19 @@ body section.pick-and-feed-a-friend .salomon-wrapper {
   align-items: center;
 }
 
+.darkened-body, body.open div.overlay, body.darkened div.overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 .orange-button, body footer .footer-wrapper .first-column a.donate-link button, body section.testimonials-block .testimonials-wrapper a button, body section.pick-and-feed-a-friend .salomon-wrapper button, body main section.pets-block a button.pets-button, body main section.favorite-animal-block .circle-wrapper button {
   width: 298px;
   height: 54px;
@@ -60,18 +73,6 @@ body div.overlay {
 }
 body.open {
   pointer-events: none;
-}
-body.open div.overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
 }
 body.open header.navigation {
   background-color: white;
@@ -318,6 +319,52 @@ body header.navigation div.navigation-wrapper div.hamburger-menu span:nth-child(
   body header.navigation div.navigation-wrapper div.hamburger-menu {
     display: none;
   }
+}
+body main button.close-modal {
+  color: #f9804b;
+  border: none;
+  outline: none;
+  width: 14px;
+  height: 14px;
+  font-size: 2rem;
+  position: fixed;
+  top: 24%;
+  right: 4%;
+  z-index: 40;
+  background: none;
+}
+@media (min-width: 640px) {
+  body main button.close-modal {
+    right: 26%;
+  }
+}
+body main .clicked-testimonial {
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 268px;
+  height: 391px;
+  border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  background: radial-gradient(circle at 100% 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
+  border-radius: 20px;
+  padding: 1rem;
+}
+body main .clicked-testimonial span {
+  color: #BDBDBD;
+}
+body main .clicked-testimonial .testimonials-articles_header {
+  display: flex;
+  margin-bottom: 10px;
+}
+body main .clicked-testimonial .testimonials-articles_header img {
+  margin-right: 10px;
 }
 body main section.favorite-animal-block {
   background-image: url("../../../assets/images/animals/Giant Panda.jpg");
@@ -809,9 +856,6 @@ body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.
     width: 366px;
   }
 }
-body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card.sm-md {
-  display: block;
-}
 body main section.pets-block .carousel-pets .pets-content .pets-wrapper article.animal-card .animal-image-wrapper {
   overflow: hidden;
   transition: all 0.2s linear;
@@ -1214,60 +1258,62 @@ body section.testimonials-block .testimonials-wrapper .testimonials-articles {
     flex-direction: row;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
   width: 268px;
   border-radius: 5px;
   padding: 5px;
   overflow: hidden;
+  cursor: pointer;
   background: radial-gradient(circle at 100% 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 0%/20px 20px no-repeat, radial-gradient(circle at 0 100%, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 0%/20px 20px no-repeat, radial-gradient(circle at 100% 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 0% 100%/20px 20px no-repeat, radial-gradient(circle at 0 0, #f5f7f6 0, #f5f7f6 18px, transparent 18px) 100% 100%/20px 20px no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 4px) calc(100% - 40px) no-repeat, linear-gradient(#f5f7f6, #f5f7f6) 50% 50%/calc(100% - 40px) calc(100% - 4px) no-repeat, linear-gradient(328deg, #f3a9f8 66%, #febdab 74%, #eaf7fe 100%, #e0d8f0 100%);
   border-radius: 20px;
   padding: 16px;
 }
 @media (min-width: 640px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
     width: 600px;
   }
 }
 @media (min-width: 1000px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
     width: 293px;
+    cursor: auto;
   }
 }
 @media (min-width: 1600px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
     width: 266px;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card.desktop {
   display: none;
 }
 @media (min-width: 1600px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.desktop {
+  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card.desktop {
     display: block;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header img {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header img {
   width: 37px;
   height: 37px;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div {
   display: block;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div h4 {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div h4 {
   font-weight: 400;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article .testimonials-articles_header div span {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div span {
   font-weight: 300;
   color: #bdbdbd;
   font-size: 15px;
   line-height: 120%;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article p {
+body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card p {
   font-weight: 300;
   font-size: 15px;
 }

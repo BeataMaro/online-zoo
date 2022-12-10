@@ -53,6 +53,19 @@ img {
   }
 }
 
+.darkened-body {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 .orange-button {
   width: 298px;
   height: 54px;
@@ -87,6 +100,12 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 100%;
 
+  &.darkened {
+    div.overlay {
+      @extend .darkened-body;
+    }
+  }
+
   div.overlay {
     display: none;
   }
@@ -96,16 +115,7 @@ body {
       pointer-events: none;
     }
     div.overlay {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 10;
+      @extend .darkened-body;
     }
     header.navigation {
       background-color: white;
@@ -358,6 +368,98 @@ body {
     }
   }
   main {
+
+    button.close-modal {
+      color: $orange;
+      border: none;
+      outline: none;
+      width: 14px;
+      height: 14px;
+      font-size: 2rem;
+      position: fixed;
+      top: 24%;
+      right: 4%;
+      z-index: 40;
+      background: none;
+      
+      @media (min-width: 640px) {
+        right: 26%;
+      }
+    }
+
+    .clicked-testimonial {
+      z-index: 20;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // ****
+      width: 268px;
+      height: 391px;
+      border-radius: 5px;
+      padding: 5px;
+      overflow: hidden;
+      font-size: 15px;
+      font-weight: 300;
+      cursor: pointer;
+
+      // https://unused-css.com/tools/border-gradient-generator?p=22EYcwvALgxAZn8BoBMyAMCCMA2BAHAHpgNwA2AFAMxIAcAJgKYgKwUCGAnDNQARZYCkzGPWC1WwbgHYALIKj1WMScO4ZUqOfVS1qMVKvX8AlEA
+
+      background: radial-gradient(
+            circle at 100% 100%,
+            #f5f7f6 0,
+            #f5f7f6 18px,
+            transparent 18px
+          )
+          0% 0%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 0 100%,
+            #f5f7f6 0,
+            #f5f7f6 18px,
+            transparent 18px
+          )
+          100% 0%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 100% 0,
+            #f5f7f6 0,
+            #f5f7f6 18px,
+            transparent 18px
+          )
+          0% 100%/20px 20px no-repeat,
+        radial-gradient(
+            circle at 0 0,
+            #f5f7f6 0,
+            #f5f7f6 18px,
+            transparent 18px
+          )
+          100% 100%/20px 20px no-repeat,
+        linear-gradient(#f5f7f6, #f5f7f6) 50% 50% / calc(100% - 4px)
+          calc(100% - 40px) no-repeat,
+        linear-gradient(#f5f7f6, #f5f7f6) 50% 50% / calc(100% - 40px)
+          calc(100% - 4px) no-repeat,
+        linear-gradient(
+          328deg,
+          #f3a9f8 66%,
+          #febdab 74%,
+          #eaf7fe 100%,
+          #e0d8f0 100%
+        );
+      border-radius: 20px;
+      padding: 1rem;
+
+      span {
+        color: #BDBDBD;
+      }
+      .testimonials-articles_header {
+        display: flex;
+        margin-bottom: 10px;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+
     //FAVORITE ANIMAL HERO BANNER
     section.favorite-animal-block {
       background-image: url("../../../assets/images/animals/Giant\ Panda.jpg");
@@ -669,20 +771,20 @@ body {
         position: relative;
 
         @media (min-width: 640px) {
-          max-width: 600px
+          max-width: 600px;
         }
-        
+
         @media (min-width: 1000px) {
           max-width: 942px;
         }
-        
+
         @media (min-width: 1600px) {
           max-width: 1158px;
         }
 
         //ARROWS
         button.arrow:disabled {
-          opacity: .5;
+          opacity: 0.5;
           cursor: auto;
 
           &:hover {
@@ -731,7 +833,7 @@ body {
             right: 34%;
           }
 
-          @media (min-width: 1600px) {   
+          @media (min-width: 1600px) {
             top: 46%;
             right: -8%;
           }
@@ -757,7 +859,7 @@ body {
               column-gap: 30px;
               row-gap: 92px;
             }
-            
+
             @media (min-width: 1600px) {
               row-gap: 30px;
             }
@@ -816,28 +918,13 @@ body {
                 width: 366px;
               }
 
-              &.sm-md {
-                display: block;
-
-                // &.aligator {
-                //   @media (min-width: 1000px) {
-                //     display: none;
-                //   }
-                //   div {
-                //     &.animal-card-desc {
-                //       padding: 1px 5px;
-                //     }
-                //   }
-                // }
-              }
-
               .animal-image-wrapper {
                 overflow: hidden;
                 transition: all 0.2s linear;
                 cursor: pointer;
 
                 &:hover {
-                  background-color: rgba($black_blue, .9);
+                  background-color: rgba($black_blue, 0.9);
                   height: 100%;
                   opacity: 0.64;
                 }
@@ -1213,11 +1300,12 @@ body {
           gap: 30px;
           flex-direction: row;
         }
-        article {
+        article.testimonial-card {
           width: 268px;
           border-radius: 5px;
           padding: 5px;
           overflow: hidden;
+          cursor: pointer;
 
           // https://unused-css.com/tools/border-gradient-generator?p=22EYcwvALgxAZn8BoBMyAMCCMA2BAHAHpgNwA2AFAMxIAcAJgKYgKwUCGAnDNQARZYCkzGPWC1WwbgHYALIKj1WMScO4ZUqOfVS1qMVKvX8AlEA
 
@@ -1268,6 +1356,7 @@ body {
           }
           @media (min-width: 1000px) {
             width: 293px;
+            cursor: auto;
           }
           @media (min-width: 1600px) {
             width: 266px;

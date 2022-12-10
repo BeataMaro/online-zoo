@@ -1,5 +1,7 @@
+let fragment = new DocumentFragment();
 const body = document.body;
 const pagePath = window.location.pathname;
+const main = document.querySelector("main");
 const navigationLinks = document.querySelectorAll(".nav-item");
 
 const mobile = 320;
@@ -79,7 +81,7 @@ prev.addEventListener("click", (e) => {
       card.style.order = o;
     }
     let flipped = await carousel.scrollBy(-width, 0);
-  }
+  };
   const animationDesktop = async () => {
     for (let card of cards) {
       let o = shuffleCards(1, cards.length);
@@ -102,6 +104,51 @@ window.addEventListener("resize", (e) => {
   width = carousel.offsetWidth;
   windowWidth = e.target.innerWidth;
 });
+
+// Testimonials
+
+//Testimonials popup
+
+const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+const closePopup = () => {
+  const popup = document.getElementById("clicked-testimonial");
+  const cross = document.getElementById("closeModal");
+  popup.remove(main);
+  cross.remove(main);
+  body.classList.remove("darkened");
+
+};
+
+const cloneTestimonial = (e) => {
+  const clickedTestimonial =
+    document.getElementById(e.target.parentElement.id) ||
+    document.getElementById(e.target.id);
+  let testimonialPopup = clickedTestimonial.cloneNode(true);
+  const cross = document.createElement("button");
+  cross.textContent = "x";
+  cross.id = "closeModal";
+  cross.className = "close-modal";
+  testimonialPopup.id = "clicked-testimonial";
+  testimonialPopup.classList.add("clicked-testimonial");
+  fragment.appendChild(testimonialPopup);
+  fragment.appendChild(cross);
+  main.append(fragment);
+  body.classList.add("darkened");
+
+  const crossBtn = document.getElementById("closeModal");
+  crossBtn.addEventListener("click", closePopup);
+  const overlay = document.getElementById("overlay");
+  overlay.addEventListener("click", closePopup);
+
+};
+
+if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
+  for (let testimonialcard of testimonialCards) {
+    testimonialcard.addEventListener("click", cloneTestimonial);
+  }
+}
+
 
 //*******//
 
