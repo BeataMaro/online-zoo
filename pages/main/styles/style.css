@@ -648,8 +648,23 @@ body main section.pets-block {
 body main section.pets-block .carousel-pets {
   margin: auto;
   width: 100%;
-  max-width: 1158px;
+  max-width: 285px;
   position: relative;
+}
+@media (min-width: 640px) {
+  body main section.pets-block .carousel-pets {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1000px) {
+  body main section.pets-block .carousel-pets {
+    max-width: 942px;
+  }
+}
+@media (min-width: 1600px) {
+  body main section.pets-block .carousel-pets {
+    max-width: 1158px;
+  }
 }
 body main section.pets-block .carousel-pets button.arrow:disabled {
   opacity: 0.5;
@@ -759,22 +774,14 @@ body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
 @media (min-width: 640px) {
   body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
     grid-auto-flow: column;
-    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     -moz-column-gap: 30px;
          column-gap: 30px;
     row-gap: 92px;
   }
 }
-@media (min-width: 1000px) {
-  body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
 @media (min-width: 1600px) {
   body main section.pets-block .carousel-pets .pets-content .pets-wrapper {
-    grid-auto-flow: column;
     row-gap: 30px;
   }
 }

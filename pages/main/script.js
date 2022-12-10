@@ -39,8 +39,6 @@ const shuffleCards = (min, max) => {
   return Math.floor(order);
 };
 
-console.log(shuffleCards(1, cards.length));
-
 let windowWidth = window.innerWidth;
 const gap = windowWidth < 640 ? 20 : windowWidth >= 640 ? 30 : 30;
 let width = carousel.offsetWidth;
@@ -50,30 +48,21 @@ next.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopImmediatePropagation();
 
-  const animationTablet = () => console.log("Tablet");
+  const animationTablet = () => carousel.scrollBy(width, 0);
 
-  const animationDesktop = () => {
+  const animationDesktop = async () => {
     for (let card of cards) {
-      let o = shuffleCards(1, cards.length);
+      let o = await shuffleCards(1, cards.length);
       card.style.order = o;
     }
     carousel.scrollBy(width + gap, 0);
-    // console.log(
-    //   `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}`
-    // );
   };
 
-  if (carousel.scrollWidth !== 0) {
-    prev.disabled = false;
-  }
-  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.disabled = true;
-  }
   console.log(
-    `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}, content.scrollWidth: ${content.scrollWidth}, carousel.scrollWidth: ${carousel.scrollWidth}`
+    `Width: ${width}, gap: ${gap}, carousel.offsetWidth: ${carousel.offsetWidth} carousel.scrollLeft: ${carousel.scrollLeft}, content.scrollWidth: ${content.scrollWidth}, carousel.scrollWidth: ${carousel.scrollWidth}`
   );
 
-  if (window.matchMedia(`(min-width: ${smallDesktop}px)`).matches) {
+  if (window.matchMedia(`(min-width: ${tablet}px)`).matches) {
     animationDesktop();
   } else {
     animationTablet();
@@ -84,26 +73,25 @@ prev.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopImmediatePropagation();
 
-  const animationTablet = () => console.log("Tablet");
-
-  const animationDesktop = () => {
+  const animationTablet = async () => {
     for (let card of cards) {
       let o = shuffleCards(1, cards.length);
       card.style.order = o;
     }
-    carousel.scrollBy(-(width + gap), 0);
+    let flipped = await carousel.scrollBy(-width, 0);
+  }
+  const animationDesktop = async () => {
+    for (let card of cards) {
+      let o = shuffleCards(1, cards.length);
+      card.style.order = o;
+    }
+    let flip = await carousel.scrollBy(-(width + gap), 0);
     console.log(
       `Width: ${width}, gap: ${gap}, carousel.scrollLeft: ${carousel.scrollLeft}`
     );
-    if (carousel.scrollLeft - width - gap <= 0) {
-      prev.disabled = true;
-    }
-    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-      next.disabled = false;
-    }
   };
 
-  if (window.matchMedia(`(min-width: ${smallDesktop}px)`).matches) {
+  if (window.matchMedia(`(min-width: ${tablet}px)`).matches) {
     animationDesktop();
   } else {
     animationTablet();
