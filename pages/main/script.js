@@ -130,7 +130,6 @@ const cloneMoreTestimonials = () => {
   clonedTestimonialsCardsPartTwo.map((card, id) => {
     card.id = `testimonial-${id + 9}`;
     card.classList.add("desktop");
-
     newFragment.append(card);
   });
 };
