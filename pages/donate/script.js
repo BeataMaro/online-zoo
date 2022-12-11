@@ -5,6 +5,10 @@ const amountForm = document.forms.amountForm;
 amountForm.addEventListener("submit", (e) => e.preventDefault());
 
 const changeDonationValue = (e) => {
+  if (donation.value.length) {
+    donation.value = "";
+    donation.placeholder = `${e.target.value}`;
+  }
   donation.placeholder = `${e.target.value}`;
 };
 
