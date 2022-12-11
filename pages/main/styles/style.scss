@@ -1253,15 +1253,14 @@ body {
       flex-direction: column;
       align-items: center;
       width: 300px;
-        // **
-      overflow: hidden;
-
-      @media (min-width: 640px) {
-        width: 600px;
-      }
-
-      @media (min-width: 1000px) {
-        width: 940px;
+        
+        @media (min-width: 640px) {
+          width: 600px;
+        }
+        
+        @media (min-width: 1000px) {
+          width: 940px;
+          overflow: hidden;
       }
 
       @media (min-width: 1600px) {

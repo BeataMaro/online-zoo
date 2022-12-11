@@ -1450,7 +1450,6 @@ body section.testimonials-block .testimonials-wrapper {
   flex-direction: column;
   align-items: center;
   width: 300px;
-  overflow: hidden;
 }
 @media (min-width: 640px) {
   body section.testimonials-block .testimonials-wrapper {
@@ -1460,6 +1459,7 @@ body section.testimonials-block .testimonials-wrapper {
 @media (min-width: 1000px) {
   body section.testimonials-block .testimonials-wrapper {
     width: 940px;
+    overflow: hidden;
   }
 }
 @media (min-width: 1600px) {

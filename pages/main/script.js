@@ -111,23 +111,39 @@ window.addEventListener("resize", (e) => {
 const testimonialsBar = document.getElementById("testimonials-bar");
 const testimonialsArticles = document.querySelector(".testimonials-articles");
 const testimonialsCards = document.querySelectorAll(".testimonial-card");
-let clonedTestimonialsCards = [];
-
-for (let card of testimonialsCards) {
-  clonedTestimonialsCards = [...clonedTestimonialsCards, card.cloneNode(true)];
-}
-
-console.log(clonedTestimonialsCards);
+let clonedTestimonialsCardsPartOne = [];
+let clonedTestimonialsCardsPartTwo = [];
 const newFragment = new DocumentFragment();
 
-clonedTestimonialsCards.map((card, id) => {
-  card.id = id + 5;
-  newFragment.append(card);
-});
+for (let card of testimonialsCards) {
+  clonedTestimonialsCardsPartOne = [...clonedTestimonialsCardsPartOne, card.cloneNode(true)];
+  clonedTestimonialsCardsPartTwo = [...clonedTestimonialsCardsPartTwo, card.cloneNode(true)];
+}
+const cloneTestimonials = () => {
+  clonedTestimonialsCardsPartOne.map((card, id) => {
+    card.id = `testimonial-${id + 5}`;
+    card.classList.add("desktop");
+    newFragment.append(card);
+  });
+};
+const cloneMoreTestimonials = () => {
+  clonedTestimonialsCardsPartTwo.map((card, id) => {
+    card.id = `testimonial-${id + 9}`;
+    card.classList.add("desktop");
+
+    newFragment.append(card);
+  });
+};
+
+cloneTestimonials()
+cloneMoreTestimonials()
 
 testimonialsArticles.append(newFragment);
+testimonialsBar.addEventListener("change", (e) => console.log(e.target.value));
 
 //Testimonials popup
+
+const newTestimonials = document.getElementsByClassName("testimonial-card")
 
 const closePopup = () => {
   const popup = document.getElementById("clicked-testimonial");
@@ -160,7 +176,7 @@ const cloneTestimonial = (e) => {
 };
 
 if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
-  for (let testimonialcard of testimonialCards) {
+  for (let testimonialcard of newTestimonials) {
     testimonialcard.addEventListener("click", cloneTestimonial);
   }
 }
@@ -169,7 +185,7 @@ if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
 
 const askReviewerForAPatience = () =>
   alert(
-    "Online-zoo JS features (week 4) will be done in 2 days. Thank you for patience :)"
+    "Online-zoo JS features (week 4) will be done tonight. Thank you for patience :)"
   );
 
-// window.onload = askReviewerForAPatience;
+window.onload = askReviewerForAPatience;
