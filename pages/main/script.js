@@ -44,7 +44,6 @@ const shuffleCards = (min, max) => {
 let windowWidth = window.innerWidth;
 const gap = windowWidth < 640 ? 20 : windowWidth >= 640 ? 30 : 30;
 let width = carousel.offsetWidth;
-console.log(width);
 
 next.addEventListener("click", (e) => {
   e.preventDefault();
@@ -147,7 +146,6 @@ if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
     testimonialcard.addEventListener("click", cloneTestimonial);
   }
 }
-
 
 //*******//
 
