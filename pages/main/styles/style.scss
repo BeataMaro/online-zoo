@@ -1253,6 +1253,8 @@ body {
       flex-direction: column;
       align-items: center;
       width: 300px;
+        // **
+      overflow: hidden;
 
       @media (min-width: 640px) {
         width: 600px;

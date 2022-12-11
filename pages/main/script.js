@@ -106,9 +106,28 @@ window.addEventListener("resize", (e) => {
 
 // Testimonials
 
-//Testimonials popup
+//Testimonials carousel
 
-const testimonialCards = document.querySelectorAll(".testimonial-card");
+const testimonialsBar = document.getElementById("testimonials-bar");
+const testimonialsArticles = document.querySelector(".testimonials-articles");
+const testimonialsCards = document.querySelectorAll(".testimonial-card");
+let clonedTestimonialsCards = [];
+
+for (let card of testimonialsCards) {
+  clonedTestimonialsCards = [...clonedTestimonialsCards, card.cloneNode(true)];
+}
+
+console.log(clonedTestimonialsCards);
+const newFragment = new DocumentFragment();
+
+clonedTestimonialsCards.map((card, id) => {
+  card.id = id + 5;
+  newFragment.append(card);
+});
+
+testimonialsArticles.append(newFragment);
+
+//Testimonials popup
 
 const closePopup = () => {
   const popup = document.getElementById("clicked-testimonial");
@@ -116,7 +135,6 @@ const closePopup = () => {
   popup.remove(main);
   cross.remove(main);
   body.classList.remove("darkened");
-
 };
 
 const cloneTestimonial = (e) => {
@@ -154,4 +172,4 @@ const askReviewerForAPatience = () =>
     "Online-zoo JS features (week 4) will be done in 2 days. Thank you for patience :)"
   );
 
-window.onload = askReviewerForAPatience;
+// window.onload = askReviewerForAPatience;
