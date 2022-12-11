@@ -1524,6 +1524,10 @@ body section.testimonials-block .testimonials-wrapper .testimonials-container {
 body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel {
   overflow: auto;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel::-webkit-scrollbar {
+  height: 0;
 }
 body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles {
   display: grid;

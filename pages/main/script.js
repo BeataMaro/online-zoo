@@ -1,3 +1,4 @@
+
 let fragment = new DocumentFragment();
 const body = document.body;
 const pagePath = window.location.pathname;
@@ -138,7 +139,35 @@ cloneTestimonials()
 cloneMoreTestimonials()
 
 testimonialsArticles.append(newFragment);
+
+// Range bar
 testimonialsBar.addEventListener("change", (e) => console.log(e.target.value));
+
+
+const testimonialsGap = 15;
+
+const testimonialsCarousel = document.getElementById("testimonials-carousel"),
+  testimonialsArt = document.getElementById("testimonials-articles");
+  artWidth = windowWidth >= 1600 ? 293 : windowWidth < 1600 ? 266 : 266;
+
+  window.addEventListener("load", () => {
+    console.log("scrollBy")
+    testimonialsCarousel.scrollBy((artWidth * 2 + testimonialsGap), 0);
+  })
+
+testimonialsBar.addEventListener("change", e => {
+if (e.target.value >= 3) {
+  testimonialsCarousel.scrollBy(artWidth, 0);
+  console.log(artWidth + testimonialsGap)
+}
+});
+testimonialsBar.addEventListener("change", e => {
+  if (e.target.value <= 3) {
+  testimonialsCarousel.scrollBy(-(artWidth), 0);
+  }
+});
+
+window.addEventListener("resize", e => (artWidth = windowWidth >= 1600 ? 293 : windowWidth < 1600 ? 266 : 266));
 
 //Testimonials popup
 

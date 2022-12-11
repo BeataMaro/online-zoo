@@ -1315,16 +1315,13 @@ body {
         .testimonials-carousel {
           overflow: auto;
           scroll-behavior: smooth;
-          // scrollbar-width: none;
+          scrollbar-width: none;
 
-          // &::-webkit-scrollbar {
-          //   height: 0;
-          // }
+          &::-webkit-scrollbar {
+            height: 0;
+          }
 
           .testimonials-articles {
-            // display: flex;
-            // flex-direction: column;
-            // gap: 30px;
             display: grid;
             grid-gap: 15px;
             grid-auto-flow: row;
@@ -1333,7 +1330,6 @@ body {
             @media (min-width: 1000px) {
               grid-auto-flow: column;
               gap: 30px;
-              // flex-direction: row;
             }
             article.testimonial-card {
               width: 268px;
