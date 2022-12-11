@@ -360,7 +360,7 @@ body main .clicked-testimonial {
   padding: 1rem;
 }
 body main .clicked-testimonial span {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 body main .clicked-testimonial .testimonials-articles_header {
   display: flex;
@@ -1445,7 +1445,6 @@ body section.testimonials-block {
   }
 }
 body section.testimonials-block .testimonials-wrapper {
-  margin: 0 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1459,11 +1458,13 @@ body section.testimonials-block .testimonials-wrapper {
 @media (min-width: 1000px) {
   body section.testimonials-block .testimonials-wrapper {
     width: 940px;
+    overflow: hidden;
   }
 }
 @media (min-width: 1600px) {
   body section.testimonials-block .testimonials-wrapper {
     width: 1160px;
+    margin: 0 220px;
   }
 }
 body section.testimonials-block .testimonials-wrapper h3 {
@@ -1500,23 +1501,47 @@ body section.testimonials-block .testimonials-wrapper input[type=range] {
     display: block;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+body section.testimonials-block .testimonials-wrapper .testimonials-container {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
 }
 @media (min-width: 640px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles {
-    gap: 15px;
+  body section.testimonials-block .testimonials-wrapper .testimonials-container {
+    max-width: 600px;
   }
 }
 @media (min-width: 1000px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles {
-    gap: 30px;
-    flex-direction: row;
+  body section.testimonials-block .testimonials-wrapper .testimonials-container {
+    max-width: 940px;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
+@media (min-width: 1600px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container {
+    max-width: 1160px;
+  }
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel::-webkit-scrollbar {
+  height: 0;
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles {
+  display: grid;
+  grid-gap: 15px;
+  grid-auto-flow: row;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles {
+    grid-auto-flow: column;
+    gap: 30px;
+  }
+}
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card {
   width: 268px;
   border-radius: 5px;
   padding: 5px;
@@ -1527,51 +1552,51 @@ body section.testimonials-block .testimonials-wrapper .testimonials-articles art
   padding: 16px;
 }
 @media (min-width: 640px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card {
     width: 600px;
   }
 }
 @media (min-width: 1000px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card {
     width: 293px;
     cursor: auto;
   }
 }
 @media (min-width: 1600px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card {
     width: 266px;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card.desktop {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card.desktop {
   display: none;
 }
-@media (min-width: 1600px) {
-  body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card.desktop {
+@media (min-width: 1000px) {
+  body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card.desktop {
     display: block;
   }
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card .testimonials-articles_header {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header img {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card .testimonials-articles_header img {
   width: 37px;
   height: 37px;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card .testimonials-articles_header div {
   display: block;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div h4 {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card .testimonials-articles_header div h4 {
   font-weight: 400;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card .testimonials-articles_header div span {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card .testimonials-articles_header div span {
   font-weight: 300;
   color: #bdbdbd;
   font-size: 15px;
   line-height: 120%;
 }
-body section.testimonials-block .testimonials-wrapper .testimonials-articles article.testimonial-card p {
+body section.testimonials-block .testimonials-wrapper .testimonials-container .testimonials-carousel .testimonials-articles article.testimonial-card p {
   font-weight: 300;
   font-size: 15px;
 }

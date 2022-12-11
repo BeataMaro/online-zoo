@@ -82,7 +82,7 @@
           </div>
         </div>
 
-        <form action="" method="POST">
+        <form action="" method="POST" name="amountForm">
           <legend>Amount</legend>
           <fieldset class="donation-radio">
             <div class="wrapper desktop">
@@ -173,7 +173,7 @@
                 type="number"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 maxlength="4"
-                placeholder="$100"
+                placeholder="100"
                 id="amount"
               />
             </span>

@@ -216,4 +216,4 @@ const askReviewerForAPatience = () =>
     "Online-zoo JS features (week 4) will be done tonight. Thank you for patience :)"
   );
 
-window.onload = askReviewerForAPatience;
+// window.onload = askReviewerForAPatience;
