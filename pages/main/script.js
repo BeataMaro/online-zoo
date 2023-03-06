@@ -208,12 +208,3 @@ if (window.matchMedia(`(max-width: ${tablet}px)`).matches) {
     testimonialcard.addEventListener("click", cloneTestimonial);
   }
 }
-
-//*******//
-
-const askReviewerForAPatience = () =>
-  alert(
-    "Online-zoo JS features (week 4) will be done tonight. Thank you for patience :)"
-  );
-
-// window.onload = askReviewerForAPatience;
